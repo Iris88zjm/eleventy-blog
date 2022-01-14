@@ -1,0 +1,28 @@
+---
+pagination:
+  data: testdata
+  size: 2
+testdata:
+ - item1
+ - item2
+ - item3
+ - item4
+ - item5
+ - item6
+---
+
+{{ pagination.pages }}
+{% comment %}
+<nav aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  <ol>
+    <li>{% if page.url != pagination.page.first %}<a href="{{ pagination.page.first }}">First</a>{% else %}First{% endif %}</li>
+    <li>{% if pagination.page.previous %}<a href="{{ pagination.page.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+{%- for pageEntry in pagination.pages %}
+    <li><a href="{{ pagination.pages[ loop.index0 ] }}"{% if page.url == pagination.pages[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+{%- endfor %}
+    <li>{% if pagination.page.next %}<a href="{{ pagination.page.next }}">Next</a>{% else %}Next{% endif %}</li>
+    <li>{% if page.url != pagination.page.last %}<a href="{{ pagination.page.last }}">Last</a>{% else %}Last{% endif %}</li>
+  </ol>
+</nav>
+{% endcomment %}

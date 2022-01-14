@@ -1,0 +1,258 @@
+---
+layout: zh.liquid
+pageSectionID: homepage
+---
+
+<section id="hero">
+  <div class="divimg">
+    <img src="{{ baseURL | url }}/assets/img/icons/hero-bg.svg" alt="">
+  </div>
+  <div class="content wow zoomInDown" data-wow-duration="1.5s" data-wow-delay="0.35s">
+    <h1>
+      欢迎<br />
+      来到科技世界
+    </h1>
+    <div class="text">
+      <p>开启奇幻之旅</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="homepage-block" id="s1">
+  <div class="wrapper">
+    <div class="content wow fadeInDown" data-wow-delay="0.5s">
+      <p>Instead of going to schools like most people, I chose to become an autodidact.</p>
+      <p>I learn everything from nature, and the internet.</p>
+    </div>
+    <div class="divimg wow zoomIn" data-wow-delay="1s">
+      <img src="{{ baseURL | url }}/assets/img/homepage/s1.svg" alt="">
+    </div>
+  </div>
+  <div class="divimg-bg">
+    <img src="{{ baseURL | url }}/assets/img/homepage/purple.svg" alt="">
+  </div>
+</section>
+
+<section class="homepage-block" id="s2">
+  <div class="title">
+    <h2>工作经历</h2>
+    <div class="title-line"></div>
+  </div>
+  <div class="wrapper">
+    <div class="work-grids">
+      <div class="item">
+        <div class="work-time wow fadeInLeft">2019.08 - now</div>
+        <div class="company-icon">
+          <i class="iconfont icon-experience" aria-hidden="true"></i>
+        </div>
+        <div class="work-info wow fadeInRight">
+          <div class="company">绿诺</div>
+          <div class="position">网页开发</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="work-time wow fadeInRight">2017.06 - 2019.08</div>
+        <div class="company-icon">
+          <i class="iconfont icon-experience" aria-hidden="true"></i>
+        </div>
+        <div class="work-info wow fadeInLeft">
+          <div class="company">天拓</div>
+          <div class="position">Web前端开发</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="work-time wow fadeInLeft">2015.08 - 2017.06</div>
+        <div class="company-icon">
+          <i class="iconfont icon-experience" aria-hidden="true"></i>
+        </div>
+        <div class="work-info wow fadeInRight">
+          <div class="company">华一</div>
+          <div class="position">ERP powerbuilder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divimg-bg">
+    <img src="{{ baseURL | url }}/assets/img/homepage/blue.svg" alt="">
+  </div>
+</section>
+
+
+<section class="homepage-block" id="s3">
+  <div class="title">
+    <h2>个人技能</h2>
+    <div class="title-line"></div>
+  </div>
+  <div class="wrapper">
+    <div class="skill-list">
+      <div id="skillsChart" style="width: 100%; height: 600px;"></div>
+    </div>
+
+  <div class="divimg-bg">
+    <img src="{{ baseURL | url }}/assets/img/homepage/yellow.svg" alt="">
+  </div>
+</section>
+
+<section class="homepage-block" id="s4">
+  <div class="title">
+    <h2>项目</h2>
+    <div class="title-line"></div>
+  </div>
+  <div class="wrapper">
+    <div class="project-list">
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.2s">
+        <a href="https://nanoleaf.me/en-US/index.html" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-website.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-website.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/nanoleaf-website.jpg">
+            </picture>
+          </div>
+          <div class="content">
+            {% if lang == "zh" %}
+            <h3>Nanoleaf 官网</h3>
+            <p>寻找高品质的智能照明产品，例如支持 Thread 的变色灯板、灯泡和 LED 灯条，可与 HomeKit、Google 智能助理、亚马逊 Alexa 等配合使用 </p>
+            {% else %}
+            <h3>Nanoleaf Website</h3>
+            <p>Find high quality smart lighting products such as Thread enabled color-changing light panels, light bulbs & LED strips that work with HomeKit, Google Assistant, Amazon Alexa and etc.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.3s">
+        <a href="https://press.nanoleaf.me/blog/?list=1&category=all" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-blogs.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-blogs.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/nanoleaf-blogs.jpg">
+            </picture>
+          </div>
+          <div class="content">
+            {% if lang == "zh" %}
+            <h3>Nanoleaf 博客</h3>
+            <p>Nanoleaf 博客页面, 新闻页面, 产品信息</p>
+            {% else %}
+            <h3>Nanoleaf Blogs</h3>
+            <p>Nanoleaf blog page, news page, product information.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.4s">
+        <a href="http://internalerp.nanoleaf.cn/" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-erp.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-erp.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/nanoleaf-erp.jpg">
+            </picture>
+          </div>
+          <div class="content">
+            {% if lang == "zh" %}
+            <h3>Nanoleaf ERP</h3>
+            <p>同步不同平台的订单, 生成不同的报表</p>
+            {% else %}
+            <h3>Nanoleaf ERP</h3>
+            <p>Synchronize orders from different platforms and generate different reports.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.5s">
+        <a href="https://us-layout.nanoleaf.me/" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-layout.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-layout.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/nanoleaf-layout.jpg">
+            </picture>
+          </div>
+          <div class="content">
+            {% if lang == "zh" %}
+            <h3>Nanoleaf 布局交互系统</h3>
+            <p>用户产品交互系统，可自定义拼图形，根据图形进行产品购买</p>
+            {% else %}
+            <h3>Nanoleaf Layout Assistant</h3>
+            <p>User product interaction system, can customize graphics, and purchase products according to graphics.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.6s">
+        <a href="https://www.repeatcashmere.com/us/" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/repeatcashmere.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/repeatcashmere.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/repeatcashmere.jpg">
+            </picture>
+          </div>
+          <div class="content">            
+            {% if lang == "zh" %}
+            <h3>Repeat 羊绒电商网站</h3>
+            <p>最奢华的材料与风格相结合，形成了 REPEAT cashmere 提供的精美服装、配饰和礼品系列。</p>
+            {% else %}
+            <h3>Repeat Cashmere</h3>
+            <p>The most luxurious materials combine with style to form the fine range of clothing, accessories and gifts available at REPEAT cashmere.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.7s">
+        <a href="https://www.tongyu-quant.com/" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/tongyu.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/tongyu.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/tongyu.jpg">
+            </picture>
+          </div>
+          <div class="content">          
+            {% if lang == "zh" %}
+            <h3>同余科技官网</h3>
+            <p>致力于使用技术促进客户的衍生品业务，为国内在衍生品领域的金融科技信息服务提供商之一</p>
+            {% else %}
+            <h3>Tong Yu</h3>
+            <p>Committed to using technology to promote customers' derivatives business, and is one of the domestic financial technology information service providers in the field of derivatives.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.8s">
+        <a href="https://slite.us/" target="_blank">
+          <div class="divimg">
+            <picture>
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/slite.webp">
+              <source srcset="{{ baseURL | url }}/assets/img/homepage/slite.jpg">
+              <img src="{{ baseURL | url }}/assets/img/homepage/slite.jpg">
+            </picture>
+          </div>
+          <div class="content">          
+            {% if lang == "zh" %}
+            <h3>Slite 电源电商网站</h3>
+            <p>Slite Electrical Supply 以 Silverlite 和 Keilton 品牌设计和制造 LED 照明、智能照明、USB 充电器 3.0 和音频电缆测试仪。</p>
+            {% else %}
+            <h3>Slite Electrical Supply</h3>
+            <p>Slite Electrical Supply designs and manufactures LED lighting,Smart lighting, USB charger 3.0 and Audio cable tester under the brand name of Silverlite and Keilton.</p>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="divimg-bg">
+    <img src="{{ baseURL | url }}/assets/img/homepage/green.svg" alt="">
+  </div>
+</section>
+
+<!-- 
+  <h2>A smile is the shortest distance between two people.</h2>
+  <h2>We all have our places in the world.</h2>
+  <h2>What others think is not important. How you fee about yourse</h2>
+  <h2>Nothing is impossible, the word itself says 'I'm possible'!</h2>
+-->

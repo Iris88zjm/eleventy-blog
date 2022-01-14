@@ -1,0 +1,51 @@
+{
+  "en": [
+    {
+      "title": "Home",
+      "path": "/en/",
+      "iconName": "icon-home"
+    },
+    {
+      "title": "Archives",
+      "path": "/en/archives/",
+      "iconName": "icon-archive"     
+    },
+    {
+      "title": "Categories",
+      "path": "/tags/",
+      "iconName": "icon-blog"
+    },
+    {
+      "title": "About",
+      "path": "/en/about/",
+      "iconName": "icon-about"
+    }
+  ],
+  "zh": [
+    {
+      "title": "首页",
+      "path": "/",
+      "iconName": "icon-home"
+    },
+    {
+      "title": "归档",
+      "path": "/archives/",
+      "iconName": "icon-archive"
+    },
+    {
+      "title": "分类",
+      "path": "/tags/",
+      "iconName": "icon-blog"
+    },
+    {
+      "title": "技术网址",
+      "path": "/links/",
+      "iconName": "icon-links"
+    },
+    {
+      "title": "关于",
+      "path": "/about/",
+      "iconName": "icon-about"
+    }
+  ]
+}

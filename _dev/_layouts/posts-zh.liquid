@@ -1,0 +1,46 @@
+---
+layout: zh.liquid
+---
+<section id="hero">
+  <div class="divimg">
+    <img src="{{ postImage }}" alt="">
+  </div>
+  <div class="content">
+    <h1>{{ title }}</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="post-info">
+    <a href="/archives/" class="btn">返回归档</a>
+    <div class="date">{{ date | date: "%Y-%m-%d" }}</div>
+    <ul class="tags">
+      {%- for tag in tags -%}
+      <li>
+        <a href="/tags/{{ tag }}/" class="btn-tag">{{ tag }}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <div class="wrapper">
+    {{ content | safe }}
+  </div>
+
+  <div class="switch-posts">
+    {% assign previousPost = collections.posts | getPreviousCollectionItem: page %}
+    {% assign nextPost = collections.posts | getNextCollectionItem: page %}
+    {% if previousPost %}
+    <div class="item">
+      <div class="lable">上一篇: </div>
+      <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+    </div>
+    {% endif %}
+    {% if nextPost %}
+    <div class="item">
+      <div class="lable">下一篇: </div>
+      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    </div>
+    {% endif %}
+  </div>
+
+</div>

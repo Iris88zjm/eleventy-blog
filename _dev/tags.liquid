@@ -1,0 +1,31 @@
+---
+layout: zh.liquid
+pageSectionID: tags
+title: All tags List
+pageDescription: All tags pages description
+---
+<section id="hero">
+  <div class="divimg">
+    <picture>
+      <source srcset="{{ baseURL | url }}/assets/img/2.webp">
+      <source srcset="{{ baseURL | url }}/assets/img/2.jpg">
+      <img src="{{ baseURL | url }}/assets/img/2.jpg">
+    </picture>
+  </div>
+  <div class="content">
+    <h1>分类</h1>
+  </div>
+</section>
+<section class="container"> 
+  <ul>
+    {% assign sortedTag = collections.tagList | reversePosts %}
+    {% for tag in sortedTag %}
+      <li>              
+        <a href="/tags/{{ tag | slug }}/">              
+          <span class="name">{{ tag }}</span>
+          <span class="count">({{ collections[tag] | size }})</span>
+        </a>
+      </li>      
+    {% endfor %}
+  </ul>
+</section>

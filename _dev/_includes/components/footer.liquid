@@ -1,0 +1,14 @@
+<footer>  
+  <div class="theme-switch">
+    <i class="iconfont icon-theme" aria-hidden="true"></i>
+    <input id="toggle-theme" class="toggle-theme" type="checkbox">
+    <label for="toggle-theme"></label>
+  </div>
+  <div class="copyright">
+    {% if lang == "en" %}
+    <p>© {{ "now" | date: "%Y" }} Iris Blog | Designed on Planet Earth.</p>
+    {% else %}
+    <p>© {{ "now" | date: "%Y" }} Iris 博客 | 来自地球的设计.</p>
+    {% endif %}
+  </div>
+</footer>

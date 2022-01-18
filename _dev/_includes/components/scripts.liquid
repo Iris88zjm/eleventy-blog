@@ -1,8 +1,13 @@
 
+  {% if pageSectionID == "homepage" %}
   <script src="https://cdn.staticfile.org/echarts/4.7.0/echarts.min.js"></script>
+  {% endif %}
   <script src="{{ baseURL | url }}/assets/js/wow.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/master.js"></script>
+  {% if pageSectionID == "loading" %}
+  <script src="{{ baseURL | url }}/assets/js/loading.js"></script>
+  {% endif %}
 
 </body>
 </html>

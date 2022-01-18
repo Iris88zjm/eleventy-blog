@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lazyload 1</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .lazyload {
+      background-color: #333;
+    }
+
+    .divimg {
+      width: 800px;
+      height: 600px;
+      margin-top: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div><span>supportLoading</span>: <span id="boolean"></span></div>
+  <div class="container">
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.jpg">
+      </picture>
+    </div>
+    <div class="divimg">
+      <picture>
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.webp 2x">
+        <source
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.jpg 2x">
+        <img class="lazyload" loading="lazy" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.jpg">
+      </picture>
+    </div>
+  </div>
+
+  <script>
+    const supportLoading = 'loading' in HTMLImageElement.prototype;
+    console.log(supportLoading);
+    let targetSpan = document.getElementById('boolean');
+    targetSpan.innerHTML = supportLoading;
+
+    if (supportLoading) {
+      const imgTag = document.querySelectorAll('img[loading="lazy"]');
+      imgTag.forEach(img => {
+        let pictureTag = img.parentNode.children;
+        // console.log(pictureTag);
+        for (var i = 0; i < pictureTag.length; i++) {
+          // console.log(pictureTag[i].dataset);
+          if (pictureTag[i].dataset.srcset) {
+            pictureTag[i].srcset = pictureTag[i].dataset.srcset
+          }
+          if (pictureTag[i].dataset.src) {
+            pictureTag[i].src = pictureTag[i].dataset.src
+          }
+        }
+      });
+    } else {
+      const script = document.createElement('script');
+      script.src = 'images/lazysizes.min.js';
+      document.body.appendChild(script);
+    }
+  </script>
+</body>
+
+</html>

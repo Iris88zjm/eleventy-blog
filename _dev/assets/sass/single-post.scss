@@ -45,15 +45,23 @@
         flex-wrap: wrap;
 
         li {
-          margin-left: 5px;
+          margin-right: 5px;
 
           .btn-tag {
             padding: 6px 12px;
           }
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
-
+    .wrapper {
+      ul,
+      ol {
+        margin-left: 2rem;
+      }
+    }
     .switch-posts {
       margin-top : 30px;
       font-size  : 0.875rem;

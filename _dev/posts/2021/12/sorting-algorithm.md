@@ -3,10 +3,10 @@ layout: posts-zh.liquid
 pageSectionID: single-post
 title: js 十大排序算法
 postImage: /assets/img/2022/01/06-1.jpg
-pageDescription: 列举出 javacsript 十大排序算法
+pageDescription: 列举出 javascript 十大排序算法
 tags:  
-  - javacsript
-date: 2022-01-06
+  - javascript
+date: 2021-12-17
 ---
 
 以下几种排序动图演示 -> [点击这里](https://visualgo.net/en/sorting)

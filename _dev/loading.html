@@ -1,8 +1,8 @@
 ---
 layout: zh.liquid
 pageSectionID: loading
-title: loading
-pageDescription: loading description
+title: 图片懒加载 demo
+pageDescription: 图片懒加载 demo
 ---
 <section id="single-page">
   <section id="hero">
@@ -14,13 +14,13 @@ pageDescription: loading description
       </picture>
     </div>
     <div class="content">
-      <h1>关于</h1>
+      <h1>图片懒加载 demo</h1>
     </div>
   </section>
   <section class="container">
     <style>
       .container .divimg {
-        width: 800px;
+        width: 100%;
         height: 600px;
         margin-top: 30px;
         border-radius: 10px;
@@ -34,112 +34,112 @@ pageDescription: loading description
         object-fit: cover;
       }
     </style>
-    <div><span>supportLoading</span>: <span id="boolean"></span></div>
+    <div><span>浏览器是否支持 loading</span>: <span id="boolean"></span></div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-elements-wood-look-wooden-light-panels-decor-off@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-shapes-rgb-light-panels-hexagons-triangles-desk-battlestation-beast-mode@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.webp, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/homepage/nanoleaf-essentials-rgb-bulbs-lightstrips-bedroom-color-changing@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-product-video-poster-a@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-second@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-battlestation-first@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-first@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-livingroom-second@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-first@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-entertainment-second@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-first@1x.jpg">
       </picture>
     </div>
     <div class="divimg">
       <picture>
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.webp, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.webp 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.webp 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.webp 2x">
         <source
-          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.jpg, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.jpg 2x">
+          data-srcset="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.jpg 1x, https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@2x.jpg 2x">
         <img class="lazyload" loading="lazy" src="{{ baseURL | url }}/assets/img/loading.svg" data-src="https://us-cdn.nanoleaf.me/assets/img/products/lines/lines-bedroom-second@1x.jpg">
       </picture>
     </div>

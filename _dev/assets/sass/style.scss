@@ -260,7 +260,7 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
     line-height   : 1.25rem;
     font-weight   : bold;
     text-transform: uppercase;
-    // border        : 1px solid $light-color-one;
+    border        : 1px solid transparent;
   }
 
   .btn.btn-text {
@@ -360,7 +360,7 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
       a {
         display        : flex;
         justify-content: center;
-        padding        : 15px 0;
+        padding        : 12px 0;
         font-size      : 30px;
         line-height    : 30px;
         font-weight    : 600;
@@ -381,7 +381,7 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
         margin-bottom: 10px;
 
         a {
-          padding  : 3px 0;
+          padding  : 0;
           font-size: 20px;
         }
       }
@@ -763,7 +763,7 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
 
       .sub-menu {
         a {
-          padding    : 10px 0;
+          padding    : 6px 0;
           font-size  : 30px;
           line-height: 30px;
         }

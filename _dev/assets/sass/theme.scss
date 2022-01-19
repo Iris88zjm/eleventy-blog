@@ -18,6 +18,18 @@
       }
     }
   }
+
+  #single-post {
+    .wrapper,
+    .switch-posts {
+      a {
+        border-bottom: 1px solid $light-color-one;
+        &:hover {
+          border-bottom: 1px solid $light-color-two;
+        }
+      }
+    }
+  }
 }
 
 [data-theme="dark"] {
@@ -53,6 +65,18 @@
       color: $dark-color-one;
       &:hover {
       color: $dark-color-two;
+      }
+    }
+  }
+  
+  #single-post {
+    .wrapper,
+    .switch-posts {
+      a {
+        border-bottom: 1px solid $dark-color-one;
+        &:hover {
+          border-bottom: 1px solid $dark-color-two;
+        }
       }
     }
   }

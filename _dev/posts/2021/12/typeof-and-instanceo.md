@@ -5,8 +5,8 @@ title: js中typeof和instanceof用法区别
 postImage: /assets/img/2022/01/03-1.jpg
 pageDescription: typeof和instanceof都可以用来判断变量，它们的用法有很大区别
 tags: 
-  - javacsript
-date: 2022-01-03
+  - javascript
+date: 2021-12-22
 ---
 
 ## typeof和instanceof的区别

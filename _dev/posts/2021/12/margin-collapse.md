@@ -7,7 +7,7 @@ pageDescription: CSS 中关于 margin collapse 的问题与解决方法
 tags:  
   - css
   - html
-date: 2022-01-04
+date: 2021-12-10
 ---
 ## Margin Collapse 的定义
 在W3C的规范中，关于 margin collapse 的描述如下：

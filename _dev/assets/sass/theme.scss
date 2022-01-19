@@ -80,6 +80,20 @@
       }
     }
   }
+
+  #tags,
+  #single-tag {
+    .container {
+      .see-all-tags {
+        a {
+          border-bottom: 1px solid $dark-color-one;
+          &:hover {
+            border-bottom: 1px solid $dark-color-two;
+          }
+        }
+      }
+    }
+  }
 }
 
 

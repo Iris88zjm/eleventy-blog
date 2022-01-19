@@ -20,11 +20,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./_dev/assets");
 
   eleventyConfig.addCollection("posts", function(collection) {
-      return collection.getFilteredByGlob("_dev/posts/**/**/*.md");
+      return collection.getFilteredByGlob("_dev/posts/**/**/*.md").reverse();
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1).sort().reverse();
   }
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function(collection) {

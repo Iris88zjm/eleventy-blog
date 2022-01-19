@@ -2,16 +2,14 @@
 layout: zh.liquid
 pageSectionID: archives
 pageDescription: All archives pages description
+pagination:
+  data: collections.posts
+  size: 12  
+  alias: postsList
+permalink: "archives/{{ pagination.pageNumber | plus: 1 }}/index.html"
 ---
 <section id="hero">
   <div class="divimg" style="background: radial-gradient(ellipse farthest-side at 76% 76%, rgba(245, 228, 212, 0.25) 2%, rgba(255, 255, 255, 0) calc(2% + 1px)), radial-gradient(circle at 76% 53%, #fef6ec 2%, rgba(255, 255, 255, 0) 2.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;">
-    {% comment %}
-    <picture>
-      <source srcset="{{ baseURL | url }}/assets/img/2.webp">
-      <source srcset="{{ baseURL | url }}/assets/img/2.jpg">
-      <img src="{{ baseURL | url }}/assets/img/2.jpg">
-    </picture>
-    {% endcomment %}
   </div>
   <div class="content">
     <h1>归档</h1>
@@ -21,8 +19,41 @@ pageDescription: All archives pages description
 <section class="container">
   <div class="title">文章列表<span class="total-counts">({{ collections.posts | size }})</span></div>
   <section class="container-left">
-    {% assign postsList = collections.posts | reversePosts %}
+    {% comment %}{% assign postsList = collections.posts | reversePosts %}{% endcomment %}
     {% include './components/postsList' %}
+
+    <div class="pagination">
+      <ul>  
+        <li>
+          {% if page.url != pagination.href.first %}
+          <a href="{{ pagination.href.first }}">First</a>
+          {% else %}
+          <span>First</span>
+          {% endif  %}
+        </li>
+        <li>
+          {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}"><i class="iconfont icon-prev" aria-hidden="true"></i></a>
+          {% else %}
+          <span><i class="iconfont icon-prev" aria-hidden="true"></i></span>
+          {% endif %}
+        </li>
+        <li>
+          {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}"><i class="iconfont icon-next" aria-hidden="true"></i></a>
+          {% else %}
+          <span><i class="iconfont icon-next" aria-hidden="true"></i></span>
+          {% endif %}
+        </li>        
+        <li>
+          {% if page.url != pagination.href.last %}
+          <a href="{{ pagination.href.last }}">Last</a>
+          {% else %}
+          <span>Last</span>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="container-right">
     <section class="right-block tags">
@@ -46,7 +77,7 @@ pageDescription: All archives pages description
         <a href="javascript:void(0)">Current Posts</a>
       </h3>
       <ul>
-        {%- for post in postsList limit:3 -%}
+        {%- for post in collections.posts limit:3 -%}
           <li>              
             <a href="{{ post.url }}">{{ post.data.title }}</a>
           </li>      

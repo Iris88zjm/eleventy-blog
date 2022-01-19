@@ -6,7 +6,7 @@ postImage: /assets/img/2022/01/demo.jpg
 pageDescription: Linux中zip压缩和unzip解压缩命令详解
 tags: 
   - linux
-date: 2022-01-11
+date: 2022-01-05
 ---
 
 1、把/home目录下面的mydata目录压缩为mydata.zip

@@ -7,7 +7,7 @@
     },
     {
       "title": "Archives",
-      "path": "/en/archives/",
+      "path": "/en/archives/1/",
       "iconName": "icon-archive"     
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "title": "归档",
-      "path": "/archives/",
+      "path": "/archives/1/",
       "iconName": "icon-archive"
     },
     {

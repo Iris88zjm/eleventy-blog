@@ -18,13 +18,25 @@ eleventyComputed:
   title: 分类 - {{ tag }}
 ---
 <section id="hero">
-  <div class="divimg">
-    <picture>
-      <source srcset="{{ baseURL | url }}/assets/img/2.webp">
-      <source srcset="{{ baseURL | url }}/assets/img/2.jpg">
-      <img src="{{ baseURL | url }}/assets/img/2.jpg">
-    </picture>
-  </div>
+  <div class="divimg"
+  {% if tag == "css" %}
+  style="background-image: linear-gradient(to right, #24c6dc, #514a9d)"
+  {% elsif tag == "eleventy"%}
+  style="background-image: linear-gradient(to right, #f3cd13, #f35858)"
+  {% elsif tag == "html"%}
+  style="background-image: linear-gradient(to right, #dd5e89, #f7bb97)"
+  {% elsif tag == "javascript"%}
+  style="background-image: linear-gradient(to right, #3ca55c, #b5ac49)"
+  {% elsif tag == "linux"%}
+  style="background-image: linear-gradient(to right, #4cb8c4, #3cd3ad)"
+  {% elsif tag == "tech" %}
+  style="background-image: linear-gradient(to right, #4776e6, #8e54e9)"
+  {% elsif tag == "wordpress" %}
+  style="background-image: linear-gradient(to right, #c04848, #480048)"
+  {% else %}
+  style="background-image: linear-gradient(to right, #7028e4, #e5b2ca)"
+  {% endif %}
+  ></div>
   <div class="content">
     <h1>分类 - {{ tag }}</h1>
   </div>

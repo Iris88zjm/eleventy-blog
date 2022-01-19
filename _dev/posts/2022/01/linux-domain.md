@@ -6,7 +6,7 @@ postImage: /assets/img/2022/01/demo.jpg
 pageDescription: linux 多域名绑定
 tags: 
   - linux
-date: 2022-01-07
+date: 2022-01-04
 ---
 
 域名配置文件的路径 /etc/apache2/sites-available/

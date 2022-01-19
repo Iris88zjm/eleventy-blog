@@ -1,28 +1,72 @@
 ---
+layout: zh.liquid
+pageSectionID: paged-array
 pagination:
   data: testdata
-  size: 2
+  size: 5
 testdata:
- - item1
- - item2
- - item3
- - item4
- - item5
- - item6
+- item1
+- item2
+- item3
+- item4
+- item5
+- item6
+- item7
+- item8
+- item9
+permalink: "paged-array/{{ pagination.pageNumber | plus: 1 }}/index.html"
 ---
-
-{{ pagination.pages }}
-{% comment %}
-<nav aria-labelledby="my-pagination">
-  <h2 id="my-pagination">This is my Pagination</h2>
-  <ol>
-    <li>{% if page.url != pagination.page.first %}<a href="{{ pagination.page.first }}">First</a>{% else %}First{% endif %}</li>
-    <li>{% if pagination.page.previous %}<a href="{{ pagination.page.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-{%- for pageEntry in pagination.pages %}
-    <li><a href="{{ pagination.pages[ loop.index0 ] }}"{% if page.url == pagination.pages[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-{%- endfor %}
-    <li>{% if pagination.page.next %}<a href="{{ pagination.page.next }}">Next</a>{% else %}Next{% endif %}</li>
-    <li>{% if page.url != pagination.page.last %}<a href="{{ pagination.page.last }}">Last</a>{% else %}Last{% endif %}</li>
-  </ol>
-</nav>
-{% endcomment %}
+<section id="single-page">
+  <section id="hero">
+    <div class="divimg">
+      <picture>
+        <source srcset="{{ baseURL | url }}/assets/img/1.webp">
+        <source srcset="{{ baseURL | url }}/assets/img/1.jpg">
+        <img src="{{ baseURL | url }}/assets/img/1.jpg">
+      </picture>
+    </div>
+    <div class="content">
+      <h1>关于</h1>
+    </div>
+  </section>
+  
+  <section class="container">
+    <div class="content-block">
+      {{ pagination.pages[pagination.pageNumber] }}
+      <br/>
+      <div class="pagination">
+        <ul>  
+          <li>
+            {% if page.url != pagination.href.first %}
+            <a href="{{ pagination.href.first }}">First</a>
+            {% else %}
+            <span>First</span>
+            {% endif  %}
+          </li>
+          <li>
+            {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}"><i class="iconfont icon-prev" aria-hidden="true"></i></a>
+            {% else %}
+            <span><i class="iconfont icon-prev" aria-hidden="true"></i></span>
+            {% endif %}
+          </li>
+          <li>
+            {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}"><i class="iconfont icon-next" aria-hidden="true"></i></a>
+            {% else %}
+            <span><i class="iconfont icon-next" aria-hidden="true"></i></span>
+            {% endif %}
+          </li>
+          
+          <li>
+            {% if page.url != pagination.href.last %}
+            <a href="{{ pagination.href.last }}">Last</a>
+            {% else %}
+            <span>Last</span>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>

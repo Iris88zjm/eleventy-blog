@@ -85,7 +85,7 @@ if (supportLoading) {
 }
 ```
 
-## 相关链接
+### 相关链接
 
 <a href="{{ baseURL | url }}/loading/" target="_blank">本站图片懒加载 demo</a>
 

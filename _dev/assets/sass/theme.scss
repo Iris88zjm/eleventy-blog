@@ -34,7 +34,6 @@
 
 [data-theme="dark"] {
   blockquote {
-    border: 1px solid $dark-color-one;
     border-left: 3px solid $light-color-two;
     background-color: $dark-bg-color;
     &:before {

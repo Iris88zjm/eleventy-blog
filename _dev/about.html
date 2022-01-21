@@ -1,28 +1,105 @@
 ---
 layout: zh.liquid
-pageSectionID: about
+pageSectionID: single-post
 ---
-<section id="single-page">
-  <section id="hero">
-    <div class="divimg">
-      <picture>
-        <source srcset="{{ baseURL | url }}/assets/img/1.webp">
-        <source srcset="{{ baseURL | url }}/assets/img/1.jpg">
-        <img src="{{ baseURL | url }}/assets/img/1.jpg">
-      </picture>
-    </div>
-    <div class="content">
-      <h1>关于</h1>
-    </div>
-  </section>
-  
-  <section class="container">
+<section id="hero">
+  <div class="divimg" style="background: linear-gradient(121.28deg, #000000 0%, #FFFFFF 100%), linear-gradient(121.28deg, #FFB800 0%, #FFFFFF 100%), linear-gradient(140.54deg, #7000FF 0%, #001AFF 72.37%), linear-gradient(307.43deg, #FFE927 0%, #00114D 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #FFFFFF 0%, #A7AA00 100%), radial-gradient(100.22% 100% at 70.57% 0%, #7A3B00 0%, #1DAC92 100%); background-blend-mode: difference, soft-light, difference, difference, difference, exclusion;">
+    {% comment %}
+    <picture>
+      <source srcset="{{ baseURL | url }}/assets/img/1.webp">
+      <source srcset="{{ baseURL | url }}/assets/img/1.jpg">
+      <img src="{{ baseURL | url }}/assets/img/1.jpg">
+    </picture>
+    {% endcomment %}
+  </div>
+  <div class="content">
+    <h1>关于</h1>
+  </div>
+</section>
+<style>
+@media screen and (min-width: 0px) {
+  .content-block { max-width: 600px; }
+  .content-block .text { max-width: 550px; }
+  .tech-lists { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; margin-top: 30px; }
+  .tech-lists .tech-item { width: calc((100% - 20px) / 3); margin: 0 10px 10px 0; border-radius: 10px; overflow: hidden; }
+  .tech-lists .tech-item:nth-child(3n) { margin: 0 0 10px 0; }
+}
+
+@media screen and (min-width: 768px) {
+  .tech-lists .tech-item { width: calc((100% - 50px) / 6); }
+  .tech-lists .tech-item:nth-child(3n) { margin: 0 10px 10px 0; }
+  .tech-lists .tech-item:nth-child(6n) { margin: 0 0 10px 0; }
+}
+</style>
+<section class="container">
+  <div class="wrapper">
     <div class="content-block">
-      <h2>本站简介</h2>
+      <h2>关于本站</h2>
       <div class="text">
-        <p>本博客网站使用的框架是 Hexo，主题是 Butterfly，主要是记录我计算机相关的学习笔记，时不时会写写文章，海纳百川、包罗万象、不限定主题、just for fun，同时我也会分享经验，记录生活中的点点滴滴、每时每刻的想法，若能无心插柳柳成荫地帮到友友们，让你们感到开心放松，一切的付出便是值得的。瞧瞧地说一声，你们能在浩瀚互联网的犄角旮旯里访问到本站，这让我感到非常幸运~</p>
-        <p>俗话说，好记性不如烂笔头，何况我的记性也不好，且来世一趟，想留下些一些有价值的东西，这可能就是我搭建博客的初心吧。在我看来，博客像是一个笔记本、一个日记簿记录着你的所思所想，也像是一名老师、一位学长或学姐给你指点迷津，甚至像是一台时光机去带你领略旅程中的精彩瞬间，it can be everything；博客更像是博主的一面镜子，可称之为“心灵的别墅”，不同功能的页面映射着博主内心不同的一面，无需和博主面对面地交谈就可以像老朋友一样的了解 Ta，也许，这就是博客的魅力之所在。</p>
+        <p>本博客网站使用的框架是 <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>. 主题是自定义的, 用了 <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a> & <a href="http://en.sass.hk/" target="_blank">SCSS</a>. 支持多语言开发.</p>
+        <p>本站主要记录本人在开发过程中遇到的问题和解决方法, 海纳百川, 包罗万象, Just for fun! 希望您在浩瀚互联网的犄角旮旯里访问到本站, 并且能有所收获.</p>
+        <p>俗话说, 好记性不如烂笔头. 把所学的知识, 所遇的问题, 再记录下来会让自己印象深刻. 希望这博客自己能坚持维护, 让自己更快, 更好的成长, 同时还能帮助他人.</p>
+        <p>每个人都有自己的梦想, 并且一直努力实现自己的人生价值. 而我只希望每天快乐, 平安, 健康!</p>
       </div>
     </div>
-  </section>
+    <div class="content-block">
+      <div class="tech-lists">
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/node.jpg" alt="node">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/git.jpg" alt="git">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/webpack.jpg" alt="webpack">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/javascript.jpg" alt="javascript">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/html5.jpg" alt="html5">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/css3.jpg" alt="css3">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/sass.jpg" alt="sass">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/eleventy.jpg" alt="eleventy">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/shopify-liquid.jpg" alt="shopify-liquid">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/gulp.jpg" alt="gulp">
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/about/es6.jpg" alt="es6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

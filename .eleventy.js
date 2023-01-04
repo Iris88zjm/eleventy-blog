@@ -19,8 +19,11 @@ module.exports = function(eleventyConfig) {
   // Passthrough file copy '_dev/assets/' to '_production/assets' with no template processing
   eleventyConfig.addPassthroughCopy("./_dev/assets");
 
+  // Create drafts - https://giustino.blog/how-to-drafts-eleventy/
+  const now = new Date();
+  const publishedPosts = (post) => post.date <= now && !post.data.draft;
   eleventyConfig.addCollection("posts", function(collection) {
-      return collection.getFilteredByGlob("_dev/posts/**/**/*.md").reverse();
+      return collection.getFilteredByGlob("_dev/posts/**/**/*.md").filter(publishedPosts).reverse();
   });
 
   function filterTagList(tags) {

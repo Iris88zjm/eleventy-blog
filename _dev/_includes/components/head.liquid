@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}" data-theme="light">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="{{ baseURL | url }}/assets/img/icons/favicon.png" sizes="128x128">
-  <link rel="preload" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.css">
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animate.css" />
-  
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/style.css" media="all" />
-  {% if pageSectionID == "homepage" %}
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage.css" media="all" />
-  {% endif %} 
-  {% if pageSectionID == "links" %}
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/links.css" media="all" />
-  {% endif %}
-  {% if pageSectionID == "single-post" %}
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/single-post.css" media="all" />
-  {% endif %}
-  {% if pageSectionID == "single-tag" or  pageSectionID == "tags" %}
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/tags.css" media="all" />
-  {% endif %}
-  <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/theme.css" media="all" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="{{ baseURL | url }}/assets/img/icons/favicon.png" sizes="128x128">
+    <link rel="preload" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.css">
+    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animate.css"/>
 
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ pageDescription }}">
-  <meta property="og:locale" content="{{ lang }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:site_name" content="{{ siteName }}" />
-  <meta property="og:description" content="{{ pageDescription }}" />
-  <meta property="og:url" content="{{ baseURL | url }}{{ page.url | url }}" />
-  <meta property="og:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@IrisZhu">
-  <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ pageDescription }}" />
-  <meta name="twitter:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
-</head>
-<body class="{{ lang }}">
+    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/style.css" media="all"/>
+    {% if pageSlug == "homepage" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage.css" media="all"/>
+    {% endif %}
+    {% if pageSlug == "links" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/links.css" media="all"/>
+    {% endif %}
+    {% if pageSlug == "single-post" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/single-post.css" media="all"/>
+    {% endif %}
+    {% if pageSlug == "single-tag" or  pageSlug == "tags" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/tags.css" media="all"/>
+    {% endif %}
+    {% if pageSlug == "gsap" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/gsap.css" media="all"/>
+    {% endif %}
+    {% if pageSlug == "homepage-v2" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage-v2.css" media="all"/>
+    {% endif %}
+    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/theme.css" media="all"/>
+
+    <title>{{ title }}
+    </title>
+    <meta name="description" content="{{ pageDescription }}">
+    <meta property="og:locale" content="{{ lang }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:site_name" content="{{ siteName }}"/>
+    <meta property="og:description" content="{{ pageDescription }}"/>
+    <meta property="og:url" content="{{ baseURL | url }}{{ page.url | url }}"/>
+    <meta property="og:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@IrisZhu">
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="{{ pageDescription }}"/>
+    <meta name="twitter:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
+  </head>
+  <body class="{{ lang }}"></body>
+</html>>>

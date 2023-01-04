@@ -1,6 +1,6 @@
 ---
 layout: posts-zh.liquid
-pageSectionID: single-post
+pageSlug: single-post
 title: 如何让自己的电脑变得更快
 postImage: /assets/img/2022/01/demo.jpg
 pageDescription: 如何让自己的电脑变得更快

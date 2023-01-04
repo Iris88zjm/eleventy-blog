@@ -1,12 +1,16 @@
 
-  {% if pageSectionID == "homepage" %}
+  {% if pageSlug == "homepage" %}
   <script src="https://cdn.staticfile.org/echarts/4.7.0/echarts.min.js"></script>
   {% endif %}
   <script src="{{ baseURL | url }}/assets/js/wow.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/master.js"></script>
-  {% if pageSectionID == "loading" %}
+  {% if pageSlug == "loading" %}
   <script src="{{ baseURL | url }}/assets/js/loading.js"></script>
+  {% endif %}
+  {% if pageSlug == "gsap" or pageSlug == "homepage-v2" %}
+  <script src="{{ baseURL | url }}/assets/js/gsap.js"></script>
+  <script src="{{ baseURL | url }}/assets/js/gsap-main.js"></script>
   {% endif %}
 
 </body>

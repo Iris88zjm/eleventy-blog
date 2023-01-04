@@ -1,6 +1,6 @@
 ---
 layout: posts-zh.liquid
-pageSectionID: single-post
+pageSlug: single-post
 title: linux 多域名绑定
 postImage: /assets/img/2022/01/demo.jpg
 pageDescription: linux 多域名绑定

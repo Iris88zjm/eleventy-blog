@@ -5,7 +5,6 @@ title: 图片懒加载处理
 postImage: /assets/img/2022/01/07-1.jpg
 pageDescription: 兼容大部分浏览器的图片懒加载处理
 tags: 
-  - html
   - javascript
 date: 2022-04-17
 ---

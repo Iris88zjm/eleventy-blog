@@ -6,7 +6,6 @@ postImage: /assets/img/2022/01/04-1.jpg
 pageDescription: CSS 中关于 margin collapse 的问题与解决方法
 tags:  
   - css
-  - html
 date: 2022-08-10
 ---
 ## Margin Collapse 的定义

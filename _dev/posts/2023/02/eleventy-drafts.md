@@ -5,7 +5,6 @@ title: 如何在 Eleventy 中创建草稿
 postImage: /assets/img/2022/01/07-1.jpg
 pageDescription: 如何在 Eleventy 中创建草稿
 tags: 
-  - eleventy
 date: 2023-02-04
 ---
 

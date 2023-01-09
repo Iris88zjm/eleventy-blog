@@ -8,9 +8,9 @@
   {% if pageSlug == "loading" %}
   <script src="{{ baseURL | url }}/assets/js/loading.js"></script>
   {% endif %}
-  {% if pageSlug == "gsap" or pageSlug == "homepage-v2" %}
-  <script src="{{ baseURL | url }}/assets/js/gsap.js"></script>
-  <script src="{{ baseURL | url }}/assets/js/gsap-main.js"></script>
+  {% if pageSlug == "gsap" %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> defer></script>
+  <script src="{{ baseURL | url }}/assets/js/demo/gsap-main.js"></script>
   {% endif %}
 
 </body>

@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: demo
-postImage: /assets/img/2022/01/demo.jpg
+postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: demo description
 tags: 
 date: 2025-01-20
@@ -39,8 +39,8 @@ draft: true
 
 <a href="https://music.163.com/">wangyiyun music</a>
 
-![1](/assets/img/1.jpg)
-<img src="/assets/img/1.jpg" alt="1">
+![1](/assets/img/2022/01/06-1.jpg)
+<img src="/assets/img/2022/01/06-1.jpg" alt="1">
 
 <iframe width="100%" height="415" src="https://www.youtube.com/embed/Pkmpj5PBp6g" title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

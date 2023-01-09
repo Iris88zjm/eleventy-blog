@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: Linux中zip压缩和unzip解压缩命令详解
-postImage: /assets/img/2022/01/demo.jpg
+postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: Linux中zip压缩和unzip解压缩命令详解
 tags: 
   - linux

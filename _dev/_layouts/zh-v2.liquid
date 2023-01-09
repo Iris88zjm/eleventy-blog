@@ -1,0 +1,22 @@
+---
+# baseURL: http://blog.huashunglass.com
+baseURL: http://localhost:8888
+lang: zh
+siteName: Iris 博客 | 中文
+pageDescription: no header and footer
+---
+
+{% include './components/head' %}
+    <main id="{{ pageSlug }}">
+      {{ content | safe }}
+      <div class="footer" style="position: fixed; bottom: 10px; left: 0; right: 0; text-align: center;">
+        <a href="{% if lang == 'zh' %}{{ baseURL | url }}/{% else %}{{ baseURL | url }}/{{ lang }}/{% endif %}" style="text-decoration: underline; {% if pageSlug == 'hero-kids' %}color: #FFF{% endif %}">Back to homepage</a>
+      </div>
+    </main>
+    {% if pageSlug == "hero-kids" %}
+    <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> defer></script>
+    <script src="{{ baseURL | url }}/assets/js/demo/hero-kids.js"></script>
+    {% endif %}
+  </body>
+</html>

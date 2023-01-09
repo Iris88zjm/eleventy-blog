@@ -103,40 +103,4 @@ $(function () {
             }
         });
     }
-
-    //   homepage-v2
-    if ($("#homepage-v2").length > 0) {
-
-        gsap.to("#homepage-v2 .divimg", {
-            duration: 5,
-            y: 50,
-            // yPercent: -5,
-            repeat: -1,
-            yoyo: true,
-        });
-
-        gsap.from("#homepage-v2 .drop", {
-            duration: 10,
-            x: 10,
-            xPercent: -50,
-            y: 20,
-            yPercent: -50,
-            repeat: -1,
-            rotation: 360,
-            yoyo: true,
-        });
-        $(".home-nav ul li a").on("click", function () {
-
-            let liIndex = $(this).parent().index();
-            $(".container .home").removeClass("active");
-            $(".container .home:nth-child(" + (liIndex + 1) + ")").addClass("active");
-            gsap.from(".home .content, .home .divimg", {
-                duration: 0.5,
-                opacity: 0,
-                y: 100,
-                ease: "power1.out"
-            });
-        });
-    }
-
 });

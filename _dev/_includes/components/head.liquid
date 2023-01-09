@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.css">
     <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animate.css"/>
 
+    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animation.css" media="all"/>
     <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/style.css" media="all"/>
     {% if pageSlug == "homepage" %}
       <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage.css" media="all"/>
@@ -23,10 +24,10 @@
       <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/tags.css" media="all"/>
     {% endif %}
     {% if pageSlug == "gsap" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/gsap.css" media="all"/>
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/demo/gsap.css" media="all"/>
     {% endif %}
-    {% if pageSlug == "homepage-v2" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage-v2.css" media="all"/>
+    {% if pageSlug == "hero-kids" %}
+      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/demo/hero-kids.css" media="all"/>
     {% endif %}
     <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/theme.css" media="all"/>
 
@@ -47,4 +48,4 @@
     <meta name="twitter:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
   </head>
   <body class="{{ lang }}"></body>
-</html>>>
+</html>

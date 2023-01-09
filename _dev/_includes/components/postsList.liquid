@@ -1,9 +1,8 @@
 <div class="article-wrapper">
   {%- for post in postsList -%}
   <div class="article-item">
-    <div class="divimg">
-      <img src="{{ post.data.postImage }}">
-    </div>
+    {% include './components/post-hero', tag: post.data.tags[0] %}
+
     <div class="info">
       <div class="article-tags">
         <i class="iconfont icon-tags" aria-hidden="true"></i>

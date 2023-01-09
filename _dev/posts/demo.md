@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: demo
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: demo description
 tags: 
 date: 2025-01-20

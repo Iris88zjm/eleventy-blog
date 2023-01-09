@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: HTML基本的头部标签
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: HTML基本的头部标签
 tags: 
   - html

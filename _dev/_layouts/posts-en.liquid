@@ -2,9 +2,8 @@
 layout: en.liquid
 ---
 <section id="hero">
-  <div class="divimg">
-    <img src="{{ postImage }}" alt="">
-  </div>
+  {% include './components/post-hero' %}
+  
   <div class="content">
     <h1>{{ title }}</h1>
   </div>

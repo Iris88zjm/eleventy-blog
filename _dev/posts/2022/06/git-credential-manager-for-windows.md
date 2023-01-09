@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: Windows 的 git 凭据管理器
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: Windows 的 git 凭据管理器
 tags: 
   - git

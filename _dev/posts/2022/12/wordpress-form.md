@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: wordpress 邮件接收不了
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: wordpress 邮件接收不了
 tags: 
   - wordpress

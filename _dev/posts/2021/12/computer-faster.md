@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: 如何让自己的电脑变得更快
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: 如何让自己的电脑变得更快
 tags: 
   - tech

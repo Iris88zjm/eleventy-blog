@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: linux 指定ftp用户 特定目录及权限
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: linux 指定ftp用户 特定目录及权限
 tags: 
   - linux

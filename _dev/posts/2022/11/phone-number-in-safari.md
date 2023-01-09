@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: 浏览器中电话号码样式
-postImage: /assets/img/2022/01/05-1.jpg
 pageDescription: 禁用手机浏览器电话号码的链接样式
 tags: 
   - html

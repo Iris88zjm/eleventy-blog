@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: js 十大排序算法
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: 列举出 javascript 十大排序算法
 tags:  
   - javascript

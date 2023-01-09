@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: 论id和class属性值加双引号与不加双引号的影响
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: 论id和class属性值加双引号与不加双引号的影响
 tags: 
   - html

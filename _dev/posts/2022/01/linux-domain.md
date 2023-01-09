@@ -2,7 +2,6 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: linux 多域名绑定
-postImage: /assets/img/2022/01/06-1.jpg
 pageDescription: linux 多域名绑定
 tags: 
   - linux

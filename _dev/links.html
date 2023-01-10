@@ -15,6 +15,9 @@ pageDescription: 技术网址 description
     </div>
     <ul>
       <li class="active">
+        <a href="#demo">Demo</a>
+      </li>
+      <li>
         <a href="#vue">VUE</a>
       </li>
       <li>
@@ -50,6 +53,39 @@ pageDescription: 技术网址 description
     </ul>
   </div>
   <div class="container-right">
+    <div class="link-item" id="demo">
+      <h2>Demo</h2>
+      <div class="item-wrapper">
+        <a class="item" href="{{ baseURL | url }}/demo/gsap/">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/links/default.svg" alt="defaul logo">
+          </div>
+          <div class="content">
+            <div class="lable">GSAP</div>
+            <p>GSAP Demo</p>
+          </div>
+        </a>
+        <a class="item" href="{{ baseURL | url }}/demo/hero-kids">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/links/default.svg" alt="defaul logo">
+          </div>
+          <div class="content">
+            <div class="lable">Hero demo</div>
+            <p>Full screen hero section</p>
+          </div>
+        </a>
+        <a class="item" href="{{ baseURL | url }}/demo/loading">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/links/default.svg" alt="defaul logo">
+          </div>
+          <div class="content">
+            <div class="lable">Loading</div>
+            <p>Images lazy loading</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <div class="link-item" id="vue">
       <h2>VUE</h2>
       <div class="item-wrapper">
@@ -412,7 +448,7 @@ pageDescription: 技术网址 description
       <div class="item-wrapper">
         <a class="item" href="https://www.wpmee.com/">
           <div class="divimg">
-            <img src="https://www.wpmee.com/wp-content/uploads/2019/12/20191216105621374.ico" alt="11ty logo">
+            <img src="{{ baseURL | url }}/assets/img/links/wpmee.svg" alt="11ty logo">
           </div>
           <div class="content">
             <div class="lable">wordpress 主题</div>

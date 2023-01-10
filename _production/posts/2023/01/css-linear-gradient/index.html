@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="http://blog.huashunglass.com/assets/img/icons/favicon.png" sizes="128x128">
+    <link rel="preload" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2922698_gd77y3bs9yw.css">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animate.css">
+
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animation.css" media="all">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/style.css" media="all">
+    
+    
+    
+      <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/single-post.css" media="all">
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/theme.css" media="all">
+
+    <title>css linear-gradient</title>
+    <meta name="description" content="css linear-gradient">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="css linear-gradient">
+    <meta property="og:site_name" content="Iris 博客 | 中文">
+    <meta property="og:description" content="css linear-gradient">
+    <meta property="og:url" content="http://blog.huashunglass.com/posts/2023/01/css-linear-gradient/">
+    <meta property="og:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@IrisZhu">
+    <meta name="twitter:title" content="css linear-gradient">
+    <meta name="twitter:description" content="css linear-gradient">
+    <meta name="twitter:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+  </head>
+  <body class="zh"></body>
+</html>
+
+<header>
+  <nav>
+    <div class="toggle-menu">
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+    </div>
+    <div class="menus-container">
+      <div class="wrapper">
+        <div class="close-menus">
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          
+          
+          
+    
+          
+          <li>
+            <a href="/">
+              
+              <div class="lable">首页</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/archives/1/">
+              
+              <div class="lable">归档</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/tags/">
+              
+              <div class="lable">分类</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/links/">
+              
+              <div class="lable">技术网址</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/about/">
+              
+              <div class="lable">关于</div>
+            </a>
+            
+    
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <a class="logo" href="http://blog.huashunglass.com/">
+      <img src="http://blog.huashunglass.com/assets/img/icons/favicon.png" alt="Logo">
+    </a>
+    <div id="language-switcher">
+      <div class="current-language">
+        
+        <i class="iconfont icon-zh active" aria-hidden="true"></i>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<main id="single-post">
+    <section id="hero">
+  <div class="divimg" style="
+   background-image: linear-gradient(45deg, #24c6dc, #514a9d)
+  ">
+  
+  <h1></h1>
+  
+</div>
+  
+  <div class="content">
+    <h1>css linear-gradient</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="post-info">
+    <a href="/archives/1/" class="btn">返回归档</a>
+    <div class="date">2023-01-10</div>
+    <ul class="tags"><li>
+        <a href="/tags/css/" class="btn-tag">css</a>
+      </li></ul>
+  </div>
+
+  <div class="wrapper">
+    <p>linear-gradient(): 创建了一个由两个或多个颜色沿直线渐进过渡的图像。其结果是一个<gradient>数据类型的对象，它是<image>的一种特殊类型。</image></gradient></p>
+<pre class="language-css line-numbers" data-language="css"><code class="language-css line-numbers" data-language="css"><span class="token line-number" aria-hidden="true"></span><span class="token comment">/* A gradient tilted 45 degrees,
+<span class="token line-number" aria-hidden="true"></span>   starting blue and finishing red */</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:blue" aria-hidden="true"></span>blue</span><span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token line-number" aria-hidden="true"></span>
+<span class="token line-number" aria-hidden="true"></span><span class="token comment">/* A gradient going from the bottom right to the top left corner,
+<span class="token line-number" aria-hidden="true"></span>   starting blue and finishing red */</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">linear-gradient</span><span class="token punctuation">(</span>to left top<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:blue" aria-hidden="true"></span>blue</span><span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token line-number" aria-hidden="true"></span>
+<span class="token line-number" aria-hidden="true"></span><span class="token comment">/* Color stop: A gradient going from the bottom to top,
+<span class="token line-number" aria-hidden="true"></span>   starting blue, turning green at 40% of its length,
+<span class="token line-number" aria-hidden="true"></span>   and finishing red */</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">linear-gradient</span><span class="token punctuation">(</span>0deg<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:blue" aria-hidden="true"></span>blue</span><span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:green" aria-hidden="true"></span>green</span> 40%<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token line-number" aria-hidden="true"></span>
+<span class="token line-number" aria-hidden="true"></span><span class="token comment">/* Color hint: A gradient going from the left to right,
+<span class="token line-number" aria-hidden="true"></span>   starting red, getting to the midpoint color
+<span class="token line-number" aria-hidden="true"></span>   10% of the way across the length of the gradient,
+<span class="token line-number" aria-hidden="true"></span>   taking the rest of the 90% of the length to change to blue */</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">linear-gradient</span><span class="token punctuation">(</span>.25turn<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span><span class="token punctuation">,</span> 10%<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:blue" aria-hidden="true"></span>blue</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token line-number" aria-hidden="true"></span>
+<span class="token line-number" aria-hidden="true"></span><span class="token comment">/* Multi-position color stop: A gradient tilted 45 degrees,
+<span class="token line-number" aria-hidden="true"></span>   with a red bottom-left half and a blue top-right half,
+<span class="token line-number" aria-hidden="true"></span>   with a hard line where the gradient changes from red to blue */</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span> 0 50%<span class="token punctuation">,</span> <span class="token color"><span class="color-preview" style="--color-value:blue" aria-hidden="true"></span>blue</span> 50% 100%<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3>side-or-corner</h3>
+<p>梯度线的起点位置。如果指定了，它由 to 这个词和最多两个关键词组成：一个表示水平面（left 或 right），另一个表示垂直面（top 或 bottom）。侧面关键词的顺序并不重要。如果没有指定，则默认为 to bottom。
+to top, to bottom, to left, 和 to right 分别相当于0度、180度、270度和90度的角度。其他的值被翻译成一个角度。</p>
+<h3>angle</h3>
+<p>梯度线的方向角。0deg的值相当于 to top；增加的值从这里开始顺时针旋转。</p>
+<h3>linear-color-stop</h3>
+<p>一个 color-stop 的<color>值，后面是一个或两个可选的stop positions，（每个都是沿梯度轴的<percentage>或<length>）。</length></percentage></color></p>
+<h3>color-hint</h3>
+<p>一个插值提示，定义渐变在相邻色块之间的进展情况。长度定义了在两个色块之间，渐变的颜色应该在哪一点达到颜色过渡的中点。如果省略，颜色过渡的中点就是两个色块之间的中点。</p>
+
+  </div>
+
+  <div class="switch-posts">
+    
+    
+    
+    
+    <div class="item">
+      <div class="lable">下一篇: </div>
+      <a href="/posts/2023/01/html-head-tag/">HTML基本的头部标签</a>
+    </div>
+    
+  </div>
+
+</div>
+</main>
+<footer>  
+  <div class="theme-switch">
+    <i class="iconfont icon-theme" aria-hidden="true"></i>
+    <input id="toggle-theme" class="toggle-theme" type="checkbox">
+    <label for="toggle-theme"></label>
+  </div>
+  <div class="copyright">
+    
+    <p>© 2023 Iris 博客 | 来自地球的设计.</p>
+    
+  </div>
+</footer>
+
+  
+  <script src="http://blog.huashunglass.com/assets/js/wow.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/master.js"></script>
+  
+  
+
+
+

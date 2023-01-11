@@ -19,6 +19,7 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "dependencies": {
+    "elasticlunr": "^0.9.5",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
     "eleventy-plugin-code-style-hooks": "^2.0.1",

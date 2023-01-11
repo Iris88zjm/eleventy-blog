@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: 如何让自己的电脑变得更快
-pageDescription: 如何让自己的电脑变得更快
+pageDescription: 使用简单的命令行，让自己的电脑变得更快
 tags: 
   - tech
 date: 2021-12-03

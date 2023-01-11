@@ -12,6 +12,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> defer></script>
   <script src="{{ baseURL | url }}/assets/js/demo/gsap-main.js"></script>
   {% endif %}
+  {% if pageSlug == "search" %}  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+  <script src="{{ baseURL | url }}/assets/js/search.js"></script>
+  {% endif %}
 
 </body>
 </html>

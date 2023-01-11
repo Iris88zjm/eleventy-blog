@@ -1,3 +1,4 @@
+const ORIGIN = $("html").data("origin");
 function scrollPageNav(scrollH, pageID, divID, row) {
   let value = $(divID).length;
   if (value > 0) {

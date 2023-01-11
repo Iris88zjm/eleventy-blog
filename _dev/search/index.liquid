@@ -1,0 +1,19 @@
+---
+layout: zh.liquid
+pageSlug: search
+---
+<section class="container">
+  <div class="container-left">
+    <div class="field">
+      {% comment %} <label for="searchField">Search for:</label> {% endcomment %}
+      <input type="search" placeholder="Search..." id="searchField" />
+    </div>
+    <div class="result">
+      <ul id="searchResults"></ul>
+      <div id="noResultsFound">
+        <p>没有搜索到你想要的结果，请重新查找.</p>
+      </div>
+    </div>
+  </div>
+  {% include './components/nav-right' %}
+</section>

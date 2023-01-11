@@ -2,10 +2,10 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: css linear-gradient
-pageDescription: css linear-gradient
+pageDescription: ""
 tags: 
 - css
-date: 2023-01-10
+date: 2023-01-01
 ---
 linear-gradient(): 创建了一个由两个或多个颜色沿直线渐进过渡的图像。其结果是一个<gradient>数据类型的对象，它是<image>的一种特殊类型。
 ```css

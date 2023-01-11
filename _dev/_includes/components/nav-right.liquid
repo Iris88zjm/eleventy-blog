@@ -1,0 +1,47 @@
+<section class="nav-right">
+  <section class="right-block tags">
+    <h3>
+      <a href="/tags/">Tags</a>
+    </h3>
+    <ul>
+      {% for tag in collections.tagList %}
+        <li>              
+          <a href="/tags/{{ tag | slug }}/">              
+            <span class="name">{{ tag }}</span>
+            <span class="count">({{ collections[tag] | size }})</span>
+          </a>
+        </li>      
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="right-block current-posts">
+    <h3>
+      <a href="javascript:void(0)">Current Posts</a>
+    </h3>
+    <ul>
+      {%- for post in collections.posts limit:3 -%}
+        <li>              
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>      
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="right-block current-posts">
+    <h3>
+      <a href="javascript:void(0)">Links</a>
+    </h3>
+    <ul>
+      <li>              
+        <a href="https://segmentfault.com/">思否</a>
+      </li>
+      <li>              
+        <a href="https://leetcode-cn.com/">力扣</a>
+      </li>
+      <li>              
+        <a href="https://codepen.io/">codepen</a>
+      </li>
+    </ul>
+  </section>
+</section>

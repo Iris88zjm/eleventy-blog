@@ -85,7 +85,7 @@ if (supportLoading) {
 
 ### 相关链接
 
-<a href="{{ baseURL | url }}/loading/" target="_blank">本站图片懒加载 demo</a>
+<a href="{{ baseURL | url }}/demo/loading/" target="_blank">本站图片懒加载 demo</a>
 
 <a href="[{{ baseURL | url }}/loading/](https://web.dev/browser-level-image-lazy-loading/)" target="_blank">浏览器不支持 lazy-loading 处理方式</a>
 

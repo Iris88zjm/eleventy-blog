@@ -73,6 +73,17 @@ video {
   width  : 100%;
 }
 
+
+input {
+  width: 100%;
+  border-radius: $border-radius;
+  border: 1px solid $light-border-grey-color;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
 ul li {
   list-style: none;
 }
@@ -283,8 +294,9 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
     left            : 0;
     right           : 0;
     top             : 0;
-    display         : flex;
-    justify-content : space-between;
+    display         : grid;
+    grid-template-columns: 68px 1fr 30px 30px;
+    grid-gap: 8px;
     align-items     : center;
     padding         : 0 20px;
     background-color: $light-color-one;
@@ -393,6 +405,7 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
 
       img {
         width: 30px;
+        margin: auto;
       }
     }
 
@@ -401,6 +414,8 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
       padding : 15px 0;
       color   : #fff;
       cursor  : pointer;
+      text-align: center;
+      grid-column: 4/5;
 
       .iconfont {
         font-size  : 1.5rem;
@@ -448,6 +463,15 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
       .select-language {
         opacity   : 1;
         visibility: visible;
+      }
+    }
+
+    .search {
+      color: #FFF;
+      text-align: center;
+      .iconfont {
+        font-size  : 1.5rem;
+        line-height: 1.875rem;
       }
     }
 
@@ -690,42 +714,42 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
           }
         }
       }
+    }
+  }
 
-      .container-right {
-        margin-top: 50px;
-      }
-
-      .right-block {
-        margin-bottom: 20px;
-        border-radius: $border-radius;
-        border       : 1px solid $light-border-grey-color;
+  .nav-right {
+    margin-top: 50px;
+  
+    .right-block {
+      margin-bottom: 20px;
+      border-radius: $border-radius;
+      border       : 1px solid $light-border-grey-color;
+      border-top   : 2px solid $light-color-two;
+  
+      h3 {
+        padding      : 12px 0;
+        text-align   : center;
         border-top   : 2px solid $light-color-two;
-
-        h3 {
-          padding      : 12px 0;
-          text-align   : center;
-          border-top   : 2px solid $light-color-two;
+        border-bottom: 1px solid $light-border-grey-color;
+      }
+  
+      ul {
+        margin: 20px;
+  
+        li {
           border-bottom: 1px solid $light-border-grey-color;
-        }
-
-        ul {
-          margin: 20px;
-
-          li {
-            border-bottom: 1px solid $light-border-grey-color;
-
-            &:last-child {
-              border-bottom: none;
-            }
-
-            a {
-              display        : flex;
-              justify-content: space-between;
-              padding        : 10px 0;
-
-              span {
-                display: block;
-              }
+  
+          &:last-child {
+            border-bottom: none;
+          }
+  
+          a {
+            display        : flex;
+            justify-content: space-between;
+            padding        : 10px 0;
+  
+            span {
+              display: block;
             }
           }
         }
@@ -758,15 +782,14 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
           width: calc(50% - 10px);
         }
       }
+    }
+  }
 
-      .container-right {
-        margin-top: 30px;
-      }
-
-      .right-block {
-        ul {
-          margin: 20px 40px;
-        }
+  .nav-right {
+    margin-top: 30px;
+    .right-block {
+      ul {
+        margin: 20px 40px;
       }
     }
   }
@@ -816,11 +839,6 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
         width: calc(100% - 270px);
       }
 
-      .container-right {
-        width     : 250px;
-        margin-top: 0;
-      }
-
       .article-wrapper {
         .article-item {
           .info {
@@ -833,11 +851,16 @@ pre.language-html.line-numbers .token.attr-value .token.punctuation {
           }
         }
       }
+    }
+  }
 
-      .right-block {
-        ul {
-          margin: 20px;
-        }
+  .nav-right {
+    width     : 250px;
+    margin-top: 0;
+
+    .right-block {
+      ul {
+        margin: 20px;
       }
     }
   }

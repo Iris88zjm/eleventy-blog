@@ -45,6 +45,13 @@
     <a class="logo" href="{% if lang == 'zh' %}{{ baseURL | url }}/{% else %}{{ baseURL | url }}/{{ lang }}/{% endif %}">
       <img src="{{ baseURL | url }}/assets/img/icons/favicon.png" alt="Logo">
     </a>
+
+    {% if pageSlug != "search" %}
+    <a class="search" href="{% if lang == 'zh' %}{{ baseURL | url }}/search/{% else %}{{ baseURL | url }}/{{ lang }}/search/{% endif %}">
+      <i class="iconfont icon-search" aria-hidden="true"></i>
+    </a>
+
+    {% endif %}
     <div id="language-switcher">
       <div class="current-language">
         {% comment %} <i class="iconfont icon-english {% if lang == 'en' %}active{% endif %}" aria-hidden="true"></i> {% endcomment %}

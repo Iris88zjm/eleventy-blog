@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: js中typeof和instanceof用法区别
-pageDescription: typeof和instanceof都可以用来判断变量，它们的用法有很大区别
+pageDescription: ""
 tags: 
   - javascript
 date: 2022-09-22

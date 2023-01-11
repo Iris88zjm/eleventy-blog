@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-theme="light" data-origin="http://blog.huashunglass.com">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="http://blog.huashunglass.com/assets/img/icons/favicon.png" sizes="128x128">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animate.css">
+
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animation.css" media="all">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/style.css" media="all">
+    
+    
+    
+      <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/single-post.css" media="all">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/theme.css" media="all">
+
+    <title>linux中zip压缩和unzip解压缩命令详解</title>
+    <meta name="description" content="">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="linux中zip压缩和unzip解压缩命令详解">
+    <meta property="og:site_name" content="Iris 博客 | 中文">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://blog.huashunglass.com/posts/2022/02/linux-zip-unzip/">
+    <meta property="og:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@IrisZhu">
+    <meta name="twitter:title" content="linux中zip压缩和unzip解压缩命令详解">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+  </head>
+  <body class="zh"></body>
+</html>
+
+<header>
+  <nav>
+    <div class="toggle-menu">
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+    </div>
+    <div class="menus-container">
+      <div class="wrapper">
+        <div class="close-menus">
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          
+          
+          
+    
+          
+          <li>
+            <a href="/">
+              
+              <div class="lable">首页</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/archives/1/">
+              
+              <div class="lable">归档</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/tags/">
+              
+              <div class="lable">分类</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/links/">
+              
+              <div class="lable">技术网址</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/about/">
+              
+              <div class="lable">关于</div>
+            </a>
+            
+    
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <a class="logo" href="http://blog.huashunglass.com/">
+      <img src="http://blog.huashunglass.com/assets/img/icons/favicon.png" alt="Logo">
+    </a>
+
+    
+    <a class="search" href="http://blog.huashunglass.com/search/">
+      <i class="iconfont icon-search" aria-hidden="true"></i>
+    </a>
+
+    
+    <div id="language-switcher">
+      <div class="current-language">
+        
+        <i class="iconfont icon-zh active" aria-hidden="true"></i>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<main id="single-post">
+    <section id="hero">
+  <div class="divimg" style="
+   background-image: linear-gradient(45deg, #4cb8c4, #3cd3ad)
+  ">
+  
+  <h1></h1>
+  
+</div>
+  
+  <div class="content">
+    <h1>linux中zip压缩和unzip解压缩命令详解</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="post-info">
+    <a href="/archives/1/" class="btn">返回归档</a>
+    <div class="date">2022-02-15</div>
+    <ul class="tags"><li>
+        <a href="/tags/linux/" class="btn-tag">linux</a>
+      </li></ul>
+  </div>
+
+  <div class="wrapper">
+    <p>1、把 /home 目录下面的 mydata 目录压缩为 mydata.zip</p>
+<p>zip -r mydata.zip mydata #压缩 mydata 目录</p>
+<p>2、把 /home 目录下面的 mydata.zip 解压到 mydatabak 目录里面</p>
+<p>unzip mydata.zip -d mydatabak</p>
+<p>3、把 /home 目录下面的 abc 文件夹和 123.txt 压缩成为 abc123.zip</p>
+<p>zip -r abc123.zip abc 123.txt</p>
+<p>4、把 /home 目录下面的 wwwroot.zip 直接解压到 /home 目录里面</p>
+<p>unzip wwwroot.zip</p>
+<p>5、把 /home 目录下面的 abc12.zip、abc23.zip、abc34.zip 同时解压到 /home 目录里面</p>
+<p>unzip abc*.zip</p>
+<p>6、查看把 /home 目录下面的 wwwroot.zip 里面的内容</p>
+<p>unzip -v wwwroot.zip</p>
+<p>7、验证 /home 目录下面的 wwwroot.zip 是否完整</p>
+<p>unzip -t wwwroot.zip</p>
+<p>8、把 /home 目录下面 wwwroot.zip 里面的所有文件解压到第一级目录</p>
+<p>unzip -j wwwroot.zip</p>
+<p>主要参数</p>
+<p>-c: 将解压缩的结果</p>
+<p>-l: 显示压缩文件内所包含的文件</p>
+<p>-p: 与 -c 参数类似, 会将解压缩的结果显示到屏幕上, 但不会执行任何的转换</p>
+<p>-t: 检查压缩文件是否正确</p>
+<p>-u: 与 -f 参数类似, 但是除了更新现有的文件外, 也会将压缩文件中的其它文件解压缩到目录中</p>
+<p>-v: 执行是时显示详细的信息</p>
+<p>-z: 仅显示压缩文件的备注文字</p>
+<p>-a: 对文本文件进行必要的字符转换</p>
+<p>-b: 不要对文本文件进行字符转换</p>
+<p>-C: 压缩文件中的文件名称区分大小写</p>
+<p>-j: 不处理压缩文件中原有的目录路径</p>
+<p>-L: 将压缩文件中的全部文件名改为小写</p>
+<p>-M: 将输出结果送到 more 程序处理</p>
+<p>-n: 解压缩时不要覆盖原有的文件</p>
+<p>-o: 不必先询问用户, unzip 执行后覆盖原有文件</p>
+<p>-P: 使用 zip 的密码选项</p>
+<p>-q: 执行时不显示任何信息</p>
+<p>-s: 将文件名中的空白字符转换为底线字符</p>
+<p>-V: 保留 VMS 的文件版本信息</p>
+<p>-X: 解压缩时同时回存文件原来的 UID/GID</p>
+<p>转载来源: <a href="http://blog.csdn.net/a19860903/article/details/46711869" target="_blank">http://blog.csdn.net/a19860903/article/details/46711869</a></p>
+
+  </div>
+
+  <div class="switch-posts">
+    
+    
+    
+    <div class="item">
+      <div class="lable">上一篇: </div>
+      <a href="/posts/2022/03/ftp-user-power/">linux 指定ftp用户 特定目录及权限</a>
+    </div>
+    
+    
+    <div class="item">
+      <div class="lable">下一篇: </div>
+      <a href="/posts/2022/01/linux-domain/">linux 多域名绑定</a>
+    </div>
+    
+  </div>
+
+</div>
+</main>
+<footer>  
+  <div class="theme-switch">
+    <i class="iconfont icon-theme" aria-hidden="true"></i>
+    <input id="toggle-theme" class="toggle-theme" type="checkbox">
+    <label for="toggle-theme"></label>
+  </div>
+  <div class="copyright">
+    
+    <p>© 2023 Iris 博客 | 来自地球的设计.</p>
+    
+  </div>
+</footer>
+
+  
+  <script src="http://blog.huashunglass.com/assets/js/wow.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/master.js"></script>
+  
+  
+  
+
+
+

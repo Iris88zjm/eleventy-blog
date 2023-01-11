@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-theme="light" data-origin="http://blog.huashunglass.com">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="http://blog.huashunglass.com/assets/img/icons/favicon.png" sizes="128x128">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animate.css">
+
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/animation.css" media="all">
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/style.css" media="all">
+    
+    
+    
+      <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/single-post.css" media="all">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://blog.huashunglass.com/assets/css/theme.css" media="all">
+
+    <title>linux 多域名绑定</title>
+    <meta name="description" content="">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="linux 多域名绑定">
+    <meta property="og:site_name" content="Iris 博客 | 中文">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://blog.huashunglass.com/posts/2022/01/linux-domain/">
+    <meta property="og:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@IrisZhu">
+    <meta name="twitter:title" content="linux 多域名绑定">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://blog.huashunglass.com/assets/img/icons/hk.svg">
+  </head>
+  <body class="zh"></body>
+</html>
+
+<header>
+  <nav>
+    <div class="toggle-menu">
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+    </div>
+    <div class="menus-container">
+      <div class="wrapper">
+        <div class="close-menus">
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          
+          
+          
+    
+          
+          <li>
+            <a href="/">
+              
+              <div class="lable">首页</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/archives/1/">
+              
+              <div class="lable">归档</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/tags/">
+              
+              <div class="lable">分类</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/links/">
+              
+              <div class="lable">技术网址</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/about/">
+              
+              <div class="lable">关于</div>
+            </a>
+            
+    
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <a class="logo" href="http://blog.huashunglass.com/">
+      <img src="http://blog.huashunglass.com/assets/img/icons/favicon.png" alt="Logo">
+    </a>
+
+    
+    <a class="search" href="http://blog.huashunglass.com/search/">
+      <i class="iconfont icon-search" aria-hidden="true"></i>
+    </a>
+
+    
+    <div id="language-switcher">
+      <div class="current-language">
+        
+        <i class="iconfont icon-zh active" aria-hidden="true"></i>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<main id="single-post">
+    <section id="hero">
+  <div class="divimg" style="
+   background-image: linear-gradient(45deg, #4cb8c4, #3cd3ad)
+  ">
+  
+  <h1></h1>
+  
+</div>
+  
+  <div class="content">
+    <h1>linux 多域名绑定</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="post-info">
+    <a href="/archives/1/" class="btn">返回归档</a>
+    <div class="date">2022-01-04</div>
+    <ul class="tags"><li>
+        <a href="/tags/linux/" class="btn-tag">linux</a>
+      </li></ul>
+  </div>
+
+  <div class="wrapper">
+    <p>域名配置文件的路径 /etc/apache2/sites-available/</p>
+<p>软链接路径 /etc/apache2/sites-enabled/</p>
+<p>登录XShell进入页面</p>
+<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> /etc/apache2/sites-available/ <span class="token comment"># 进入目录</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">ls</span> <span class="token comment"># 查看当前目录文件列表</span></code></pre>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2022/01/01-2.png" alt="当前目录文件列表">
+  </div>
+  <div class="img-desc">图 1: 当前目录文件列表</div>
+</div>
+<p>配置新域名(www.zhufupin.cn)</p>
+<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">cp</span> <span class="token number">201519</span>.conf zhufupin.conf <span class="token comment"># 复制文件</span></code></pre>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2022/01/01-3.png" alt="复制文件">
+  </div>
+  <div class="img-desc">图 2: 复制文件</div>
+</div>
+<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">vi</span> zhufupin.conf <span class="token comment"># 编辑文件</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token comment"># vi 命令进入文件时, 需要先按( i 键), 才能编辑文件; 编辑完成时保存, 需先按( Esc 键),然后按( : 键), 再输入 wq , 按回车, 这时文件保存成功</span></code></pre>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2022/01/01-4.png" alt="编辑文件">
+  </div>
+  <div class="img-desc">图 3: 编辑文件</div>
+</div>
+<p>此时配置文件弄好了, 还需要建立软链接</p>
+<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span> <span class="token comment"># 返回上级目录</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> /etc/apache2/sites-enabled/ <span class="token comment"># 进入目录</span>
+<span class="token line-number" aria-hidden="true"></span><span class="token function">ln</span> -s /etc/apache2/sites-available/zhufupin.conf <span class="token comment"># 建立新配置域名的软链接</span></code></pre>
+<p>然后需要重启 apache2 才能生效</p>
+<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span>/etc/init.d/apache2 restart</code></pre>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2022/01/01-5.png" alt="建立软链接 并重启">
+  </div>
+  <div class="img-desc">图 4: 建立软链接 并重启</div>
+</div>
+<p>此时服务器重启成功</p>
+<p>这时需要登录 ftp</p>
+<p>新建一个命名为 zhufupin 的文件夹上传到 /var/www/ 目录下</p>
+<p>然后把源码放在这个 zhufupin 文件夹里</p>
+<p>域名绑定成功, 访问 www.zhufupin.cn, 奇迹就出现啦</p>
+
+  </div>
+
+  <div class="switch-posts">
+    
+    
+    
+    <div class="item">
+      <div class="lable">上一篇: </div>
+      <a href="/posts/2022/02/linux-zip-unzip/">linux中zip压缩和unzip解压缩命令详解</a>
+    </div>
+    
+    
+    <div class="item">
+      <div class="lable">下一篇: </div>
+      <a href="/posts/2021/12/computer-faster/">如何让自己的电脑变得更快</a>
+    </div>
+    
+  </div>
+
+</div>
+</main>
+<footer>  
+  <div class="theme-switch">
+    <i class="iconfont icon-theme" aria-hidden="true"></i>
+    <input id="toggle-theme" class="toggle-theme" type="checkbox">
+    <label for="toggle-theme"></label>
+  </div>
+  <div class="copyright">
+    
+    <p>© 2023 Iris 博客 | 来自地球的设计.</p>
+    
+  </div>
+</footer>
+
+  
+  <script src="http://blog.huashunglass.com/assets/js/wow.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="http://blog.huashunglass.com/assets/js/master.js"></script>
+  
+  
+  
+
+
+

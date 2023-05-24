@@ -14,7 +14,7 @@ $(function () {
                             let endPositon = searchStr.length + startPositon;
                             separateTitle = docs[i].title.substr(0, startPositon) + '<b>' + docs[i].title.substr(startPositon, searchStr.length) + '</b>' + docs[i].title.substr(endPositon, docs[i].title.length);
                             // resultHtml += `<li><a href="${docs[i].id}" target="_blank">${docs[i].title}</a>`
-                            resultHtml += `<li><a href="${ORIGIN}/${docs[i].id}" target="_blank">${separateTitle}</a>`
+                            resultHtml += `<li><a href="${ORIGIN}${docs[i].id}" >${separateTitle}</a>`
 
                         }
                     }

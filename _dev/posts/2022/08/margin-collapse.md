@@ -1,8 +1,8 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: css 中关于 margin collapse 的问题与解决方法
-pageDescription: ""
+title: css margin collapse 
+pageDescription: css 中关于 margin 崩塌的问题与解决方法
 tags:  
   - css
 date: 2022-08-10

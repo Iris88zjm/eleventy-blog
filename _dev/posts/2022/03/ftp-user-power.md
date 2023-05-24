@@ -1,7 +1,7 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: linux 指定ftp用户 特定目录及权限
+title: linux 指定 ftp 用户 特定目录及权限
 pageDescription: ""
 tags: 
   - linux

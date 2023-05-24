@@ -1,8 +1,8 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: HTML基本的头部标签
-pageDescription: ""
+title: HTML meta 标签
+pageDescription: HTML 基本的头部标签
 tags: 
   - html
 date: 2023-01-03

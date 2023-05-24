@@ -1,8 +1,8 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: 用Elasticlunr为Eleventy网站添加搜索功能
-pageDescription: ""
+title: Eleventy 添加搜索功能
+pageDescription: "用 Elasticlunr 为 Eleventy 网站添加搜索功能"
 tags: 
 - eleventy
 date: 2023-01-11

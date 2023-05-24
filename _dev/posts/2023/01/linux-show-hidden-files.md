@@ -1,7 +1,7 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: 在linux下如何显示隐藏文件
+title: 在 linux 下如何显示隐藏文件
 pageDescription: ""
 tags: 
   - linux

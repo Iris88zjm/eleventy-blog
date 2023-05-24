@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: linux 多域名绑定
-pageDescription: ""
+pageDescription: 使用简单的几步命令，在 linux 下配置域名
 tags: 
   - linux
 date: 2022-01-04

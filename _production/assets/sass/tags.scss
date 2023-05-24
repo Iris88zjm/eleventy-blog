@@ -124,54 +124,54 @@
         &:nth-child(2n+1) {
           text-align: left;
         }
-        &:nth-child(1) {
+        &.css {
           a {
-            background-image: linear-gradient(to right, #24c6dc, #514a9d);
+            background-image: linear-gradient(45deg, #24c6dc, #514a9d);
           }
         }
-        &:nth-child(2) {
+        &.eleventy {
           a {
-            background-image: linear-gradient(to right, #f3cd13, #f35858);
+            background-image: linear-gradient(45deg, #f3cd13, #f35858);
           }
         }
-        &:nth-child(3) {
+        &.git {
           a {
-            background-image: linear-gradient(to right, #dd5e89, #f7bb97);
+            background-image: linear-gradient(45deg, #dd5e89, #f7bb97);
           }
         }
-        &:nth-child(4) {
+        &.gulp {
           a {
-            background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+            background-image: linear-gradient(45deg, #3ca55c, #b5ac49);
           }
         }
-        &:nth-child(5) {
+        &.html {
           a {
-            background-image: linear-gradient(to right, #4cb8c4, #3cd3ad);
+            background-image: linear-gradient(45deg, #4cb8c4, #3cd3ad);
           }
         }
-        &:nth-child(6) {
+        &.javascript {
           a {
-            background-image: linear-gradient(to right, #4776e6, #8e54e9);
+            background-image: linear-gradient(45deg, #4776e6, #8e54e9);
           }
         }        
-        &:nth-child(7) {
+        &.linux {
           a {
-            background-image: linear-gradient(to right, #c04848, #480048)
+            background-image: linear-gradient(45deg, #c04848, #480048);
           }
         }                
-        &:nth-child(8) {
+        &.tech {
           a {
-            background-image: linear-gradient(to right, #30cfd0, #330867)
+            background-image: linear-gradient(45deg, #30cfd0, #330867);
           }
         }               
-        &:nth-child(9) {
+        &.wordpress {
           a {
-            background-image: linear-gradient(to right, #7028e4, #e5b2ca)
+            background-image: linear-gradient(45deg, #7028e4, #e5b2ca);
           }
         }               
-        &:nth-child(10) {
+        &.else {
           a {
-            background-image: linear-gradient(to right, #f44336, #fc00ff)
+            background-image: linear-gradient(45deg, #f44336, #fc00ff);
           }
         }
       }

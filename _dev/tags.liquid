@@ -15,7 +15,7 @@ pageDescription: All tags pages description
   <ul>
     {% assign sortedTag = collections.tagList | reversePosts %}
     {% for tag in sortedTag %}
-      <li>              
+      <li class="{{ tag | slug }}">              
         <a href="/tags/{{ tag | slug }}/">{{ tag }} ({{ collections[tag] | size }})</a>
       </li>      
     {% endfor %}

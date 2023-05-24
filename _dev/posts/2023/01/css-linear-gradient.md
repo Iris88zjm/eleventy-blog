@@ -2,7 +2,7 @@
 layout: posts-zh.liquid
 pageSlug: single-post
 title: css linear-gradient
-pageDescription: ""
+pageDescription: CSS 背景渐变色使用
 tags: 
 - css
 date: 2023-01-01

@@ -1,14 +1,5 @@
-<div class="divimg" style="
-  {% if tag == 'css' %} background-image: {{ postHero[0] }}
-  {% elsif tag == 'eleventy'%} background-image: {{ postHero[1] }}
-  {% elsif tag == 'html'%} background-image: {{ postHero[2] }}
-  {% elsif tag == 'javascript'%} background-image: {{ postHero[3] }}
-  {% elsif tag == 'linux'%} background-image: {{ postHero[4] }}
-  {% elsif tag == 'tech' %} background-image: {{ postHero[5] }}
-  {% elsif tag == 'wordpress' %} background-image: {{ postHero[6] }}
-  {% elsif tag == 'git' %} background-image: {{ postHero[7] }}
-  {% else %} background-image: {{ postHero[8] }}
-  {% endif %}">
+{% comment %} tag: classname {% endcomment %}
+<div class="divimg {{ tag }}" >
   {% if pageSlug == "single-post" %}
   <h1>{{ post.data.title }}</h1>
   {% else %}

@@ -1,9 +1,10 @@
 ---
 layout: posts-zh.liquid
 pageSlug: single-post
-title: 如何在 Eleventy 中创建草稿
+title: Eleventy draft 文章草稿
 pageDescription: 如何在 Eleventy 中创建草稿
 tags: 
+- eleventy
 date: 2023-02-04
 ---
 

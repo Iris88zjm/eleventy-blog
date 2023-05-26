@@ -4,6 +4,20 @@
   {% endif %}
   <script src="{{ baseURL | url }}/assets/js/wow.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
+  {% if pageSlug == "archives" or pageSlug == "single-tag" %}
+  <script src="{{ baseURL | url }}/assets/js/masonry.pkgd.min.js"></script>
+  <script>
+    $('.article-wrapper').masonry({
+      // set itemSelector so .grid-sizer is not used in layout
+      itemSelector: '.article-item',
+      // use element for option
+      // columnWidth: '.grid-sizer',
+      gutter: $(window).outerWidth() >= 1600 ? 20 : 10,
+      percentPosition: true,
+      horizontalOrder: true
+    })
+  </script>
+  {% endif %}
   <script src="{{ baseURL | url }}/assets/js/master.js"></script>
   {% if pageSlug == "loading" %}
   <script src="{{ baseURL | url }}/assets/js/loading.js"></script>

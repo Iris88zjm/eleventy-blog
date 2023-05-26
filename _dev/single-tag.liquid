@@ -24,8 +24,9 @@ eleventyComputed:
   </div>
 </section>
 <section class="container">
-  <div class="see-all-tags">See <a href="{{ '/tags/' | url }}">all tags</a>.</div>
-
-  {% assign postsList = collections[tag] | reversePosts %}
-  {% include './components/postsList' %}
+  <section class="container-left">
+    <div class="see-all-tags">See <a href="{{ '/tags/' | url }}">all tags</a>.</div>
+    {% include './components/postsList', postsList: collections[tag] | reversePosts %}  
+  </section>
+  {% include './components/nav-right' %}
 </section>

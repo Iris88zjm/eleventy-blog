@@ -1,0 +1,65 @@
+
+footer {
+  padding: 30px var(--page-padding-lr);
+  background-color: var(--light-color-one);
+  color: #fff;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs-line-height);
+}
+footer .theme-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+footer .iconfont {
+  display: block;
+  margin-right: 16px;
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+}
+
+footer input {
+  display: none;
+
+}
+footer input:checked+label {
+  background-color: var(--light-color-two);
+}
+
+footer input:checked+label::before {
+  left: 23px;
+}
+
+footer label {
+  width: 52px;
+  height: 32px;
+  position: relative;
+  background-color: var(--light-border-grey-color);
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  border-radius: 20px;
+  display: block;
+  transition: var(--transition-animation);
+  cursor: pointer;
+
+}
+footer label::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-animation);
+}
+
+footer .old-link {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #FFF;
+}

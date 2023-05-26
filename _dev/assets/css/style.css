@@ -1,0 +1,148 @@
+@import url('./variable.css');
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-Regular.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Regular.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Regular.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-RegularItalic.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-RegularItalic.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-RegularItalic.woff') format('woff'), url('../fonts/woff2/Nanoleaf-RegularItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-Bold.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Bold.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Bold.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-Thin.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Thin.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Thin.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: thin;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-Medium.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Medium.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Medium.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-SemiBold.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-SemiBold.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-SemiBold.woff') format('woff'), url('../fonts/woff2/Nanoleaf-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'nanoleaf';
+  src: url('../fonts/otf/Nanoleaf-Black.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Black.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Black.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: 'nanoleaf', sans-serif;
+  color: var(--light-color-one);
+}
+
+img,
+video {
+  display: block;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--light-border-grey-color);
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs-line-height);
+  padding: 6px 12px;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+ol li {
+  list-style-position: inside;
+}
+
+button {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color-one);
+  transition: var(--transition-animation);
+}
+
+a:hover {
+  color: var(--light-color-two);
+}
+
+a:focus {
+  outline: none;
+}
+
+.font-size-xxl {
+  font-size: var(--font-size-xxl);
+  line-height: var(--font-size-xxl);
+}
+
+.font-size-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl);
+}
+
+.font-size-l {
+  font-size: var(--font-size-l);
+  line-height: var(--font-size-l);
+}
+
+.font-size-m {
+  font-size: var(--font-size-m);
+  line-height: var(--font-size-m);
+}
+
+.font-size-s {
+  font-size: var(--font-size-s);
+  line-height: var(--font-size-s);
+}
+
+.font-size-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs);
+}
+
+.font-size-xxs {
+  font-size: var(--font-size-xxs);
+  line-height: var(--font-size-xxs);
+}
+
+@import url(common/editors.css);
+@import url(common/header.css);
+@import url(common/footer.css);

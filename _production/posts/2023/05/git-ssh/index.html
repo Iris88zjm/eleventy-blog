@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-theme="light" data-origin="http://localhost:8888">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="http://localhost:8888/assets/img/icons/favicon.png" sizes="128x128">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
+    <link rel="stylesheet" href="http://localhost:8888/assets/css/animation.css" media="all">
+    <link rel="stylesheet" href="http://localhost:8888/assets/css/style.css" media="all">
+
+    
+
+    <title>Linux git ssh 拉取项目</title>
+    <meta name="description" content="git ssh 拉取项目，配置 key 验证">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Linux git ssh 拉取项目">
+    <meta property="og:site_name" content="Iris 博客 | 中文">
+    <meta property="og:description" content="git ssh 拉取项目，配置 key 验证">
+    <meta property="og:url" content="http://localhost:8888/posts/2023/05/git-ssh/">
+    <meta property="og:image" content="http://localhost:8888/assets/img/icons/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@IrisZhu">
+    <meta name="twitter:title" content="Linux git ssh 拉取项目">
+    <meta name="twitter:description" content="git ssh 拉取项目，配置 key 验证">
+    <meta name="twitter:image" content="http://localhost:8888/assets/img/icons/favicon.png">
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d013155126dadf8457e34005b9c2d3a3";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+  </head>
+  <body class="zh"></body>
+</html>
+
+<header>
+  <nav>
+    <div class="toggle-menu">
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+      <span class="menu-line"></span>      
+    </div>
+    <div class="menus-container">
+      <div class="wrapper">
+        <div class="close-menus">
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          
+          
+          
+    
+          
+          <li>
+            <a href="/">
+              
+              <div class="lable">首页</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/archives/1/">
+              
+              <div class="lable">归档</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/tags/">
+              
+              <div class="lable">分类</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/links/">
+              
+              <div class="lable">技术网址</div>
+            </a>
+            
+    
+          </li>
+          
+          <li>
+            <a href="/about/">
+              
+              <div class="lable">关于</div>
+            </a>
+            
+    
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <a class="logo" href="http://localhost:8888/">
+      <img src="http://localhost:8888/assets/img/icons/favicon.png" alt="Logo">
+    </a>
+
+    
+    <a class="search" href="http://localhost:8888/search/">
+      <i class="iconfont icon-search" aria-hidden="true"></i>
+    </a>
+
+    
+    <div id="language-switcher">
+      <div class="current-language">
+        
+        <i class="iconfont icon-zh active" aria-hidden="true"></i>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<main id="single-post">
+    <section id="hero">
+  
+<div class="divimg git">
+  
+  <h1></h1>
+  
+</div>
+  
+  <div class="content">
+    <h1>Linux git ssh 拉取项目</h1>
+  </div>
+</section>
+<div class="container">
+  <div class="post-info">
+    <a href="/archives/1/" class="btn">查看所有文章</a>
+    <div class="date font-size-xs">2023-05-24</div>
+    <ul class="tags"><li>
+        <a href="/tags/git/" class="btn-tag">git</a>
+      </li></ul>
+  </div>
+
+  <div class="wrapper">
+    <!-- https://jessieji.com/2019/pure-css-masonry 
+https://masonry.desandro.com/-->
+<p>由于 git 弃用之前账号密码的方式，现在用 key 来进行验证。</p>
+<p>当进行拉取新项目时(SSH)：<code>git clone git@github.com:yourr_username/your_project.git</code></p>
+<p>他会告诉我们需要权限验证</p>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2023/05/git-ssh-1.jpg" alt="git clone 项目">
+  </div>
+  <div class="img-desc">图 1: git clone 项目</div>
+</div>
+<p>这时我们需要生成 git 所需的 ssh key。</p>
+<p>先进入文件路径 <code>cd ~/.ssh/</code></p>
+<p>再ed25519加密方式生成： <code>ssh-keygen -t ed25519 -C &quot;your_email_address@.gmail.com&quot;</code></p>
+<p>添加 key 文件名（路径为/root/.ssh/）: key_file_name</p>
+<p>输入口令：</p>
+<p>在输入刚刚的口令</p>
+<p>请记住这个口令，一会需要用到。这时我们所需要的 key 已经生成</p>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2023/05/git-ssh-2.jpg" alt="生成 ssh key">
+  </div>
+  <div class="img-desc">图 2: 生成 ssh key</div>
+</div>
+<p>把刚刚生成的文件添加到 ssh-agent 的高速缓存中 <code>ssh-add ~/.ssh/key_file_name</code></p>
+<p>这是需要刚刚输入我们新建 key 的口令</p>
+<p>把文件的内容显示出来 <code>cat key_file_name.pub</code></p>
+<p>把文件的内容复制到粘贴板</p>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2023/05/git-ssh-3.jpg" alt="复制 ssh key">
+  </div>
+  <div class="img-desc">图 3: 复制 ssh key</div>
+</div>
+<p>下一步是需要把这个 key 添加到你的git 账号里ssh key 进行同步验证</p>
+<p>在git setting -&gt; Access -&gt; SSH and GPG keys -&gt; New SSH key</p>
+<p>为这个key 命名，同时把刚刚的key 粘贴到文本框中</p>
+<div class="divimg-wrapper">
+  <div class="img">
+    <img src="/assets/img/2023/05/git-ssh-4.jpg" alt="设置git ssh key code">
+  </div>
+  <div class="img-desc">图 4: 设置git ssh key code</div>
+</div>
+<p>最后在 <code>git clone git@github.com:yourr_username/your_project.git</code>, 成功拉取项目。</p>
+
+  </div>
+
+  <div class="switch-posts">
+    
+    
+    
+    <div class="item">
+      <div class="lable">上一篇: </div>
+      <a href="/posts/2023/05/gulp-file/">使用 gulp 读取写入文件</a>
+    </div>
+    
+    
+  </div>
+
+</div>
+</main>
+<footer>  
+  <div class="theme-switch">
+    <i class="iconfont icon-theme" aria-hidden="true"></i>
+    <input id="toggle-theme" class="toggle-theme" type="checkbox">
+    <label for="toggle-theme"></label>
+  </div>
+  <a href="http://blog.huashunglass.com/" target="_blank" class="old-link">旧版博客</a>
+  <div class="copyright">
+    
+    <p>2016 - © 2023 Iris 博客 | 来自地球的设计</p>
+    
+  </div>
+</footer>
+
+  
+  <script src="http://localhost:8888/assets/js/wow.min.js"></script>
+  <script src="http://localhost:8888/assets/js/jquery-3.4.1.min.js"></script>
+  
+  <script src="http://localhost:8888/assets/js/master.js"></script>
+  
+  
+  
+
+
+

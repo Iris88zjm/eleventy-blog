@@ -1,0 +1,19 @@
+@import url(common/pagination.css);
+@import url(common/nav-right.css);
+@import url(common/article-item.css);
+
+@media screen and (min-width: 0px) {
+  #archives .container-left .title {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  #archives .container-left .total-counts {
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1440px) {}

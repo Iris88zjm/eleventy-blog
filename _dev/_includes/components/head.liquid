@@ -7,32 +7,15 @@
     <link rel="icon" type="image/png" href="{{ baseURL | url }}/assets/img/icons/favicon.png" sizes="128x128">
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
-    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animate.css"/>
-
-    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/animation.css" media="all"/>
+    {% if pageSlug != "hero-kids" %}
     <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/style.css" media="all"/>
-    {% if pageSlug == "homepage" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/homepage.css" media="all"/>
     {% endif %}
-    {% if pageSlug == "links" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/links.css" media="all"/>
-    {% endif %}
-    {% if pageSlug == "single-post" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/single-post.css" media="all"/>
-    {% endif %}
-    {% if pageSlug == "single-tag" or  pageSlug == "tags" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/tags.css" media="all"/>
-    {% endif %}
-    {% if pageSlug == "gsap" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/demo/gsap.css" media="all"/>
-    {% endif %}
-    {% if pageSlug == "hero-kids" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/demo/hero-kids.css" media="all"/>
-    {% endif %}
-    {% if pageSlug == "search" %}
-      <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/search.css" media="all"/>
-    {% endif %}
-    <link rel="stylesheet" href="{{ baseURL | url }}/assets/css/theme.css" media="all"/>
+    
+    {% if cssFiles %}
+			{% for name in cssFiles %}
+				<link rel="stylesheet" href="{{ baseURL | url }}/assets/css/{{ name }}.css" media="all" />
+			{% endfor %}
+		{% endif %}
 
     <title>{{ title }}</title>
     <meta name="description" content="{{ pageDescription }}">
@@ -42,12 +25,23 @@
     <meta property="og:site_name" content="{{ siteName }}"/>
     <meta property="og:description" content="{{ pageDescription }}"/>
     <meta property="og:url" content="{{ baseURL | url }}{{ page.url | url }}"/>
-    <meta property="og:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
+    <meta property="og:image" content="{{ baseURL | url }}/assets/img/icons/favicon.png">
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
     <meta name="twitter:title" content="{{ title }}"/>
     <meta name="twitter:description" content="{{ pageDescription }}"/>
-    <meta name="twitter:image" content="{{ baseURL | url }}/assets/img/icons/hk.svg">
+    <meta name="twitter:image" content="{{ baseURL | url }}/assets/img/icons/favicon.png">
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d013155126dadf8457e34005b9c2d3a3";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
   </head>
   <body class="{{ lang }}"></body>
 </html>

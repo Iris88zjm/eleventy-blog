@@ -1,0 +1,26 @@
+@media screen and (min-width: 0px) {
+
+  #search input {
+    max-width: 380px;
+  }
+  #search #noResultsFound {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+  #search #noResultsFound.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+  #search #searchResults {
+    margin-top: 20px;
+  }
+  #search #searchResults a {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+

@@ -7,6 +7,7 @@ pagination:
   size: 12  
   alias: postsList
 permalink: "archives/{{ pagination.pageNumber | plus: 1 }}/index.html"
+cssFiles: ["archives"]
 ---
 <section id="hero">
   <div class="divimg" style="background: radial-gradient(ellipse farthest-side at 76% 76%, rgba(245, 228, 212, 0.25) 2%, rgba(255, 255, 255, 0) calc(2% + 1px)), radial-gradient(circle at 76% 53%, #fef6ec 2%, rgba(255, 255, 255, 0) 2.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;">
@@ -17,8 +18,8 @@ permalink: "archives/{{ pagination.pageNumber | plus: 1 }}/index.html"
 </section>
 
 <section class="container">
-  <div class="title">文章列表<span class="total-counts">({{ collections.posts | size }})</span></div>
   <section class="container-left">
+    <div class="title font-size-l">文章列表<span class="total-counts">({{ collections.posts | size }})</span></div>
     {% comment %}{% assign postsList = collections.posts | reversePosts %}{% endcomment %}
     {% include './components/postsList' %}
 

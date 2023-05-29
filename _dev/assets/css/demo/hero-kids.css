@@ -1,0 +1,255 @@
+@media screen and (min-width: 0px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ol li {
+    list-style-position: inside;
+  }
+
+  .container {
+    height: 100vh;
+    background-color: #ffd3a1;
+    color: #FFF;
+  }
+  .container .home {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px 0;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  .container .home.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .container .home .content {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    opacity: 1;
+  }
+  .container .home .content h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 700;
+  }
+  .container .home .content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .container .home .divimg {
+    width: 65vw;
+    max-width: 600px;
+    align-self: flex-start;
+    -webkit-animation: moveUp 5s cubic-bezier(0.53, 0.18, 0.6, 0.97) infinite;
+    animation: moveUp 5s cubic-bezier(0.53, 0.18, 0.6, 0.97) infinite;
+  }
+  .container .home .drops {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+  }
+  .container .home .drops .drop {
+    position: absolute;
+    height: 60px;
+    -webkit-animation: dropFloat 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s infinite;
+    animation: dropFloat 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s infinite;
+  }
+  .container .home .drops .drop img {
+    -webkit-animation: dropRotation 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: dropRotation 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  }
+  .container .home .drops .drop-1 {
+    left: 10%;
+    top: 23%;
+    width: 50px;
+  }
+  .container .home .drops .drop-2 {
+    right: 10%;
+    top: 10%;
+    width: 60px;
+  }
+  .container .home .drops .drop-3 {
+    left: 10%;
+    bottom: 40%;
+    width: 72px;
+  }
+  .container .home .drops .drop-4 {
+    right: 10%;
+    bottom: 22%;
+    width: 52px;
+  }
+  .container .home .drops .drop-5 {
+    right: 5%;
+    bottom: 36%;
+    width: 66px;
+  }
+  .container .home .drops .drop-6 {
+    left: 63%;
+    top: 35%;
+    width: 58px;
+  }
+  .container .home .drops .drop-7 {
+    left: 40%;
+    top: 40%;
+    width: 42px;
+  }
+  .container .home#s1 {
+    background-color: #ffd3a1;
+  }
+  .container .home#s2 {
+    background-color: #efb700;
+  }
+  .container .home#s3 {
+    background-color: #ff7673;
+  }
+  .container .home#s4 {
+    background-color: #02ae90;
+  }
+
+  .home-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+  .home-nav ul {
+    display: grid;
+  }
+  .home-nav ul li {
+    order: 2;
+  }
+  .home-nav ul li.active {
+    order: 1;
+  }
+  .home-nav ul li.active a {
+    padding: 16px 20px;
+  }
+  .home-nav ul li a {
+    display: block;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #FFF;
+  }
+  .home-nav ul li a:hover {
+    color: #FFF;
+  }
+  .home-nav ul li:nth-child(1) {
+    background-color: #efb700;
+  }
+  .home-nav ul li:nth-child(2) {
+    background-color: #ff7673;
+  }
+  .home-nav ul li:nth-child(3) {
+    background-color: #02ae90;
+  }
+}
+@media screen and (min-width: 768px) {
+  #hero-kids {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .container .home {
+    padding: 80px 50px 0;
+    right: 144px;
+  }
+
+  .home-nav {
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: 0;
+    transform: translate3d(0, -100%, 0) rotate(-90deg);
+    transform-origin: right bottom;
+    width: 100vh;
+  }
+  .home-nav ul li.active a {
+    padding: 16px 50px;
+  }
+  .home-nav ul li a {
+    padding: 8px 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .home .content {
+    max-width: 530px;
+  }
+  .container .home .content h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+  .container .home .content p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container .home {
+    padding-top: 0;
+  }
+  .container .home .divimg {
+    position: absolute;
+    left: 30vw;
+    top: 30%;
+    bottom: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container .home {
+    padding: 0 12vw;
+  }
+  .container .home .drops {
+    left: 12vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .home .divimg {
+    left: 40vw;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container .home {
+    padding: 0 20vw;
+  }
+  .container .home .content {
+    max-width: 650px;
+  }
+  .container .home .content h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+  .container .home .content p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .container .home .divimg {
+    max-width: 800px;
+  }
+  .container .home .drops {
+    left: 20vw;
+  }
+}

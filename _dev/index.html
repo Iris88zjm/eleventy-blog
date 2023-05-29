@@ -3,8 +3,8 @@ layout: zh.liquid
 pageSlug: homepage
 title: Iris 的博客
 pageDescription: eleventy - Iris 的博客
+cssFiles: ["homepage"]
 ---
-
 <section id="hero">
   <div class="divimg">
     <img src="{{ baseURL | url }}/assets/img/icons/hero-bg.svg" alt="">
@@ -14,16 +14,15 @@ pageDescription: eleventy - Iris 的博客
       Hello, <br />
       来到 Iris 的博客
     </h1>
-    <div class="text">
+    <div class="text font-size-s">
       <p>开启奇幻的前端之旅</p>
     </div>
   </div>
 </section>
 
-
 <section class="homepage-block" id="s1">
   <div class="wrapper">
-    <div class="content wow fadeInDown" data-wow-delay="0.5s">
+    <div class="content wow fadeInDown font-size-xxl" data-wow-delay="0.5s">
       <p>对新奇的事物充满好奇, 追求视觉美感. 对技术迎难而上, 学无止境. 崇尚简单生活而不失激情.</p>
       <p>每个 blog 都充满能量, 相互汲取, 滋养我们成长</p>
     </div>
@@ -38,11 +37,11 @@ pageDescription: eleventy - Iris 的博客
 
 <section class="homepage-block" id="s2">
   <div class="title">
-    <h2>工作经历</h2>
+    <h2>Experiences</h2>
     <div class="title-line"></div>
   </div>
   <div class="wrapper">
-    <div class="work-grids">
+    <div class="work-grids font-size-s">
       <div class="item">
         <div class="work-time wow fadeInLeft">2019.08 - now</div>
         <div class="company-icon">
@@ -85,7 +84,7 @@ pageDescription: eleventy - Iris 的博客
 
 <section class="homepage-block" id="s3">
   <div class="title">
-    <h2>个人技能</h2>
+    <h2>Individual Skills</h2>
     <div class="title-line"></div>
   </div>
   <div class="wrapper">
@@ -100,7 +99,7 @@ pageDescription: eleventy - Iris 的博客
 
 <section class="homepage-block" id="s4">
   <div class="title">
-    <h2>项目</h2>
+    <h2>Projects</h2>
     <div class="title-line"></div>
   </div>
   <div class="wrapper">
@@ -126,7 +125,7 @@ pageDescription: eleventy - Iris 的博客
         </a>
       </div>
       <div class="project-item wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.3s">
-        <a href="https://press.nanoleaf.me/blog/?list=1&category=all" target="_blank">
+        <a href="https://nanoleaf.me/en-US/newsroom/" target="_blank">
           <div class="divimg">
             <picture>
               <source srcset="{{ baseURL | url }}/assets/img/homepage/nanoleaf-blogs.webp">
@@ -251,10 +250,3 @@ pageDescription: eleventy - Iris 的博客
     <img src="{{ baseURL | url }}/assets/img/homepage/green.svg" alt="">
   </div> -->
 </section>
-
-<!-- 
-  <h2>A smile is the shortest distance between two people.</h2>
-  <h2>We all have our places in the world.</h2>
-  <h2>What others think is not important. How you fee about yourse</h2>
-  <h2>Nothing is impossible, the word itself says 'I'm possible'!</h2>
--->

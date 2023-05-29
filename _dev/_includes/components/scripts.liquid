@@ -1,21 +1,36 @@
-
+  <script src="{{ baseURL | url }}/assets/js/wow.min.js"></script>
+  <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
   {% if pageSlug == "homepage" %}
   <script src="https://cdn.staticfile.org/echarts/4.7.0/echarts.min.js"></script>
   {% endif %}
-  <script src="{{ baseURL | url }}/assets/js/wow.min.js"></script>
-  <script src="{{ baseURL | url }}/assets/js/jquery-3.4.1.min.js"></script>
   <script src="{{ baseURL | url }}/assets/js/master.js"></script>
-  {% if pageSlug == "loading" %}
-  <script src="{{ baseURL | url }}/assets/js/loading.js"></script>
+
+  {% if pageSlug == "archives" or pageSlug == "single-tag" %}
+  <script src="{{ baseURL | url }}/assets/js/masonry.pkgd.min.js"></script>
+  <script>
+    $('.article-wrapper').masonry({
+      // set itemSelector so .grid-sizer is not used in layout
+      itemSelector: '.article-item',
+      // use element for option
+      // columnWidth: '.grid-sizer',
+      gutter: $(window).outerWidth() >= 1600 ? 20 : 10,
+      percentPosition: true,
+      horizontalOrder: true
+    })
+  </script>
   {% endif %}
+
   {% if pageSlug == "gsap" %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> defer></script>
-  <script src="{{ baseURL | url }}/assets/js/demo/gsap-main.js"></script>
   {% endif %}
   {% if pageSlug == "search" %}  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-  <script src="{{ baseURL | url }}/assets/js/search.js"></script>
   {% endif %}
 
+  {% if jsFiles %}
+    {% for name in jsFiles %}
+    <script src="{{ baseURL | url }}/assets/js/{{ name }}.js"></script>
+    {% endfor %}
+  {% endif %}
 </body>
 </html>

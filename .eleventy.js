@@ -1,7 +1,8 @@
 
 // const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const codeStyleHooks = require('eleventy-plugin-code-style-hooks');
-const elasticlunr = require("elasticlunr");
+const elasticlunr = require("elasticlunr"); // search function
+const CleanCSS  = require("clean-css");
 
 module.exports = function (eleventyConfig) {
   // Add Plugins
@@ -16,7 +17,8 @@ module.exports = function (eleventyConfig) {
   // Add XML filters plugin
   // eleventyConfig.addPlugin(xmlFiltersPlugin);
 
-  eleventyConfig.addWatchTarget("./_dev/assets/sass/");
+  eleventyConfig.addWatchTarget("./_dev/assets/css/");
+  // eleventyConfig.addWatchTarget("./_dev/assets/sass/");
   // Passthrough file copy '_dev/assets/' to '_production/assets' with no template processing
   eleventyConfig.addPassthroughCopy("./_dev/assets");
 
@@ -68,6 +70,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("reversePosts", function (value) {
     let result = value.reverse();
     return result;
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // RETURN OBJECTS HERE

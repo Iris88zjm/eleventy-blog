@@ -6,9 +6,38 @@
       <span class="menu-line"></span>      
       <span class="menu-line"></span>      
     </div>
+    <a class="logo" href="{% if lang == 'zh' %}{{ baseURL | url }}/{% else %}{{ baseURL | url }}/{{ lang }}/{% endif %}">
+      <img src="{{ baseURL | url }}/assets/img/icons/favicon.png" alt="Logo">
+    </a>
+
+    {% if pageSlug != "search" %}
+    <a class="search" href="{% if lang == 'zh' %}{{ baseURL | url }}/search/{% else %}{{ baseURL | url }}/{{ lang }}/search/{% endif %}">
+      <i class="iconfont icon-search" aria-hidden="true"></i>
+    </a>
+    {% endif %}
+
+    <div id="language-switcher">
+      <div class="current-language">
+        {% comment %} <i class="iconfont icon-english {% if lang == 'en' %}active{% endif %}" aria-hidden="true"></i> {% endcomment %}
+        <i class="iconfont icon-zh {% if lang == 'zh' %}active{% endif %}" aria-hidden="true"></i>
+      </div>
+      {% comment %} <div class="select-language">   
+        <ul>
+          <li class="{% if lang == 'zh' %}active{% endif %}">
+            <a href="{{ baseURL | url }}/en/{{ page.url | url | remove_first: '/' | remove: lang }}"
+            hreflang='en'><i class="iconfont icon-english" aria-hidden="true"></i></a>
+          </li>
+          <li class="{% if lang == 'en' %}active{% endif %}">
+            <a href="{{ baseURL | url }}{{ page.url | url | remove_first: '/' | remove: lang }}"
+            hreflang='zh'><i class="iconfont icon-zh" aria-hidden="true"></i></a>
+          </li>
+        </ul>   
+      </div> {% endcomment %}
+    </div>
+
     <div class="menus-container">
       <div class="wrapper">
-        <div class="close-menus">
+        <div class="global-close-icon">
           <div></div>
           <div></div>
         </div>
@@ -21,7 +50,7 @@
     
           {% for item in menusObj %}
           <li>
-            <a href="{{ item.path }}">
+            <a href="{{ item.path }}" class="menu-title font-size-xxl">
               {% comment %}<i class="iconfont {{ item.iconName }}" aria-hidden="true"></i>{% endcomment %}
               <div class="lable">{{ item.title }}</div>
             </a>
@@ -41,34 +70,6 @@
           {% endfor %}
         </ul>
       </div>
-    </div>
-    <a class="logo" href="{% if lang == 'zh' %}{{ baseURL | url }}/{% else %}{{ baseURL | url }}/{{ lang }}/{% endif %}">
-      <img src="{{ baseURL | url }}/assets/img/icons/favicon.png" alt="Logo">
-    </a>
-
-    {% if pageSlug != "search" %}
-    <a class="search" href="{% if lang == 'zh' %}{{ baseURL | url }}/search/{% else %}{{ baseURL | url }}/{{ lang }}/search/{% endif %}">
-      <i class="iconfont icon-search" aria-hidden="true"></i>
-    </a>
-
-    {% endif %}
-    <div id="language-switcher">
-      <div class="current-language">
-        {% comment %} <i class="iconfont icon-english {% if lang == 'en' %}active{% endif %}" aria-hidden="true"></i> {% endcomment %}
-        <i class="iconfont icon-zh {% if lang == 'zh' %}active{% endif %}" aria-hidden="true"></i>
-      </div>
-      {% comment %} <div class="select-language">   
-        <ul>
-          <li class="{% if lang == 'zh' %}active{% endif %}">
-            <a href="{{ baseURL | url }}/en/{{ page.url | url | remove_first: '/' | remove: lang }}"
-            hreflang='en'><i class="iconfont icon-english" aria-hidden="true"></i></a>
-          </li>
-          <li class="{% if lang == 'en' %}active{% endif %}">
-            <a href="{{ baseURL | url }}{{ page.url | url | remove_first: '/' | remove: lang }}"
-            hreflang='zh'><i class="iconfont icon-zh" aria-hidden="true"></i></a>
-          </li>
-        </ul>   
-      </div> {% endcomment %}
     </div>
   </nav>
 </header>

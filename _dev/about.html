@@ -12,29 +12,27 @@ pageSlug: single-post
 <style>
 @media screen and (min-width: 0px) {
   .content-block { max-width: 600px; }
+  .content-block h2{ margin-bottom: 12px; }
   .content-block .text { max-width: 550px; }
-  .tech-lists { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; margin-top: 30px; }
-  .tech-lists .tech-item { width: calc((100% - 20px) / 3); margin: 0 10px 10px 0; border-radius: 10px; overflow: hidden; }
-  .tech-lists .tech-item:nth-child(3n) { margin: 0 0 10px 0; }
+  .tech-lists { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; justify-content: flex-start; align-items: center; margin-top: 30px; }
+  .tech-lists .tech-item { border-radius: 10px; overflow: hidden; }
 }
 
 @media screen and (min-width: 768px) {
-  .tech-lists .tech-item { width: calc((100% - 50px) / 6); }
-  .tech-lists .tech-item:nth-child(3n) { margin: 0 10px 10px 0; }
-  .tech-lists .tech-item:nth-child(6n) { margin: 0 0 10px 0; }
+  .tech-lists { grid-template-columns: repeat(6, 1fr); }
 }
 </style>
 <section class="container">
-  <div class="wrapper">
+  <div class="container-left">
     <div class="content-block">
-      <h2>关于本站</h2>
-      <div class="text">
-        <p>本博客网站使用的框架是 <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>. 主题是自定义的, 用了 <a href="https://shopify.github.io/liquid/" target="_blank">Liquid</a> & <a href="http://en.sass.hk/" target="_blank">SCSS</a>. 支持多语言开发.</p>
+      <h2 class="font-size-l">关于本站</h2>
+      <div class="text font-size-xs">
+        <p>本博客网站使用的框架是 <a href="https://www.11ty.dev/" target="_blank" class="text-link">Eleventy</a>. 主题是自定义的, 用了 <a href="https://shopify.github.io/liquid/" target="_blank" class="text-link">Liquid</a> & <a href="http://en.sass.hk/" target="_blank" class="text-link">SCSS</a>. 支持多语言开发.</p>
         <p>本站主要记录本人在开发过程中遇到的问题和解决方法, 海纳百川, 包罗万象, Just for fun! 希望您在浩瀚互联网的犄角旮旯里访问到本站, 并且能有所收获.</p>
         <p>俗话说, 好记性不如烂笔头. 把所学的知识, 所遇的问题, 再记录下来会让自己印象深刻. 希望这博客自己能坚持维护, 让自己更快, 更好的成长, 同时还能帮助他人.</p>
         <p>每个人都有自己的梦想, 并且一直努力实现自己的人生价值. 而我只希望每天快乐, 平安, 健康!</p>
         
-        <p>个人邮箱: 327055610@qq.com</p>
+        <p>个人邮箱: <a href="mailto:327055610@qq.com" class="text-link">327055610@qq.com</a></p>
       </div>
     </div>
     <div class="content-block">

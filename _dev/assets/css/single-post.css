@@ -1,0 +1,88 @@
+@import url(common/editors.css);
+
+@media screen and (min-width: 0px) {
+  #single-post .wrapper {
+    padding: var(--page-padding-tb) var(--page-padding-lr);
+  }
+
+  #single-post .post-info {
+    text-align: center;
+  }
+
+  #single-post .post-info .btn {
+    margin: 0 auto 8px;
+  }
+
+  #single-post .post-info .tag-list {
+    margin-top: 4px;
+    justify-content: center;
+  }
+
+  #single-post .content {
+    font-size: var(--font-size-s);
+    line-height: var(--font-size-s-line-height);
+  }
+
+  #single-post .content h2 {
+    padding: 28px 0 8px;
+    font-size: var(--font-size-xl);
+    line-height: var(--font-size-xl-line-height);
+  }
+  
+  #single-post .content h3 {
+    padding: 8px 0 4px;
+    font-size: var(--font-size-l);
+    line-height: var(--font-size-l-line-height);
+  }
+
+  #single-post .content ul,
+  #single-post .content ol {
+    margin: 8px 0;
+  }
+
+  #single-post .content p {
+    padding: 4px 0;
+  }
+
+  #single-post .content a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  #single-post .content .divimg-wrapper {
+    max-width: 650px;
+    margin-bottom: 20px;
+  }
+
+  #single-post .content .divimg-wrapper .img {
+    margin: 8px 0;
+  }
+
+  #single-post .content .divimg-wrapper .img-desc {
+    font-size: var(--font-size-xxs);
+    line-height: var(--font-size-xxs-line-height);
+    text-align: center;
+  }
+
+  #single-post .switch-posts {
+    margin-top: 28px;
+    font-size: var(--font-size-xs);
+    line-height: var(--font-size-xs-line-height);
+  }
+
+  #single-post .switch-posts .item {
+    padding: 4px 0;
+  }
+
+  #single-post .switch-posts .item .lable {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1440px) {}

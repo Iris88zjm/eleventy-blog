@@ -42,7 +42,7 @@ https://masonry.desandro.com/-->
   <div class="img-desc">图 2: 生成 ssh key</div>
 </div>
 
-把刚刚生成的文件添加到 ssh-agent 的高速缓存中 <code>ssh-add ~/.ssh/key_file_name</code>
+把刚刚生成的文件添加到 ssh-agent 的高速缓存中(这步很重要) <code>ssh-add ~/.ssh/key_file_name</code>
 
 这是需要刚刚输入我们新建 key 的口令
 

@@ -12,7 +12,7 @@ layout: en.liquid
   <div class="post-info">
     <a href="/archives/1/" class="btn">back to archives</a>
     <div class="date">{{ date | date: "%Y-%m-%d" }}</div>
-    <ul class="tags">
+    <ul class="tag-list">
       {%- for tag in tags -%}
       <li>
         <a href="/tags/{{ tag }}/" class="btn-tag">{{ tag }}</a>

@@ -3,54 +3,57 @@ layout: zh.liquid
 pageSlug: links
 title: 技术网址
 pageDescription: 技术网址 description
+cssFiles: ["links"]
 ---
 <section class="container">
   <div class="container-left">
-    <div class="close-popup">
-      <div></div>
-      <div></div>
-    </div>
     <div class="mobile-filter">
       <a href="#" class="open-popup">TABLE OF CONTENTS </a>
     </div>
-    <ul>
-      <li class="active">
-        <a href="#demo">Demo</a>
-      </li>
-      <li>
-        <a href="#vue">VUE</a>
-      </li>
-      <li>
-        <a href="#11ty">11ty</a>
-      </li>
-      <li>
-        <a href="#javascript">Javascript</a>
-      </li>
-      <li>
-        <a href="#css">CSS</a>
-      </li>
-      <li>
-        <a href="#node">Node</a>
-      </li>
-      <li>
-        <a href="#wordpress">Wordpress</a>
-      </li>
-      <li>
-        <a href="#canvas">Canvas</a>
-      </li>
-      <li>
-        <a href="#charts">Charts</a>
-      </li>
-      <li>
-        <a href="#tech">Tech Website</a>
-      </li>
-      <li>
-        <a href="#blogs">Blogs Website</a>
-      </li>
-      <li>
-        <a href="#design">Design Website</a>
-      </li>
-    </ul>
+    <div class="wrapper">
+      <div class="global-close-icon close-popup">
+        <div></div>
+        <div></div>
+      </div>
+      <ul>
+        <li class="active">
+          <a href="#demo">Demo</a>
+        </li>
+        <li>
+          <a href="#vue">VUE</a>
+        </li>
+        <li>
+          <a href="#11ty">11ty</a>
+        </li>
+        <li>
+          <a href="#javascript">Javascript</a>
+        </li>
+        <li>
+          <a href="#css">CSS</a>
+        </li>
+        <li>
+          <a href="#node">Node</a>
+        </li>
+        <li>
+          <a href="#wordpress">Wordpress</a>
+        </li>
+        <li>
+          <a href="#canvas">Canvas</a>
+        </li>
+        <li>
+          <a href="#charts">Charts</a>
+        </li>
+        <li>
+          <a href="#tech">Tech Website</a>
+        </li>
+        <li>
+          <a href="#blogs">Blogs Website</a>
+        </li>
+        <li>
+          <a href="#design">Design Website</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="container-right">
     <div class="link-item" id="demo">
@@ -628,10 +631,10 @@ pageDescription: 技术网址 description
         </a>
         <a class="item" href="https://clarity.microsoft.com/projects/view/9rux0qvqxq/dashboard?date=Last%203%20days">
           <div class="divimg">
-            <img src="https://clarity.microsoft.com/static/favicon.ico" alt="default logo">
+            <img src="{{ baseURL | url }}/assets/img/links/default.svg"" alt="default logo">
           </div>
           <div class="content">
-            <div class="lable">clarity microsoft</div>
+            <div class="lable">Clarity Microsoft</div>
             <p>Heat maps for website</p>
           </div>
         </a>
@@ -679,7 +682,7 @@ pageDescription: 技术网址 description
         </a>
         <a class="item" href="https://ng-tech.icu/books/">
           <div class="divimg">
-            <img src="https://ng-tech.icu/books/icons/icon-192x192.png" alt="loading logo">
+            <img src="{{ baseURL | url }}/assets/img/links/default.svg" alt="loading logo">
           </div>
           <div class="content">
             <div class="lable">NGTE Books</div>

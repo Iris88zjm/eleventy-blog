@@ -1,5 +1,6 @@
 ---
 layout: zh.liquid
+cssFiles: ["single-post"]
 ---
 <section id="hero">
   {% include './components/post-hero', tag: tags[0] %}
@@ -8,11 +9,11 @@ layout: zh.liquid
     <h1>{{ title }}</h1>
   </div>
 </section>
-<div class="container">
+<div class="wrapper">
   <div class="post-info">
-    <a href="/archives/1/" class="btn">查看所有文章</a>
+    <a href="/archives/1/" class="btn btn-text">查看所有文章</a>
     <div class="date font-size-xs">{{ date | date: "%Y-%m-%d" }}</div>
-    <ul class="tags">
+    <ul class="tag-list">
       {%- for tag in tags -%}
       <li>
         <a href="/tags/{{ tag }}/" class="btn-tag">{{ tag }}</a>
@@ -21,7 +22,7 @@ layout: zh.liquid
     </ul>
   </div>
 
-  <div class="wrapper">
+  <div class="content">
     {{ content | safe }}
   </div>
 
@@ -31,13 +32,13 @@ layout: zh.liquid
     {% if nextPost %}
     <div class="item">
       <div class="lable">上一篇: </div>
-      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+      <a href="{{ nextPost.url }}" class="text-link">{{ nextPost.data.title }}</a>
     </div>
     {% endif %}
     {% if previousPost %}
     <div class="item">
       <div class="lable">下一篇: </div>
-      <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+      <a href="{{ previousPost.url }}" class="text-link">{{ previousPost.data.title }}</a>
     </div>
     {% endif %}
   </div>

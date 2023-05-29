@@ -1,60 +1,26 @@
 @media screen and (min-width: 0px) {
-  #search {
-    margin-top: 30px;
-  }
-  #search .container {
-    padding: 60px 20px;
-  }
-  #search .container input {
+
+  #search input {
     max-width: 380px;
   }
-  #search .container #noResultsFound {
+  #search #noResultsFound {
     opacity: 0;
     visibility: hidden;
     height: 0;
   }
-  #search .container #noResultsFound.active {
+  #search #noResultsFound.active {
     opacity: 1;
     visibility: visible;
     height: auto;
   }
-  #search .container #searchResults {
+  #search #searchResults {
     margin-top: 20px;
   }
-  #search .container #searchResults a {
+  #search #searchResults a {
     display: inline-block;
     padding: 4px 0;
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-@media screen and (min-width: 768px) {
-  #search .container {
-    padding: 60px 50px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #search .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  #search .container .container-left {
-    width: calc(100% - 270px);
-  }
-}
-@media screen and (min-width: 1280px) {
-  #search .container {
-    padding: 80px 12%;
-  }
-}
-@media screen and (min-width: 1920px) {
-  #search .container {
-    padding: 80px 20%;
-  }
-}
-@media screen and (min-width: 2560px) {
-  #search .container {
-    padding-left: calc((100% - 1200px) / 2);
-    padding-right: calc((100% - 1200px) / 2);
-  }
-}
+

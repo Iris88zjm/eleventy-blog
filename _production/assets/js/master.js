@@ -108,7 +108,7 @@ $(function () {
     $("header .menus-container").addClass("active");
     return false;
   });
-  $("header .close-menus").on("tap click", function () {
+  $("header .menus-container .global-close-icon").on("tap click", function () {
     $("header .menus-container").removeClass("active");
     return false;
   });

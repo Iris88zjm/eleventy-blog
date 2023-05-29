@@ -1,4 +1,17 @@
 @media screen and (min-width: 0px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ol li {
+    list-style-position: inside;
+  }
+
   .container {
     height: 100vh;
     background-color: #ffd3a1;

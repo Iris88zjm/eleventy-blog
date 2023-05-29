@@ -5,7 +5,7 @@ code {
 }
 
 blockquote {
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 8px 16px;
   border-left: 3px solid var(--light-color-two);
   background-color: var(--light-bg-color);
@@ -17,7 +17,7 @@ blockquote p {
 
 blockquote span {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 600;
   text-align: right;
 }
@@ -25,14 +25,14 @@ blockquote span {
 blockquote span:before {
   content: "--";
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 4px;
   font-weight: normal;
 }
 
 pre[data-language] {
   position: relative;
   min-height: 40px;
-  margin: 10px 0;
+  margin: 8px 0;
   color: var(--light-bg-color);
   background-color: var(--light-color-one);
   font-family: 'nanoleaf', sans-serif;

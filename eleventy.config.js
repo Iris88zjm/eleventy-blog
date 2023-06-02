@@ -1,7 +1,4 @@
-
-// const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 // import codeStyleHooks from 'eleventy-plugin-code-style-hooks';
-const elasticlunr = require("elasticlunr"); // search function
 const fs = require("fs");
 
 module.exports = function(eleventyConfig) {
@@ -13,9 +10,6 @@ module.exports = function(eleventyConfig) {
     dynamicPartials: true,
     // strict_filters: true
   });
-
-  // Add XML filters plugin
-  // eleventyConfig.addPlugin(xmlFiltersPlugin);
 
   eleventyConfig.addWatchTarget("./_dev/assets/css/");
   // eleventyConfig.addWatchTarget("./_dev/assets/sass/");

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx @11ty/eleventy --serve --port=8888 --quiet --incremental",
     "build": "npx @11ty/eleventy",
-    "clean": "rm -rf _production && rm -rf .11ty-vite"
+    "clean": "rm -rf _production"
   },
   "keywords": [],
   "author": "Iris Zhu",

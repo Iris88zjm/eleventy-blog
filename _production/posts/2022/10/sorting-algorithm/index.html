@@ -1,166 +1,10 @@
-
-<!DOCTYPE html>
-<html lang="zh" data-theme="light" data-origin="http://huashunglass.com">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="http://huashunglass.com/assets/img/icons/favicon.png" sizes="128x128">
-    <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
-    
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
-    
-    
-    
-			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
-			
-		
-
-    <title>js 十大排序算法</title>
-    
-    <meta name="description" content="">
-    <meta property="og:locale" content="zh"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="js 十大排序算法"/>
-    <meta property="og:site_name" content="Iris 博客 | 中文"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/10/sorting-algorithm/"/>
-    <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="js 十大排序算法"/>
-    <meta name="twitter:description" content=""/>
-    <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-
-    <script>
-      var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh" data-theme="light" data-origin="http://huashunglass.com"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"><meta charset="utf-8"><link rel="icon" type="image/png" href="http://huashunglass.com/assets/img/icons/favicon.png" sizes="128x128"><link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css"><link rel="stylesheet" href="http://huashunglass.com/assets/css/style-182302c5d1.css" media="all"><link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post-11924b14fd.css" media="all"><title>js 十大排序算法</title><meta name="description" content=""><meta property="og:locale" content="zh"><meta property="og:type" content="website"><meta property="og:title" content="js 十大排序算法"><meta property="og:site_name" content="Iris 博客 | 中文"><meta property="og:description" content=""><meta property="og:url" content="http://huashunglass.com/posts/2022/10/sorting-algorithm/"><meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@IrisZhu"><meta name="twitter:title" content="js 十大排序算法"><meta name="twitter:description" content=""><meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png"><script>var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?d013155126dadf8457e34005b9c2d3a3";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-
-  </head>
-  <body class="zh"></body>
-</html>
-
-<header>
-  <nav>
-    <div class="toggle-menu">
-      <span class="menu-line"></span>      
-      <span class="menu-line"></span>      
-      <span class="menu-line"></span>      
-    </div>
-    <a class="logo" href="http://huashunglass.com/">
-      <img src="http://huashunglass.com/assets/img/icons/favicon.png" alt="Logo">
-    </a>
-
-    
-    <a class="search" href="http://huashunglass.com/search/">
-      <i class="iconfont icon-search" aria-hidden="true"></i>
-    </a>
-    
-
-    <div id="language-switcher">
-      <div class="current-language">
-        
-        <i class="iconfont icon-zh active" aria-hidden="true"></i>
-      </div>
-      
-    </div>
-
-    <div class="menus-container">
-      <div class="wrapper">
-        <div class="global-close-icon">
-          <div></div>
-          <div></div>
-        </div>
-        <ul>
-          
-          
-          
-    
-          
-          <li>
-            <a href="/" class="menu-title font-size-xxl">
-              
-              <div class="lable">首页</div>
-            </a>
-            
-    
-          </li>
-          
-          <li>
-            <a href="/archives/1/" class="menu-title font-size-xxl">
-              
-              <div class="lable">归档</div>
-            </a>
-            
-    
-          </li>
-          
-          <li>
-            <a href="/tags/" class="menu-title font-size-xxl">
-              
-              <div class="lable">分类</div>
-            </a>
-            
-    
-          </li>
-          
-          <li>
-            <a href="/links/" class="menu-title font-size-xxl">
-              
-              <div class="lable">技术网址</div>
-            </a>
-            
-    
-          </li>
-          
-          <li>
-            <a href="/about/" class="menu-title font-size-xxl">
-              
-              <div class="lable">关于</div>
-            </a>
-            
-    
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<main id="single-post">
-    <section id="hero">
-  
-<div class="divimg javascript" >
-  
-  <h1></h1>
-  
-</div>
-  
-  <div class="content">
-    <h1>js 十大排序算法</h1>
-  </div>
-</section>
-<div class="wrapper">
-  <div class="post-info">
-    <a href="/archives/1/" class="btn btn-text">查看所有文章</a>
-    <div class="date font-size-xs">2022-10-17</div>
-    <ul class="tag-list"><li>
-        <a href="/tags/javascript/" class="btn-tag">javascript</a>
-      </li></ul>
-  </div>
-
-  <div class="content">
-    <p>以下几种排序动图演示 -&gt; <a href="https://visualgo.net/en/sorting">点击这里</a></p>
-<h2>1.冒泡排序（Bubble Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+      })();</script></head><body class="zh"></body></html><header><nav><div class="toggle-menu"><span class="menu-line"></span> <span class="menu-line"></span> <span class="menu-line"></span></div><a class="logo" href="http://huashunglass.com/"><img src="http://huashunglass.com/assets/img/icons/favicon.png" alt="Logo"> </a><a class="search" href="http://huashunglass.com/search/"><i class="iconfont icon-search" aria-hidden="true"></i></a><div id="language-switcher"><div class="current-language"><i class="iconfont icon-zh active" aria-hidden="true"></i></div></div><div class="menus-container"><div class="wrapper"><div class="global-close-icon"><div></div><div></div></div><ul><li><a href="/" class="menu-title font-size-xxl"><div class="lable">首页</div></a></li><li><a href="/archives/1/" class="menu-title font-size-xxl"><div class="lable">归档</div></a></li><li><a href="/tags/" class="menu-title font-size-xxl"><div class="lable">分类</div></a></li><li><a href="/links/" class="menu-title font-size-xxl"><div class="lable">技术网址</div></a></li><li><a href="/about/" class="menu-title font-size-xxl"><div class="lable">关于</div></a></li></ul></div></div></nav></header><main id="single-post"><section id="hero"><div class="divimg javascript"><h1></h1></div><div class="content"><h1>js 十大排序算法</h1></div></section><div class="wrapper"><div class="post-info"><a href="/archives/1/" class="btn btn-text">查看所有文章</a><div class="date font-size-xs">2022-10-17</div><ul class="tag-list"><li><a href="/tags/javascript/" class="btn-tag">javascript</a></li></ul></div><div class="content"><p>以下几种排序动图演示 -&gt; <a href="https://visualgo.net/en/sorting">点击这里</a></p><h2>1.冒泡排序（Bubble Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -204,9 +48,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>2.选择排序（Selection Sort）</h2>
-<pre><code class="language-javascript">function selectionSort(arr) {
+</code></pre><h2>2.选择排序（Selection Sort）</h2><pre><code class="language-javascript">function selectionSort(arr) {
     var len = arr.length;
     var minIndex, temp;
     for (var i = 0; i &lt; len - 1; i++) {
@@ -222,9 +64,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>3.插入排序（Insertion Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+</code></pre><h2>3.插入排序（Insertion Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -268,9 +108,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>4.希尔排序（Shell Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+</code></pre><h2>4.希尔排序（Shell Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -314,9 +152,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>5.归并排序（Merge Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+</code></pre><h2>5.归并排序（Merge Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -360,9 +196,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>6.快速排序（Quick Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+</code></pre><h2>6.快速排序（Quick Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -406,9 +240,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>7.堆排序（Heap Sort）</h2>
-<pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+</code></pre><h2>7.堆排序（Heap Sort）</h2><pre><code class="language-javascript">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 function buildMaxHeap(arr) {   //建立大顶堆
     len = arr.length;
@@ -452,9 +284,7 @@ function heapSort(arr) {
     }
     return arr;
 }
-</code></pre>
-<h2>8.计数排序（Counting Sort）</h2>
-<pre><code class="language-javascript">function countingSort(arr, maxValue) {
+</code></pre><h2>8.计数排序（Counting Sort）</h2><pre><code class="language-javascript">function countingSort(arr, maxValue) {
     var bucket = new Array(maxValue+1),
         sortedIndex = 0;
         arrLen = arr.length,
@@ -476,9 +306,7 @@ function heapSort(arr) {
 
     return arr;
 }
-</code></pre>
-<h2>9.桶排序（Bucket Sort）</h2>
-<pre><code class="language-javascript">function bucketSort(arr, bucketSize) {
+</code></pre><h2>9.桶排序（Bucket Sort）</h2><pre><code class="language-javascript">function bucketSort(arr, bucketSize) {
     if (arr.length === 0) {
       return arr;
     }
@@ -518,9 +346,7 @@ function heapSort(arr) {
 
     return arr;
 }
-</code></pre>
-<h2>10.基数排序（Radix Sort）</h2>
-<pre><code class="language-javascript">//LSD Radix Sort
+</code></pre><h2>10.基数排序（Radix Sort）</h2><pre><code class="language-javascript">//LSD Radix Sort
 var counter = [];
 function radixSort(arr, maxDigit) {
     var mod = 10;
@@ -545,52 +371,4 @@ function radixSort(arr, maxDigit) {
     }
     return arr;
 }
-</code></pre>
-
-  </div>
-
-  <div class="switch-posts">
-    
-    
-    
-    <div class="item">
-      <div class="lable">上一篇: </div>
-      <a href="/posts/2022/09/typeof-and-instanceo/" class="text-link">js中typeof和instanceof用法区别</a>
-    </div>
-    
-    
-    <div class="item">
-      <div class="lable">下一篇: </div>
-      <a href="/posts/2022/11/phone-number-in-safari/" class="text-link">浏览器中电话号码样式</a>
-    </div>
-    
-  </div>
-
-</div>
-</main>
-<footer>  
-  <div class="theme-switch">
-    <i class="iconfont icon-theme" aria-hidden="true"></i>
-    <input id="toggle-theme" class="toggle-theme" type="checkbox">
-    <label for="toggle-theme"></label>
-  </div>
-  <a href="http://blog.huashunglass.com/" target="_blank" class="old-link">旧版博客</a>
-  <div class="copyright">
-    
-    <p>2016 - © 2023 Iris 博客 | 来自地球的设计</p>
-    
-  </div>
-</footer>
-  <script src="http://huashunglass.com/assets/js/wow.min.js"></script>
-  <script src="http://huashunglass.com/assets/js/jquery-3.4.1.min.js"></script>
-  
-  <script src="http://huashunglass.com/assets/js/master.js"></script>
-
-  
-
-  
-  
-
-  
-</body>
-</html>
+</code></pre></div><div class="switch-posts"><div class="item"><div class="lable">上一篇:</div><a href="/posts/2022/09/typeof-and-instanceo/" class="text-link">js中typeof和instanceof用法区别</a></div><div class="item"><div class="lable">下一篇:</div><a href="/posts/2022/11/phone-number-in-safari/" class="text-link">浏览器中电话号码样式</a></div></div></div></main><footer><div class="theme-switch"><i class="iconfont icon-theme" aria-hidden="true"></i> <input id="toggle-theme" class="toggle-theme" type="checkbox"> <label for="toggle-theme"></label></div><a href="http://blog.huashunglass.com/" target="_blank" class="old-link">旧版博客</a><div class="copyright"><p>2016 - © 2023 Iris 博客 | 来自地球的设计</p></div></footer><script src="http://huashunglass.com/assets/js/wow-d48b3cbdac.min.js"></script><script src="http://huashunglass.com/assets/js/jquery-3.4-7111461029.1.min.js"></script><script src="http://huashunglass.com/assets/js/master-347d4fa7d9.js"></script>

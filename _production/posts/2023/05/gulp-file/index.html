@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>使用 gulp 读取写入文件</title>
+    
     <meta name="description" content="使用 gulp readdirSync readFileSync writeFileSync 读取写入文件">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="使用 gulp 读取写入文件">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="使用 gulp readdirSync readFileSync writeFileSync 读取写入文件">
-    <meta property="og:url" content="http://huashunglass.com/posts/2023/05/gulp-file/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="使用 gulp 读取写入文件"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="使用 gulp readdirSync readFileSync writeFileSync 读取写入文件"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2023/05/gulp-file/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="使用 gulp 读取写入文件">
-    <meta name="twitter:description" content="使用 gulp readdirSync readFileSync writeFileSync 读取写入文件">
+    <meta name="twitter:title" content="使用 gulp 读取写入文件"/>
+    <meta name="twitter:description" content="使用 gulp readdirSync readFileSync writeFileSync 读取写入文件"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg gulp">
+<div class="divimg gulp" >
   
   <h1></h1>
   
@@ -170,29 +171,30 @@
 <h2>写入文件</h2>
 <p>把 blogMeta 写入对应的文件中 <code>fs.writeFileSync(path, JSON.stringify(Object, undefined, 2));</code></p>
 <p>注意写入文件是异步事件</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">writeBlogMeta</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">let</span> files <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token line-number" aria-hidden="true"></span>      blogMeta <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  files <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span><span class="token string">'_dev/_data/blogs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  files<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">let</span> blogFile <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">_dev/_data/blogs/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">encoding</span><span class="token operator">:</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token literal-property property">flag</span><span class="token operator">:</span> <span class="token string">'r'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">let</span> jsonData <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>blogFile<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>    jsonData<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">blog</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token keyword">let</span> blogKey <span class="token operator">=</span> blog<span class="token punctuation">.</span><span class="token constant">ID</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>blogKey <span class="token keyword">in</span> blogMeta<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        blogMeta<span class="token punctuation">[</span>blogKey<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">title</span><span class="token operator">:</span> blog<span class="token punctuation">.</span>title<span class="token punctuation">,</span> <span class="token literal-property property">description</span><span class="token operator">:</span> blog<span class="token punctuation">.</span>excerpt<span class="token punctuation">,</span> <span class="token literal-property property">image</span><span class="token operator">:</span> blog<span class="token punctuation">.</span>featured_image <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">try</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">_dev/_data/blogsmeta.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>blogMeta<span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Error: "</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span></code></pre>
+<pre><code class="language-javascript">const fs = require(&quot;fs&quot;);
+async function writeBlogMeta() {  
+  let files = [],
+      blogMeta = {};
+  files = fs.readdirSync('_dev/_data/blogs');
+  files.forEach(function (file) {
+    let blogFile = fs.readFileSync(`_dev/_data/blogs/${file}`, { encoding: 'utf8', flag: 'r' });
+    let jsonData = JSON.parse(blogFile.toString());
+    jsonData.posts.map((blog) =&gt; {
+      let blogKey = blog.ID.toString();
+      if(!(blogKey in blogMeta)) {
+        blogMeta[blogKey] = { title: blog.title, description: blog.excerpt, image: blog.featured_image };
+      }
+    })
+  })
+  try {
+    fs.writeFileSync(
+      `_dev/_data/blogsmeta.json`, JSON.stringify(blogMeta, undefined, 2)
+      );
+  } catch (e) {
+    console.log(&quot;Error: &quot;, e);
+  }
+}
+</code></pre>
 
   </div>
 
@@ -239,5 +241,5 @@
   
 
   
-
-
+</body>
+</html>

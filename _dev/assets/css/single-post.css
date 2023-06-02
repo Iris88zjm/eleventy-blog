@@ -1,4 +1,4 @@
-@import url(common/editors.css);
+@import url(components/editors.css);
 
 @media screen and (min-width: 0px) {
   #single-post .wrapper {

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-Regular.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Regular.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Regular.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Regular.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-Regular.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-Regular.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-Regular.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-RegularItalic.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-RegularItalic.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-RegularItalic.woff') format('woff'), url('../fonts/woff2/Nanoleaf-RegularItalic.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-RegularItalic.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-RegularItalic.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-RegularItalic.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-RegularItalic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
   font-display: block;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-Bold.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Bold.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Bold.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Bold.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-Bold.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-Bold.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-Bold.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: block;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-Thin.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Thin.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Thin.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Thin.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-Thin.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-Thin.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-Thin.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-Thin.woff2') format('woff2');
   font-weight: 200;
   font-style: thin;
   font-display: block;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-Medium.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Medium.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Medium.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Medium.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-Medium.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-Medium.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-Medium.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: block;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-SemiBold.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-SemiBold.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-SemiBold.woff') format('woff'), url('../fonts/woff2/Nanoleaf-SemiBold.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-SemiBold.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-SemiBold.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-SemiBold.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: block;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: 'nanoleaf';
-  src: url('../fonts/otf/Nanoleaf-Black.otf') format('opentype'), url('../fonts/ttf/Nanoleaf-Black.ttf') format('truetype'), url('../fonts/woff/Nanoleaf-Black.woff') format('woff'), url('../fonts/woff2/Nanoleaf-Black.woff2') format('woff2');
+  src: url('../../fonts/otf/Nanoleaf-Black.otf') format('opentype'), url('../../fonts/ttf/Nanoleaf-Black.ttf') format('truetype'), url('../../fonts/woff/Nanoleaf-Black.woff') format('woff'), url('../../fonts/woff2/Nanoleaf-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: block;
@@ -81,6 +81,7 @@
     line-height: var(--font-size-xs-line-height);
     padding: 6px 12px;
     box-sizing: border-box;
+    outline: none;
   }
 
   ul li {
@@ -200,8 +201,8 @@
 
   .btn-tag {
     display: block;
-    padding: 1px 8px;
-    background-color: #3FAE29;
+    padding: 4px 8px;
+    background-color: var(--light-color-two);
     border-radius: 3px;
     color: #fff;
     font-size: var(--font-size-xxs);
@@ -305,6 +306,10 @@
 @media screen and (min-width: 1200px) {
   #hero {
     height: 220px;
+  }
+  .btn-tag:hover {
+    color: #FFF;
+    background-color: var(--light-color-two-hover);
   }
 }
 

@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>Eleventy draft 文章草稿</title>
+    
     <meta name="description" content="如何在 Eleventy 中创建草稿">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Eleventy draft 文章草稿">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="如何在 Eleventy 中创建草稿">
-    <meta property="og:url" content="http://huashunglass.com/posts/2023/02/eleventy-drafts/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Eleventy draft 文章草稿"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="如何在 Eleventy 中创建草稿"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2023/02/eleventy-drafts/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="Eleventy draft 文章草稿">
-    <meta name="twitter:description" content="如何在 Eleventy 中创建草稿">
+    <meta name="twitter:title" content="Eleventy draft 文章草稿"/>
+    <meta name="twitter:description" content="如何在 Eleventy 中创建草稿"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg eleventy">
+<div class="divimg eleventy" >
   
   <h1></h1>
   
@@ -163,13 +164,14 @@
 <p>然后我们将为所有已发布的帖子创建一个集合，并使用它来打印列表。</p>
 <h2>下面来写11ty中添加草稿的代码</h2>
 <p>我假设您在 _dev/posts 文件夹中有您的帖子和一个 .eleventy.js 文件用于您的配置。 打开它并添加以下代码：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">const</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">const</span> <span class="token function-variable function">publishedPosts</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span> <span class="token operator">=></span> post<span class="token punctuation">.</span>date <span class="token operator">&lt;=</span> now <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>post<span class="token punctuation">.</span>data<span class="token punctuation">.</span>draft<span class="token punctuation">;</span> <span class="token comment">// [1]</span>
-<span class="token line-number" aria-hidden="true"></span>eleventyConfig<span class="token punctuation">.</span><span class="token function">addCollection</span><span class="token punctuation">(</span><span class="token string">"posts"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">collection</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">// [2]</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">return</span> collection
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">.</span><span class="token function">getFilteredByGlob</span><span class="token punctuation">(</span><span class="token string">"./_dev/posts/*.md"</span><span class="token punctuation">)</span> <span class="token comment">// [3]</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>publishedPosts<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [4]</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre><code class="language-javascript">const now = new Date();
+const publishedPosts = (post) =&gt; post.date &lt;= now &amp;&amp; !post.data.draft; // [1]
+eleventyConfig.addCollection(&quot;posts&quot;, (collection) =&gt; { // [2]
+  return collection
+      .getFilteredByGlob(&quot;./_dev/posts/*.md&quot;) // [3]
+      .filter(publishedPosts); // [4]
+});
+</code></pre>
 <p>让我们一步一步来。
 在 [1] 中，我们定义了一个函数 publishedPosts，它接受一个 post 参数并检查两件事：
 如果 post.date 早于 now：那么该帖子不计划在未来发布
@@ -178,15 +180,16 @@
 在 [3] 中，我们使用 getFilteredByGlob 方法获取 _dev/posts 文件夹中的所有 markdown 文件，这允许我们使用 *.md 来指定这组文件。
 最后在 [4] 中我们过滤掉所有不符合 publishedPosts 函数中定义的条件的帖子，我们的草稿！
 现在我们有了已发布帖子的集合，现在可以列出它们了</p>
-<pre class="language-liquid line-numbers" data-language="liquid"><code class="language-liquid line-numbers" data-language="liquid"><span class="token line-number" aria-hidden="true"></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%-</span> set postslist <span class="token operator">=</span> collections<span class="token punctuation">.</span>posts <span class="token operator">|</span> <span class="token function filter">reverse</span> <span class="token delimiter punctuation">-%}</span></span>
-<span class="token line-number" aria-hidden="true"></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%-</span> <span class="token keyword">for</span> post <span class="token keyword">in</span> postslist <span class="token delimiter punctuation">-%}</span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{{</span> post<span class="token punctuation">.</span>url <span class="token operator">|</span> <span class="token function filter">url</span> <span class="token delimiter punctuation">}}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{{</span> post<span class="token punctuation">.</span>data<span class="token punctuation">.</span>title <span class="token delimiter punctuation">}}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%-</span> <span class="token keyword">endfor</span> <span class="token delimiter punctuation">-%}</span></span>
-<span class="token line-number" aria-hidden="true"></span></code></pre>
+<pre><code class="language-liquid">
+{%- set postslist = collections.posts | reverse -%}
+
+{%- for post in postslist -%}
+    &lt;h3&gt;
+        &lt;a href=&quot;{{ post.url | url }}&quot;&gt;{{ post.data.title }}&lt;/a&gt;
+    &lt;/h3&gt;
+{%- endfor -%}
+
+</code></pre>
 <p>就是这样，Eleventy 生成草稿啦！</p>
 <p>参考链接：<a href="https://giustino.blog/how-to-drafts-eleventy/">https://giustino.blog/how-to-drafts-eleventy/</a></p>
 
@@ -235,5 +238,5 @@
   
 
   
-
-
+</body>
+</html>

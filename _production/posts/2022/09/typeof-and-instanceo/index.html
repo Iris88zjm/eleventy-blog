@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>js中typeof和instanceof用法区别</title>
+    
     <meta name="description" content="">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="js中typeof和instanceof用法区别">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/09/typeof-and-instanceo/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="js中typeof和instanceof用法区别"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/09/typeof-and-instanceo/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="js中typeof和instanceof用法区别">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="js中typeof和instanceof用法区别"/>
+    <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg javascript">
+<div class="divimg javascript" >
   
   <h1></h1>
   
@@ -161,57 +162,66 @@
 <p>typeof和instanceof都可以用来判断变量，它们的用法有很大区别：</p>
 <p>typeof会返回一个变量的基本类型，只有以下几种：number, boolean, string, object, undefined, function</p>
 <p>例：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//number</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//string</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//boolean</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//undefined</span></code></pre>
+<pre><code class="language-javascript">alert(typeof(1));  //number
+alert(typeof(&quot;abc&quot;));  //string
+alert(typeof(true));  //boolean
+alert(typeof(m));  //undefined
+</code></pre>
 <p>如果我们想要判断一个变量是否存在，可以使用typeof：(不能使用if(a) 若a未声明，则报错)</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">!=</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token comment">//变量存在</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span></code></pre>
+<pre><code class="language-javascript">if(typeof a != 'undefined'){
+    //变量存在
+}
+</code></pre>
 <p>instanceof返回的是一个布尔值，如：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//true</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>b <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//true</span></code></pre>
+<pre><code class="language-javascript">var a = {};
+alert(a instanceof Object);  //true
+var b = [];
+alert(b instanceof Array);  //true
+</code></pre>
 <p>需要注意的是，instanceof只能用来判断对象和函数，不能用来判断字符串和数字等，如：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>b <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//false</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//string</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>c <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//true</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//object</span></code></pre>
+<pre><code class="language-javascript">var b = '123';
+alert(b instanceof String);  //false
+alert(typeof b);  //string
+var c = new String(&quot;123&quot;);
+alert(c instanceof String);  //true
+alert(typeof c);  //object
+</code></pre>
 <p>另外，用instanceof可以判断变量是否为数组</p>
 <p>大家都知道js中可以使用typeof来判断变量的基本类型，如：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token string">'111'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "string" </span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "number" </span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "undefined" </span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "undefined" </span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "object"</span></code></pre>
+<pre><code class="language-javascript">alert(typeof '111'); // &quot;string&quot; 
+alert(typeof 22); // &quot;number&quot; 
+alert(typeof a); // &quot;undefined&quot; 
+alert(typeof undefined); // &quot;undefined&quot; 
+alert(typeof []); // &quot;object&quot;
+</code></pre>
 <p>但是这个方法不适用于来判断数组，因为不管是数组还是对象，都会返回object，这就需要我们需求其他的方法。</p>
 <p>有几种方法可以拿来判断：</p>
 <h3>1、constructor属性</h3>
 <p>这个属性在我们使用js系统或者自己创建的对象的时候，会默认的加上，例如：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">//创建一个数组对象</span>
-<span class="token line-number" aria-hidden="true"></span>arr<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Array<span class="token punctuation">;</span>  <span class="token comment">//这一句是系统默认加上的</span></code></pre>
+<pre><code class="language-javascript">var arr = [1,2,3];  //创建一个数组对象
+arr.prototype.constructor = Array;  //这一句是系统默认加上的
+</code></pre>
 <p>所以我们就可以这样来判断：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// true</span></code></pre>
+<pre><code class="language-javascript">var arr = [1,2,3,1]; 
+alert(arr.constructor === Array);   // true
+</code></pre>
 <h3>2、instanceof</h3>
 <p>instanceof是检测对象的原型链是否指向构造函数的prototype对象的，所以我们也可以用它来判断：</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// true</span></code></pre>
+<pre><code class="language-javascript">var arr = [1,2,3]; 
+alert(arr instanceof Array);   // true
+</code></pre>
 <p>最后，为了给大家一个结果，现写出一个终极解决方案：</p>
 <p>判断数组终极解决方案</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">function</span> <span class="token function">isArrayFn</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment">//封装一个函数</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> Array<span class="token punctuation">.</span>isArray <span class="token operator">===</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">return</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//浏览器支持则使用isArray()方法</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>                     <span class="token comment">//否则使用toString方法</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">return</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">"[object Array]"</span><span class="token punctuation">;</span> 
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span> 
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span> 
-<span class="token line-number" aria-hidden="true"></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">isArrayFn</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// true</span></code></pre>
+<pre><code class="language-javascript">var arr = [1,2,3]; 
+function isArrayFn(obj){  //封装一个函数
+  if (typeof Array.isArray === &quot;function&quot;) { 
+    return Array.isArray(obj); //浏览器支持则使用isArray()方法
+  }else{                     //否则使用toString方法
+    return Object.prototype.toString.call(obj) === &quot;[object Array]&quot;; 
+  } 
+} 
+alert(isArrayFn(arr));// true
+</code></pre>
 
   </div>
 
@@ -258,5 +268,5 @@
   
 
   
-
-
+</body>
+</html>

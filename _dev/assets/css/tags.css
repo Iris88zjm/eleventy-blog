@@ -1,5 +1,5 @@
-@import url(common/nav-right.css);
-@import url(common/article-item.css);
+@import url(components/nav-right.css);
+@import url(components/article-item.css);
 
 @media screen and (min-width: 0px) {
   #tags .wrapper {

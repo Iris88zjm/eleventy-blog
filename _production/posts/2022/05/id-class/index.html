@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>论 id 和 class 属性值加双引号与不加双引号的影响</title>
+    
     <meta name="description" content="">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="论 id 和 class 属性值加双引号与不加双引号的影响">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/05/id-class/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="论 id 和 class 属性值加双引号与不加双引号的影响"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/05/id-class/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="论 id 和 class 属性值加双引号与不加双引号的影响">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="论 id 和 class 属性值加双引号与不加双引号的影响"/>
+    <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg html">
+<div class="divimg html" >
   
   <h1></h1>
   
@@ -163,9 +164,11 @@
 <p>最后，</p>
 <p>才发现，原来是对应的属性值没有加上双引号</p>
 <p>原来是</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>num</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;span class=num&gt;&lt;/span&gt;
+</code></pre>
 <p>改成</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>num<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;span class=&quot;num&quot;&gt;&lt;/span&gt;
+</code></pre>
 <p>通过测试，没问题了</p>
 
   </div>
@@ -213,5 +216,5 @@
   
 
   
-
-
+</body>
+</html>

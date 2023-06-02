@@ -1,0 +1,70 @@
+
+@media screen and (min-width: 0px) {
+  :root { 
+    --border-radius: 6px;
+    --tag-border-radius: 3px;
+    --transition-animation: all 0.35s;
+    --light-color-one: #2D2F30;
+    --light-color-one-hover: #3E4041;
+    --light-color-two: #3FAE29;
+    --light-color-two-hover: #52B63E;
+    --light-bg-color: #fff;
+    --light-border-grey-color: #ebebeb;
+    
+    --dark-color-one: #fff;
+    --dark-color-two: #3FAE29;
+    --dark-bg-color: #2D2F30;
+    --dark-border-grey-color: #ebebeb;
+    
+    --font-size-xxl: 28px;
+    --font-size-xxl-line-height: 36px;
+    --font-size-xl: 24px;
+    --font-size-xl-line-height: 32px;
+    --font-size-l: 20px;
+    --font-size-l-line-height: 26px;
+    --font-size-m: 18px;
+    --font-size-m-line-height: 24px;
+    --font-size-s: 16px;
+    --font-size-s-line-height: 22px;
+    --font-size-xs: 14px;
+    --font-size-xs-line-height: 18px;
+    --font-size-xxs: 12px;
+    --font-size-xxs-line-height: 16px;
+    --page-padding-lr: 20px;
+    --page-padding-tb: 60px;  
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root { 
+    --page-padding-lr: 50px;
+    --page-padding-tb: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root { 
+    --page-padding-lr: 12vw;
+    --page-padding-tb: 100px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root { 
+    --font-size-xxl: 30px;
+    --font-size-xxl-line-height: 38px;
+    --font-size-xl: 26px;
+    --font-size-xl-line-height: 34px;
+    --font-size-l: 22px;
+    --font-size-l-line-height: 28px;
+    --font-size-m: 20px;
+    --font-size-m-line-height: 26px;
+    --font-size-s: 18px;
+    --font-size-s-line-height: 24px;
+    --font-size-xs: 16px;
+    --font-size-xs-line-height: 22px;
+    --font-size-xxs: 14px;
+    --font-size-xxs-line-height: 18px;
+    --page-padding-lr: 20vw;
+  }
+}

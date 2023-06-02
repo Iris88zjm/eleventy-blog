@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>css margin collapse</title>
+    
     <meta name="description" content="css 中关于 margin 崩塌的问题与解决方法">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="css margin collapse">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="css 中关于 margin 崩塌的问题与解决方法">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/08/margin-collapse/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="css margin collapse"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="css 中关于 margin 崩塌的问题与解决方法"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/08/margin-collapse/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="css margin collapse">
-    <meta name="twitter:description" content="css 中关于 margin 崩塌的问题与解决方法">
+    <meta name="twitter:title" content="css margin collapse"/>
+    <meta name="twitter:description" content="css 中关于 margin 崩塌的问题与解决方法"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg css">
+<div class="divimg css" >
   
   <h1></h1>
   
@@ -168,35 +169,36 @@
 </blockquote>
 <h2>Margin Collapse 的发生条件</h2>
 <p>我们用一个例子</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span>  <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
-<span class="token line-number" aria-hidden="true"></span>    <span class="token selector">.case</span> <span class="token punctuation">{</span> <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token color"><span class="color-preview" style="--color-value:yellow" aria-hidden="true"></span>yellow</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token selector">.container</span> <span class="token punctuation">{</span> <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token color"><span class="color-preview" style="--color-value:lightblue" aria-hidden="true"></span>lightblue</span><span class="token punctuation">;</span> <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span> <span class="token property">padding-top</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token selector">.preface</span> <span class="token punctuation">{</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 58px<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span> <span class="token property">border</span><span class="token punctuation">:</span> 1px solid <span class="token color"><span class="color-preview" style="--color-value:red" aria-hidden="true"></span>red</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token selector">.one .intro</span> <span class="token punctuation">{</span> <span class="token property">clear</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">margin-top</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token selector">.two .intro</span> <span class="token punctuation">{</span> <span class="token property">clear</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">margin-top</span><span class="token punctuation">:</span> 59px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>case one<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preface<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>              lorem ipsum
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>intro<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      after
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>case two<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preface<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>              lorem ipsum
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>intro<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>      after
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;style&gt;
+    .case { width: 200px; background-color: yellow; }
+    .container { background-color: lightblue; margin-bottom: 70px; padding-top: 1px; }
+    .preface { float: left; height: 58px; width: 100px; border: 1px solid red; }
+    .one .intro { clear: left; margin-top: 60px; }
+    .two .intro { clear: left; margin-top: 59px; }
+  &lt;/style&gt;
+  &lt;div class=&quot;case one&quot;&gt;
+      &lt;div class=&quot;container&quot; &gt;
+          &lt;div class=&quot;preface&quot;&gt;
+              lorem ipsum
+          &lt;/div&gt;
+          &lt;div class=&quot;intro&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      after
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;div class=&quot;case two&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;preface&quot;&gt;
+              lorem ipsum
+          &lt;/div&gt;
+          &lt;div class=&quot;intro&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      after
+  &lt;/div&gt;
+  &lt;/html&gt;
+</code></pre>
 <p><em>本文的实验与结论均基于windows 7系统中Chrome 49.0.2623.110版本</em></p>
 <p>例中，case one 与 case two 应用了相同的样式，除了 .intro 的 margin-top，前者为60px，后者为59px。从结果来看，case two应当是想象中的效果，而case one的效果则大相径庭。</p>
 <div class="divimg-wrapper">
@@ -267,5 +269,5 @@
   
 
   
-
-
+</body>
+</html>

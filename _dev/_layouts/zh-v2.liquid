@@ -8,7 +8,7 @@ pageDescription: no header and footer
 
 {% include './components/head' %}
     <main id="{{ pageSlug }}">
-      {{ content | safe }}
+      {{ content }}
       <div class="footer" style="position: fixed; bottom: 10px; left: 0; right: 0; text-align: center;">
         <a href="{% if lang == 'zh' %}{{ baseURL | url }}/{% else %}{{ baseURL | url }}/{{ lang }}/{% endif %}" style="text-decoration: underline; {% if pageSlug == 'hero-kids' %}color: #FFF{% endif %}">Back to homepage</a>
       </div>

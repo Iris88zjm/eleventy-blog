@@ -1,6 +1,6 @@
-@import url(variable.css);
-@import url(animation.css);
-@import url(init.css);
-@import url(common/header.css);
-@import url(common/footer.css);
-@import url(common/theme.css);
+@import url(components/variable.css);
+@import url(components/animation.css);
+@import url(components/init.css);
+@import url(components/header.css);
+@import url(components/footer.css);
+@import url(components/theme.css);

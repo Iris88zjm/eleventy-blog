@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>linux 多域名绑定</title>
+    
     <meta name="description" content="使用简单的几步命令，在 linux 下配置域名">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="linux 多域名绑定">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="使用简单的几步命令，在 linux 下配置域名">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/01/linux-domain/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="linux 多域名绑定"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="使用简单的几步命令，在 linux 下配置域名"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/01/linux-domain/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="linux 多域名绑定">
-    <meta name="twitter:description" content="使用简单的几步命令，在 linux 下配置域名">
+    <meta name="twitter:title" content="linux 多域名绑定"/>
+    <meta name="twitter:description" content="使用简单的几步命令，在 linux 下配置域名"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg linux">
+<div class="divimg linux" >
   
   <h1></h1>
   
@@ -160,8 +161,9 @@
     <p>域名配置文件的路径 /etc/apache2/sites-available/</p>
 <p>软链接路径 /etc/apache2/sites-enabled/</p>
 <p>登录XShell进入页面</p>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> /etc/apache2/sites-available/ <span class="token comment"># 进入目录</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">ls</span> <span class="token comment"># 查看当前目录文件列表</span></code></pre>
+<pre><code class="language-shell">cd /etc/apache2/sites-available/ # 进入目录
+ls # 查看当前目录文件列表
+</code></pre>
 <div class="divimg-wrapper">
   <div class="img">
     <img src="/assets/img/2022/01/01-2.png" alt="当前目录文件列表">
@@ -169,15 +171,17 @@
   <div class="img-desc">图 1: 当前目录文件列表</div>
 </div>
 <p>配置新域名(www.zhufupin.cn)</p>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">cp</span> <span class="token number">201519</span>.conf zhufupin.conf <span class="token comment"># 复制文件</span></code></pre>
+<pre><code class="language-shell">cp 201519.conf zhufupin.conf # 复制文件
+</code></pre>
 <div class="divimg-wrapper">
   <div class="img">
     <img src="/assets/img/2022/01/01-3.png" alt="复制文件">
   </div>
   <div class="img-desc">图 2: 复制文件</div>
 </div>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">vi</span> zhufupin.conf <span class="token comment"># 编辑文件</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token comment"># vi 命令进入文件时, 需要先按( i 键), 才能编辑文件; 编辑完成时保存, 需先按( Esc 键),然后按( : 键), 再输入 wq , 按回车, 这时文件保存成功</span></code></pre>
+<pre><code class="language-shell">vi zhufupin.conf # 编辑文件
+# vi 命令进入文件时, 需要先按( i 键), 才能编辑文件; 编辑完成时保存, 需先按( Esc 键),然后按( : 键), 再输入 wq , 按回车, 这时文件保存成功
+</code></pre>
 <div class="divimg-wrapper">
   <div class="img">
     <img src="/assets/img/2022/01/01-4.png" alt="编辑文件">
@@ -185,11 +189,13 @@
   <div class="img-desc">图 3: 编辑文件</div>
 </div>
 <p>此时配置文件弄好了, 还需要建立软链接</p>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span> <span class="token comment"># 返回上级目录</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token builtin class-name">cd</span> /etc/apache2/sites-enabled/ <span class="token comment"># 进入目录</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">ln</span> -s /etc/apache2/sites-available/zhufupin.conf <span class="token comment"># 建立新配置域名的软链接</span></code></pre>
+<pre><code class="language-shell">cd .. # 返回上级目录
+cd /etc/apache2/sites-enabled/ # 进入目录
+ln -s /etc/apache2/sites-available/zhufupin.conf # 建立新配置域名的软链接
+</code></pre>
 <p>然后需要重启 apache2 才能生效</p>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span>/etc/init.d/apache2 restart</code></pre>
+<pre><code class="language-shell">/etc/init.d/apache2 restart
+</code></pre>
 <div class="divimg-wrapper">
   <div class="img">
     <img src="/assets/img/2022/01/01-5.png" alt="建立软链接 并重启">
@@ -247,5 +253,5 @@
   
 
   
-
-
+</body>
+</html>

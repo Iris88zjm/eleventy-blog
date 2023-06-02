@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>图片懒加载处理</title>
+    
     <meta name="description" content="兼容大部分浏览器的图片懒加载处理">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="图片懒加载处理">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="兼容大部分浏览器的图片懒加载处理">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/04/images-lazy-loading/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="图片懒加载处理"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="兼容大部分浏览器的图片懒加载处理"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/04/images-lazy-loading/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="图片懒加载处理">
-    <meta name="twitter:description" content="兼容大部分浏览器的图片懒加载处理">
+    <meta name="twitter:title" content="图片懒加载处理"/>
+    <meta name="twitter:description" content="兼容大部分浏览器的图片懒加载处理"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg javascript">
+<div class="divimg javascript" >
   
   <h1></h1>
   
@@ -171,48 +172,52 @@
 <p>先查看 <a href="https://caniuse.com/?search=loading">loading</a> &amp; <a href="https://caniuse.com/?search=lazy">lazy</a> 有哪些浏览器能支持</p>
 <h2>图片懒加载处理方式</h2>
 <p>大部分浏览器是支持的, 我们可以直接在 img 标签中添加 <code>loading=&quot;lazy&quot;</code></p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xxx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;img loading=&quot;lazy&quot; src=&quot;/assets/img/xxx@1x.jpg&quot; alt=&quot;xxx&quot;&gt;
+</code></pre>
 <p>如果浏览器不支持, 那我们可以用 <a href="[http://huashunglass.com/loading/](https://github.com/aFarkas/lazysizes)" target="_blank">lazysizes plugin</a></p>
 <p>在 img 标签中添加 <code>class=&quot;lazyload&quot; loading=&quot;lazy&quot;</code>, 同时使用 data-src 属性, lazysizes 会把 data-src 转成 src</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>divimg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picture</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.webp 1x, /assets/img/xxx@2x.webp 2x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.jpg 1x, /assets/img/xxx@2x.jpg 2x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazyload<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token attr-name">data-src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picture</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;div class=&quot;divimg&quot;&gt;
+  &lt;picture&gt;
+    &lt;source data-srcset=&quot;/assets/img/xxx@1x.webp 1x, /assets/img/xxx@2x.webp 2x&quot;&gt;
+    &lt;source data-srcset=&quot;/assets/img/xxx@1x.jpg 1x, /assets/img/xxx@2x.jpg 2x&quot;&gt;
+    &lt;img class=&quot;lazyload&quot; loading=&quot;lazy&quot; data-src=&quot;/assets/img/xxx@1x.jpg&quot;&gt;
+  &lt;/picture&gt;
+&lt;/div&gt;
+</code></pre>
 <p>如果需要在图片懒加载时, 出现一个加载图片, 可以添加 src 属性</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>divimg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picture</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.webp 1x, /assets/img/xxx@2x.webp 2x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.jpg 1x, /assets/img/xxx@2x.jpg 2x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazyload<span class="token punctuation">"</span></span> <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/loading.svg<span class="token punctuation">"</span></span> <span class="token attr-name">data-src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/xxx@1x.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picture</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;div class=&quot;divimg&quot;&gt;
+  &lt;picture&gt;
+    &lt;source data-srcset=&quot;/assets/img/xxx@1x.webp 1x, /assets/img/xxx@2x.webp 2x&quot;&gt;
+    &lt;source data-srcset=&quot;/assets/img/xxx@1x.jpg 1x, /assets/img/xxx@2x.jpg 2x&quot;&gt;
+    &lt;img class=&quot;lazyload&quot; loading=&quot;lazy&quot; src=&quot;/assets/img/loading.svg&quot; data-src=&quot;/assets/img/xxx@1x.jpg&quot;&gt;
+  &lt;/picture&gt;
+&lt;/div&gt;
+</code></pre>
 <p>判断浏览器是否支持 loading, 请使用 <code>'loading' in HTMLImageElement.prototype</code></p>
 <p>如果支持则直接用 <code>loading=&quot;lazy&quot;</code>; 若不支持则使用 lazysizes plugin</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">const</span> supportLoading <span class="token operator">=</span> <span class="token string">'loading'</span> <span class="token keyword">in</span> <span class="token class-name">HTMLImageElement</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token comment">// let targetSpan = document.getElementById('boolean');</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token comment">// targetSpan.innerHTML = supportLoading;</span>
-<span class="token line-number" aria-hidden="true"></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token keyword">if</span> <span class="token punctuation">(</span>supportLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">const</span> imgTag <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'img[loading="lazy"]'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  imgTag<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">img</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">let</span> pictureTag <span class="token operator">=</span> img<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pictureTag<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token keyword">if</span> <span class="token punctuation">(</span>pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>srcset<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>srcset <span class="token operator">=</span> pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>srcset
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>      <span class="token keyword">if</span> <span class="token punctuation">(</span>pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>src<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>src <span class="token operator">=</span> pictureTag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>src
-<span class="token line-number" aria-hidden="true"></span>      <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>  <span class="token keyword">const</span> script <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  script<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'/assets/js/lazysizes.min.js'</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span></code></pre>
+<pre><code class="language-javascript">const supportLoading = 'loading' in HTMLImageElement.prototype;
+// let targetSpan = document.getElementById('boolean');
+// targetSpan.innerHTML = supportLoading;
+
+if (supportLoading) {
+  const imgTag = document.querySelectorAll('img[loading=&quot;lazy&quot;]');
+  imgTag.forEach(function(img) {
+    let pictureTag = img.parentNode.children;
+    for (var i = 0; i &lt; pictureTag.length; i++) {
+      if (pictureTag[i].dataset.srcset) {
+        pictureTag[i].srcset = pictureTag[i].dataset.srcset
+      }
+      if (pictureTag[i].dataset.src) {
+        pictureTag[i].src = pictureTag[i].dataset.src
+      }
+    }
+  })
+} else {
+  const script = document.createElement('script');
+  script.src = '/assets/js/lazysizes.min.js';
+  document.body.appendChild(script);
+}
+</code></pre>
 <h3>相关链接</h3>
 <p><a href="http://huashunglass.com/demo/loading/" target="_blank">本站图片懒加载 demo</a></p>
 <p><a href="[http://huashunglass.com/loading/](https://web.dev/browser-level-image-lazy-loading/)" target="_blank">浏览器不支持 lazy-loading 处理方式</a></p>
@@ -263,5 +268,5 @@
   
 
   
-
-
+</body>
+</html>

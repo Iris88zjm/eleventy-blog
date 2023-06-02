@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>Eleventy 添加搜索功能</title>
+    
     <meta name="description" content="用 Elasticlunr 为 Eleventy 网站添加搜索功能">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Eleventy 添加搜索功能">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="用 Elasticlunr 为 Eleventy 网站添加搜索功能">
-    <meta property="og:url" content="http://huashunglass.com/posts/2023/01/eleventy-search/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Eleventy 添加搜索功能"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content="用 Elasticlunr 为 Eleventy 网站添加搜索功能"/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2023/01/eleventy-search/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="Eleventy 添加搜索功能">
-    <meta name="twitter:description" content="用 Elasticlunr 为 Eleventy 网站添加搜索功能">
+    <meta name="twitter:title" content="Eleventy 添加搜索功能"/>
+    <meta name="twitter:description" content="用 Elasticlunr 为 Eleventy 网站添加搜索功能"/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg eleventy">
+<div class="divimg eleventy" >
   
   <h1></h1>
   
@@ -173,74 +174,77 @@
 </ul>
 <h2>11ty 添加search filter</h2>
 <p>.eleventy.js</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token keyword">const</span> elasticlunr <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"elasticlunr"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"search"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">collection</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token comment">// what fields we'd like our index to consist of</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token function">elasticlunr</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token comment">// this.addField("title")</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token comment">// this.setRef("id");</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token comment">// loop through each page and add it to the index</span>
-<span class="token line-number" aria-hidden="true"></span>        collection<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>            index<span class="token punctuation">.</span><span class="token function">addDoc</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token literal-property property">id</span><span class="token operator">:</span> page<span class="token punctuation">.</span>url<span class="token punctuation">,</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token literal-property property">title</span><span class="token operator">:</span> page<span class="token punctuation">.</span>template<span class="token punctuation">.</span>frontMatter<span class="token punctuation">.</span>data<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token literal-property property">tags</span><span class="token operator">:</span> page<span class="token punctuation">.</span>template<span class="token punctuation">.</span>frontMatter<span class="token punctuation">.</span>data<span class="token punctuation">.</span>tags<span class="token punctuation">,</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token keyword">return</span> index<span class="token punctuation">.</span><span class="token function">toJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>
-<span class="token line-number" aria-hidden="true"></span>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addCollection</span><span class="token punctuation">(</span><span class="token string">"postsSearch"</span><span class="token punctuation">,</span> <span class="token parameter">collection</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">...</span>collection<span class="token punctuation">.</span><span class="token function">getFilteredByGlob</span><span class="token punctuation">(</span><span class="token string">"_dev/posts/**/*.md"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span></code></pre>
+<pre><code class="language-javascript">const elasticlunr = require(&quot;elasticlunr&quot;);
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addFilter(&quot;search&quot;, function (collection) {
+        // what fields we'd like our index to consist of
+        var index = elasticlunr(function () {
+            // this.addField(&quot;title&quot;)
+            // this.setRef(&quot;id&quot;);
+        });
+        // loop through each page and add it to the index
+        collection.forEach((page) =&gt; {
+            index.addDoc({
+                id: page.url,
+                title: page.template.frontMatter.data.title,
+                tags: page.template.frontMatter.data.tags,
+            });
+        });
+        return index.toJSON();
+    });
+
+    eleventyConfig.addCollection(&quot;postsSearch&quot;, collection =&gt; {
+        return [...collection.getFilteredByGlob(&quot;_dev/posts/**/*.md&quot;)];
+    });
+};
+
+</code></pre>
 <h2>创建search page</h2>
 <p>search.html</p>
-<pre class="language-html line-numbers" data-language="html"><code class="language-html line-numbers" data-language="html"><span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>field<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Search...<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchField<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>result<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchResults<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>noResultsFound<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>没有搜索到你想要的结果，请重新查找.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token comment">&lt;!--Only 5.7kb GZipped. You may want to bundle this with your application code. --></span>
-<span class="token line-number" aria-hidden="true"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="language-html">&lt;div class=&quot;field&quot;&gt;
+    &lt;input type=&quot;search&quot; placeholder=&quot;Search...&quot; id=&quot;searchField&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;result&quot;&gt;
+    &lt;ul id=&quot;searchResults&quot;&gt;&lt;/ul&gt;
+    &lt;div id=&quot;noResultsFound&quot;&gt;
+        &lt;p&gt;没有搜索到你想要的结果，请重新查找.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--Only 5.7kb GZipped. You may want to bundle this with your application code. --&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
 <p>search.js</p>
-<pre class="language-javascript line-numbers" data-language="javascript"><code class="language-javascript line-numbers" data-language="javascript"><span class="token line-number" aria-hidden="true"></span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#search input'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"input propertychange change"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token keyword">let</span> searchStr <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token keyword">if</span><span class="token punctuation">(</span>searchStr<span class="token punctuation">)</span><span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"/search-index.json"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span>
-<span class="token line-number" aria-hidden="true"></span>                response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rawIndex</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token keyword">let</span> resultHtml <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token keyword">let</span> docs <span class="token operator">=</span> rawIndex<span class="token punctuation">.</span>documentStore<span class="token punctuation">.</span>docs<span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> docs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                        <span class="token keyword">if</span><span class="token punctuation">(</span>docs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>searchStr<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                            resultHtml <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li>&lt;a href="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>docs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" target="_blank"></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>docs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/a></span><span class="token template-punctuation string">`</span></span>
-<span class="token line-number" aria-hidden="true"></span>                        <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token keyword">return</span> resultHtml<span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#searchResults"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token keyword">if</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#noResultsFound"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"active"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#searchResults"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>                    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#noResultsFound"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"active"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>                <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#noResultsFound"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"active"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#searchResults"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span>        <span class="token punctuation">}</span>
-<span class="token line-number" aria-hidden="true"></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre><code class="language-javascript">$(function () {
+    $('#search input').on(&quot;input propertychange change&quot;, function () {
+        let searchStr = $(this).val();
+        if(searchStr){
+            fetch(&quot;/search-index.json&quot;).then((response) =&gt;
+                response.json().then((rawIndex) =&gt; {
+                    let resultHtml = &quot;&quot;;
+                    let docs = rawIndex.documentStore.docs;
+                    for(let i in docs) {
+                        if(docs[i].title.toLowerCase().indexOf(searchStr.toLowerCase()) &gt;= 0) {
+                            resultHtml += `&lt;li&gt;&lt;a href=&quot;${docs[i].id}&quot; target=&quot;_blank&quot;&gt;${docs[i].title}&lt;/a&gt;`
+                        }
+                    }
+                    return resultHtml;
+                })
+            ).then((result)=&gt;{
+                $(&quot;#searchResults&quot;).html(&quot;&quot;);
+                if(result) {
+                    $(&quot;#noResultsFound&quot;).removeClass(&quot;active&quot;);
+                    $(&quot;#searchResults&quot;).append(result);
+                } else {
+                    $(&quot;#noResultsFound&quot;).addClass(&quot;active&quot;);
+                }
+            });
+        } else {
+            $(&quot;#noResultsFound&quot;).removeClass(&quot;active&quot;);
+            $(&quot;#searchResults&quot;).html(&quot;&quot;);
+        }
+    });
+});
+</code></pre>
 <p>相关链接：</p>
 <p><a href="http://elasticlunr.com/" target="_blank">ElasticLunr docs</a></p>
 <p><a href="https://www.belter.io/eleventy-search/" target="_blank">https://www.belter.io/eleventy-search/</a></p>
@@ -291,5 +295,5 @@
   
 
   
-
-
+</body>
+</html>

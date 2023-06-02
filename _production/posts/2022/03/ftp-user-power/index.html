@@ -9,28 +9,29 @@
     <link rel="preload" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2922698_9pj5wqw6kw5.css">
     
-    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all">
+    <link rel="stylesheet" href="http://huashunglass.com/assets/css/style.css" media="all"/>
     
     
     
 			
-				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all">
+				<link rel="stylesheet" href="http://huashunglass.com/assets/css/single-post.css" media="all" />
 			
 		
 
     <title>linux 指定 ftp 用户 特定目录及权限</title>
+    
     <meta name="description" content="">
-    <meta property="og:locale" content="zh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="linux 指定 ftp 用户 特定目录及权限">
-    <meta property="og:site_name" content="Iris 博客 | 中文">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="http://huashunglass.com/posts/2022/03/ftp-user-power/">
+    <meta property="og:locale" content="zh"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="linux 指定 ftp 用户 特定目录及权限"/>
+    <meta property="og:site_name" content="Iris 博客 | 中文"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="http://huashunglass.com/posts/2022/03/ftp-user-power/"/>
     <meta property="og:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@IrisZhu">
-    <meta name="twitter:title" content="linux 指定 ftp 用户 特定目录及权限">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="linux 指定 ftp 用户 特定目录及权限"/>
+    <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content="http://huashunglass.com/assets/img/icons/favicon.png">
 
     <script>
@@ -137,7 +138,7 @@
 <main id="single-post">
     <section id="hero">
   
-<div class="divimg linux">
+<div class="divimg linux" >
   
   <h1></h1>
   
@@ -160,40 +161,49 @@
     <p>在linux中添加 ftp 用户, 并设置相应的权限, 操作步骤如下:</p>
 <p>要求: 被限制用户名为 test.被限制路径为 /var/www/test</p>
 <h2>新建建用户: 在root用户下:</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">useradd</span> -d /var/www/test <span class="token builtin class-name">test</span> <span class="token comment"># 增加用户 test, 并制定test用户的主目录为 /var/www/test</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">passwd</span> <span class="token builtin class-name">test</span> <span class="token comment"># 为 test 设置密码</span></code></pre>
+<pre><code class="language-shell">useradd -d /var/www/test test # 增加用户 test, 并制定test用户的主目录为 /var/www/test
+passwd test # 为 test 设置密码
+</code></pre>
 <h2>更改用户相应的权限设置</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -s /sbin/nologin <span class="token builtin class-name">test</span> <span class="token comment"># 限定用户 test 不能 telnet, 只能 ftp</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -s /sbin/bash <span class="token builtin class-name">test</span> <span class="token comment"># 用户 test 恢复正常</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -d /var/www <span class="token builtin class-name">test</span> <span class="token comment"># 更改用户 test 的主目录为 /var/www</span></code></pre>
+<pre><code class="language-shell">usermod -s /sbin/nologin test # 限定用户 test 不能 telnet, 只能 ftp
+usermod -s /sbin/bash test # 用户 test 恢复正常
+usermod -d /var/www test # 更改用户 test 的主目录为 /var/www
+</code></pre>
 <h2>如果需要允许用户修改密码, 但是又没有 telnet 登录系统的权限:</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -s /usr/bin/passwd <span class="token builtin class-name">test</span> <span class="token comment"># 用户telnet后将直接进入改密界面</span></code></pre>
+<pre><code class="language-shell">usermod -s /usr/bin/passwd test # 用户telnet后将直接进入改密界面
+</code></pre>
 <h2>建工作组</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">groupadd</span> <span class="token builtin class-name">test</span> <span class="token comment"># 新建test工作组</span></code></pre>
+<pre><code class="language-shell">groupadd test # 新建test工作组
+</code></pre>
 <h2>新建用户同时增加工作组</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">useradd</span> -g <span class="token builtin class-name">test</span> phpq <span class="token comment"># 新建phpq用户并增加到test工作组</span></code></pre>
+<pre><code class="language-shell">useradd -g test phpq # 新建phpq用户并增加到test工作组
+</code></pre>
 <p>注: -g 所属组 -d 家目录 -s 所用的SHELL</p>
 <h2>给已有的用户增加工作组</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -G groupname username <span class="token comment"># (这个会把用户从其他组中去掉)</span>
-<span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> -a groupname username <span class="token comment"># 或者: gpasswd -a user group</span></code></pre>
+<pre><code class="language-shell">usermod -G groupname username # (这个会把用户从其他组中去掉)
+usermod -a groupname username # 或者: gpasswd -a user group
+</code></pre>
 <p>如果添加了用户, 添加了组, 然后使这个组里的人都可以sudo 到公共账号下</p>
 <p>可以/etc/sudoers.d 下面建立一个文件内容如下 , 就可以是etl组的所有用户都可以无密码的切到etl用户下.</p>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span>%etl <span class="token assign-left variable">ALL</span><span class="token operator">=</span><span class="token punctuation">(</span>ALL<span class="token punctuation">)</span> NOPASSWD: /bin/su etl
-<span class="token line-number" aria-hidden="true"></span>%etl <span class="token assign-left variable">ALL</span><span class="token operator">=</span><span class="token punctuation">(</span>ALL<span class="token punctuation">)</span> NOPASSWD: /bin/su – etl</code></pre>
+<pre><code class="language-shell">%etl ALL=(ALL) NOPASSWD: /bin/su etl
+%etl ALL=(ALL) NOPASSWD: /bin/su – etl
+</code></pre>
 <h2>临时关闭:</h2>
 <p>在 /etc/shadow 文件中属于该用户的行的第二个字段(密码)前面加上<em>就可以了.想恢复该用户, 去掉</em>即可.
 或者使用如下命令关闭用户账号: passwd peter –l</p>
 <p>重新释放: passwd peter –u</p>
 <h2>永久性删除用户账号</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">userdel</span> peter
-<span class="token line-number" aria-hidden="true"></span><span class="token function">groupdel</span> peter
-<span class="token line-number" aria-hidden="true"></span><span class="token function">usermod</span> –G peter peter <span class="token comment"># (强制删除该用户的主目录和主目录下的所有文件和子目录)</span></code></pre>
+<pre><code class="language-shell">userdel peter
+groupdel peter
+usermod –G peter peter # (强制删除该用户的主目录和主目录下的所有文件和子目录)
+</code></pre>
 <h2>从组中删除用户</h2>
 <p>编辑 /etc/group 找到 GROUP1 那一行, 删除 A</p>
 <p>或者用命令 gpasswd -d A GROUP</p>
 <h2>显示用户信息</h2>
-<pre class="language-shell line-numbers" data-language="shell"><code class="language-shell line-numbers" data-language="shell"><span class="token line-number" aria-hidden="true"></span><span class="token function">id</span> user
-<span class="token line-number" aria-hidden="true"></span><span class="token function">cat</span> /etc/passwd</code></pre>
+<pre><code class="language-shell">id user
+cat /etc/passwd
+</code></pre>
 
   </div>
 
@@ -240,5 +250,5 @@
   
 
   
-
-
+</body>
+</html>

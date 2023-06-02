@@ -1,12 +1,12 @@
 
-// const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const codeStyleHooks = require('eleventy-plugin-code-style-hooks');
+// const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
+// import codeStyleHooks from 'eleventy-plugin-code-style-hooks';
 const elasticlunr = require("elasticlunr"); // search function
-const CleanCSS  = require("clean-css");
+const fs = require("fs");
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
   // Add Plugins
-  eleventyConfig.addPlugin(codeStyleHooks);
+  // eleventyConfig.addPlugin(codeStyleHooks);
 
   // API CONFIG GOES HERE
   eleventyConfig.setLiquidOptions({
@@ -42,29 +42,30 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-  // Search 
-  // https://www.raymondcamden.com/2019/10/20/adding-search-to-your-eleventy-static-site-with-lunr
-  // https://www.belter.io/eleventy-search/
+  // Search active posts
   eleventyConfig.addFilter("search", function (collection) {
-    // what fields we'd like our index to consist of
-    var index = elasticlunr(function () {
-      // this.addField("title")
-      // this.setRef("id");
-    });
-    // loop through each page and add it to the index
-    collection.filter(publishedPosts).forEach((page) => {
-      index.addDoc({
-        id: page.url,
-        title: page.template.frontMatter.data.title,
-        tags: page.template.frontMatter.data.tags,
-      });
-    });
-    return index.toJSON();
+    let urlObj = {data: []};
+    collection.forEach((page, index) => {
+      let pageObj = {
+        id: (index + 1),
+        url: page.url,
+        title: page.template._frontMatter.data.title,
+        description: page.template._frontMatter.data.pageDescription,
+        tags: page.template._frontMatter.data.tags,
+      }
+      urlObj.data[index] = pageObj;
+    })
+    try {
+      fs.writeFileSync(
+        `_dev/assets/data/searchPost.json`, JSON.stringify(urlObj, undefined, 2)
+        );
+    } catch (e) {
+      console.log("Error: ", e);
+    }
   });
 
   eleventyConfig.addCollection("postsSearch", collection => {
-    return [...collection.getFilteredByGlob("_dev/posts/**/*.md")];
-    // return [...collection.getFilteredByGlob("_dev/demo/")];
+    return [...collection.getFilteredByGlob("_dev/posts/**/*.md").filter(publishedPosts)];
   });
 
   eleventyConfig.addFilter("reversePosts", function (value) {
@@ -72,11 +73,6 @@ module.exports = function (eleventyConfig) {
     return result;
   });
 
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  // RETURN OBJECTS HERE
   return {
     dir: {
       // Define input directory for development
@@ -88,5 +84,5 @@ module.exports = function (eleventyConfig) {
       // Define default directory for layout files
       layouts: "./_layouts",
     }
-  };
+  }
 };

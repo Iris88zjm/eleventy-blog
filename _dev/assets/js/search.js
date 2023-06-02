@@ -4,7 +4,7 @@ $(function () {
 
     function fetchSearch(query) {
         if(query){
-            fetch(`${ORIGIN}/assets/data/search-index.json`).then((response) =>
+            fetch(`${ORIGIN}/assets/data/searchPost.json`).then((response) =>
                 response.json().then((item) => {
                     let resultHtml = "";
                     let docs = item.data;

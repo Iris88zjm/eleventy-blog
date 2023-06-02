@@ -1,5 +1,4 @@
 @media screen and (min-width: 0px) {
-
   #search input {
     max-width: 380px;
   }
@@ -17,7 +16,7 @@
     margin-top: 20px;
   }
   #search #searchResults a {
-    display: inline-block;
+    display: block;
     padding: 4px 0;
     font-size: 1rem;
     line-height: 1.5rem;

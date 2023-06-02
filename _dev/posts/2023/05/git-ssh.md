@@ -22,6 +22,8 @@ https://masonry.desandro.com/-->
   <div class="img-desc">图 1: git clone 项目</div>
 </div>
 
+## 生成 ssh key
+
 这时我们需要生成 git 所需的 ssh key。
 
 先进入文件路径 <code>cd ~/.ssh/</code>
@@ -56,6 +58,8 @@ https://masonry.desandro.com/-->
   <div class="img-desc">图 3: 复制 ssh key</div>
 </div>
 
+## 把 ssh key 添加到 git
+
 下一步是需要把这个 key 添加到你的git 账号里ssh key 进行同步验证
 
 在git setting -> Access -> SSH and GPG keys -> New SSH key
@@ -69,3 +73,12 @@ https://masonry.desandro.com/-->
 </div>
 
 最后在 <code>git clone git@github.com:yourr_username/your_project.git</code>, 成功拉取项目。
+
+## 后记
+当在下一次 git 命令操作时，如果遇到错误：<code>Could not open a connection to your authentication agent.</code>
+
+输入命令 <code>ssh-agent bash</code> 或者 <code>eval "$(ssh-agent -s)"</code>
+
+然后再输入命令 <code>ssh-add ~/.ssh/key_file_name</code>
+
+再进行 git 命令操作

@@ -18,6 +18,9 @@
 		{% endif %}
 
     <title>{{ title }}</title>
+    {% if noIndex == true %}
+    <meta name="robots" content="noindex" />
+		{% endif %}
     <meta name="description" content="{{ pageDescription }}">
     <meta property="og:locale" content="{{ lang }}"/>
     <meta property="og:type" content="website"/>

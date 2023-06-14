@@ -170,6 +170,15 @@
       "tags": [
         "git"
       ]
+    },
+    {
+      "id": 20,
+      "url": "/posts/2023/06/css-frosted-glass/",
+      "title": "磨砂玻璃渐变背景",
+      "description": "妙用滤镜构建高级感拉满的磨砂玻璃渐变背景",
+      "tags": [
+        "css"
+      ]
     }
   ]
 }

@@ -29,7 +29,7 @@ blockquote span:before {
   font-weight: normal;
 }
 
-pre[data-language] {
+pre {
   position: relative;
   min-height: 40px;
   margin: 8px 0;
@@ -39,16 +39,14 @@ pre[data-language] {
   overflow-x: auto;
 }
 
-pre[data-language]::before {
-  content: attr(data-language);
+pre code::before {
+  content: attr(class);
   position: absolute;
   top: 0;
   right: 0;
   display: block;
   margin: 8px;
   padding: 2px 8px;
-  font-size: var(--font-size-xs);
-  line-height: var(--font-size-xs-line-height);
   border-radius: var(--tag-border-radius);
   color: var(--light-color-one);
   background-color: var(--light-bg-color);
@@ -57,7 +55,7 @@ pre[data-language]::before {
   transition-delay: 100ms;
 }
 
-pre[data-language]:hover::before {
+pre:hover code::before {
   opacity: 1;
 }
 

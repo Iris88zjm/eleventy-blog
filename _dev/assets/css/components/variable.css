@@ -10,6 +10,7 @@
     --light-color-two-hover: #52B63E;
     --light-bg-color: #fff;
     --light-border-grey-color: #ebebeb;
+    --grey: #8f8f8f;
     
     --dark-color-one: #fff;
     --dark-color-two: #3FAE29;
@@ -30,22 +31,22 @@
     --font-size-xs-line-height: 18px;
     --font-size-xxs: 12px;
     --font-size-xxs-line-height: 16px;
-    --page-padding-lr: 20px;
-    --page-padding-tb: 60px;  
+    --page-padding-lr: 16px;
+    --page-padding-tb: 48px;  
   }
 }
 
 @media screen and (min-width: 768px) {
   :root { 
-    --page-padding-lr: 50px;
-    --page-padding-tb: 80px;
+    --page-padding-lr: 32px;
+    --page-padding-tb: 56px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   :root { 
     --page-padding-lr: 12vw;
-    --page-padding-tb: 100px;
+    --page-padding-tb: 64px;
   }
 }
 

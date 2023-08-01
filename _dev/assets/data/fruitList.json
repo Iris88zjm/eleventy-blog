@@ -1,0 +1,274 @@
+[
+  {
+    "id": "horridus",
+    "familyName": "葫芦科",
+    "genuName": "刺枝瓜属",
+    "scientificName": "Acanthosicyos horridus",
+    "chineseName": "纳米比瓜",
+    "englishName": "Nara",
+    "nickname": "",
+    "origin": "非洲纳米比沙漠",
+    "mutation": "",
+    "description": "非洲纳米比沙漠特有的一种甜瓜",
+    "comment": "",
+    "images": [
+      "cucurbitaceae/acanthosicyos/horridus-1"
+    ]
+  },
+  {
+    "id": "naudinianus",
+    "familyName": "葫芦科",
+    "genuName": "刺枝瓜属",
+    "scientificName": "Acanthosicyos naudinianus",
+    "chineseName": "大羚羊瓜",
+    "englishName": "Gemsbok cucumber",
+    "nickname": "",
+    "origin": "南部非洲",
+    "mutation": "",
+    "description": "源于南部非洲的一种甜瓜",
+    "comment": "",
+    "images": [
+      "cucurbitaceae/acanthosicyos/naudinianus-1"
+    ]
+  },
+  {
+    "id": "aculeata",
+    "familyName": "棕榈科",
+    "genuName": "刺茎椰属",
+    "scientificName": "Acrocomia aculeata",
+    "chineseName": "格鲁椰",
+    "englishName": "Grugru palm",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "果肉略甜，非常黏稠",
+    "comment": "",
+    "images": [
+      "arecaceae/acrocomia/aculeata-1"
+    ]
+  },
+  {
+    "id": "intumescens",
+    "familyName": "棕榈科",
+    "genuName": "刺茎椰属",
+    "scientificName": "Acrocomia intumescens",
+    "chineseName": "马卡乌巴",
+    "englishName": "Macauba",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "名称源自图皮语单词，意思是“黄色椰子”",
+    "comment": "",
+    "images": [
+      "arecaceae/acrocomia/intumescens-1"
+    ]
+  },
+  {
+    "id": "arguta",
+    "familyName": "猕猴桃科",
+    "genuName": "猕猴桃属",
+    "scientificName": "Actinidia arguta",
+    "chineseName": "软枣猕猴桃",
+    "englishName": "Kiwiberry",
+    "nickname": "软枣子、奇异莓",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/arguta-1"
+    ]
+  },
+  {
+    "id": "chinensis",
+    "familyName": "猕猴桃科",
+    "genuName": "猕猴桃属",
+    "scientificName": "Actinidia chinensis",
+    "chineseName": "中华猕猴桃",
+    "englishName": "Chinese gooseberry",
+    "nickname": "猕猴桃",
+    "origin": "中国",
+    "mutation": "黄金奇异果(变种)",
+    "description": "于中国市场上贩售者之猕猴桃属水果，多为此物种",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/chinensis-1"
+    ]
+  },
+  {
+    "id": "actinidiaDeliciosa",
+    "familyName": "猕猴桃科",
+    "genuName": "猕猴桃属",
+    "scientificName": "Actinidia deliciosa",
+    "chineseName": "美味猕猴桃",
+    "englishName": "Kiwifruit",
+    "nickname": "奇异果",
+    "origin": "",
+    "mutation": "海沃德奇异果",
+    "description": "此物种为全球市场上最寻常的猕猴桃属水果",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/deliciosa-1"
+    ]
+  },
+  {
+    "id": "actinidiaGoldenKiwifruit",
+    "familyName": "猕猴桃科",
+    "genuName": "猕猴桃属",
+    "scientificName": "Actinidia golden kiwifruit",
+    "chineseName": "黄金奇异果",
+    "englishName": "Golden kiwifruit",
+    "nickname": "",
+    "origin": "中国",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/golden-kiwifruit-1"
+    ]
+  },
+  {
+    "id": "actinidiaKolomikta",
+    "familyName": "猕猴桃科",
+    "genuName": "猕猴桃属",
+    "scientificName": "Actinidia kolomikta",
+    "chineseName": "狗枣猕猴桃",
+    "englishName": "",
+    "nickname": "狗枣子",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/kolomikta-1"
+    ]
+  },
+  {
+    "id": "digitata",
+    "familyName": "锦葵科",
+    "genuName": "猴面包树属",
+    "scientificName": "Adansonia digitata",
+    "chineseName": "猴面包果",
+    "englishName": "African baobab",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "malvaceae/adansonia/digitata-1"
+    ]
+  },
+  {
+    "id": "grandidieri",
+    "familyName": "锦葵科",
+    "genuName": "猴面包树属",
+    "scientificName": "Adansonia grandidieri",
+    "chineseName": "大猴面包果",
+    "englishName": "Grandidier's baobab",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "malvaceae/adansonia/grandidieri-1"
+    ]
+  },
+  {
+    "id": "gregorii",
+    "familyName": "锦葵科",
+    "genuName": "猴面包树属",
+    "scientificName": "Adansonia gregorii",
+    "chineseName": "澳洲猴面包果",
+    "englishName": "",
+    "nickname": "",
+    "origin": "澳洲",
+    "mutation": "",
+    "description": "唯一原产于澳洲之猴面包果",
+    "comment": "",
+    "images": [
+      "malvaceae/adansonia/gregorii-1"
+    ]
+  },
+  {
+    "id": "rubrostipa",
+    "familyName": "锦葵科",
+    "genuName": "猴面包树属",
+    "scientificName": "Adansonia rubrostipa",
+    "chineseName": "芬尼猴面包果",
+    "englishName": "Fony baobab",
+    "nickname": "",
+    "origin": "马达加斯加西部",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "malvaceae/adansonia/rubrostipa-1"
+    ]
+  },
+  {
+    "id": "quinata",
+    "familyName": "木通科",
+    "genuName": "木通属",
+    "scientificName": "Akebia quinata",
+    "chineseName": "五叶木通果",
+    "englishName": "Five-leaf akebia",
+    "nickname": "阿科比",
+    "origin": "日本",
+    "mutation": "",
+    "description": "阿科比较八月瓜苦涩",
+    "comment": "",
+    "images": [
+      "akebia/akebia/quinata-1"
+    ]
+  },
+  {
+    "id": "trifoliata",
+    "familyName": "木通科",
+    "genuName": "木通属",
+    "scientificName": "Akebia trifoliata",
+    "chineseName": "三叶木通果",
+    "englishName": "Three-leaf akebia",
+    "nickname": "八月瓜",
+    "origin": "日本",
+    "mutation": "",
+    "description": "八月瓜较阿科比甘甜",
+    "comment": "",
+    "images": [
+      "akebia/akebia/trifoliata-1"
+    ]
+  },
+  {
+    "id": "connatus",
+    "familyName": "无患子科",
+    "genuName": "红冠果属",
+    "scientificName": "Alectryon connatus",
+    "chineseName": "毛红冠果",
+    "englishName": "",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "actinidia/actinidia/chinensis-1"
+    ]
+  },
+  {
+    "id": "excelsus",
+    "familyName": "无患子科",
+    "genuName": "红冠果属",
+    "scientificName": "Alectryon excelsus",
+    "chineseName": "红冠果",
+    "englishName": "",
+    "nickname": "",
+    "origin": "",
+    "mutation": "",
+    "description": "",
+    "comment": "",
+    "images": [
+      "cucurbitaceae/acanthosicyos/horridus-1"
+    ]
+  }
+]

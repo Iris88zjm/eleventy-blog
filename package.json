@@ -2,6 +2,7 @@
   "name": "blog",
   "version": "1.6.1",
   "description": "",
+  "_type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve --port=8888 --quiet --incremental",

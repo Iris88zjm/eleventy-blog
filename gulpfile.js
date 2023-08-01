@@ -6,6 +6,7 @@ import htmlmin from "gulp-htmlmin"; // Minify HTML
 import terser from "gulp-terser"; // Compressed es6+ code
 import cleanFile from 'gulp-clean'; // remove file or folder
 import tap from 'gulp-tap'; // Easily tap into a pipeline.
+import fs from 'fs';
 const { src, dest, series, parallel } = pkg;
 
 function minifyCss() {
@@ -13,7 +14,7 @@ function minifyCss() {
     .pipe(cleanCSS())
     .pipe(dest("_production/assets/css/"));
 }
-  
+
 function minifyJs() {
   return src("_dev/assets/js/**/*.js")
     .pipe(terser({ warnings: true }))
@@ -64,13 +65,63 @@ function revCollect() {
 }
 
 function removeOldCssJs() {
-  return src(["_production/assets/js/", "_production/assets/css/"], {read: false, allowEmpty: true})
-  .pipe(cleanFile())
+  return src(["_production/assets/js/", "_production/assets/css/"], { read: false, allowEmpty: true })
+    .pipe(cleanFile())
+}
+
+export async function writeFruitData() {
+  let files = [],
+    tempMenu = [],
+    // fruitMenu = {},
+    fruitData = [];
+  files = fs.readdirSync('_dev/_data/fruits');
+  files.forEach(function (file) {
+    let fruitFile = fs.readFileSync(`_dev/_data/fruits/${file}`, { encoding: 'utf8', flag: 'r' });
+    let jsonData = JSON.parse(fruitFile.toString());
+    // console.log(jsonData)
+    jsonData.data.map((fruitInfo) => {
+      fruitData.push(fruitInfo);
+      tempMenu.push({
+        "familyName": fruitInfo.familyName,
+        "genuName": fruitInfo.genuName
+      })
+    })
+  })
+
+  let fruitMenu = tempMenu.map(item => {
+    return { familyName: item.familyName, genuNames: [] }
+  })
+  let hash = {}; //数组去重
+  fruitMenu = fruitMenu.reduce((item, next) => {
+    hash[next.familyName] ? "" : hash[next.familyName] = true && item.push(next);
+    return item
+  }, [])
+  tempMenu.map(menu => {
+    for (let i in fruitMenu) {
+      if (menu.familyName == fruitMenu[i].familyName) {
+        if (fruitMenu[i].genuNames.indexOf(menu.genuName) < 0) {
+          fruitMenu[i].genuNames.push(menu.genuName);
+        }
+      }
+    }
+  })
+
+  try {
+    fs.writeFileSync(
+      `_dev/assets/data/fruitList.json`, JSON.stringify(fruitData, undefined, 2)
+    );
+    fs.writeFileSync(
+      `_dev/assets/data/fruitMenu.json`, JSON.stringify(fruitMenu, undefined, 2)
+      // `_dev/_data/fruitMenu.json`, JSON.stringify(fruitMenu, undefined, 2)
+    );
+  } catch (e) {
+    console.log("Error: ", e);
+  }
 }
 
 export const packCSSJS = series(
-    removeOldCssJs, 
-    parallel(minifyCss, minifyJs, minifyHTML), 
-    parallel(revCss, revJs), 
-    revCollect
-  );
+  removeOldCssJs,
+  parallel(minifyCss, minifyJs, minifyHTML),
+  parallel(revCss, revJs),
+  revCollect
+);

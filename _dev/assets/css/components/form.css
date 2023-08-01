@@ -1,0 +1,90 @@
+textarea {
+  min-height: 160px;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-family);
+  display: block;
+  width: 100%;
+  padding: 11px 16px;
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs-line-heigth);
+  font-weight: 500;
+  border: 1px solid var(--light-border-grey-color);
+  border-radius: var(--border-radius);
+  color: var(--light-color-one);
+  background: none;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  transition: var(--default-transition);
+}
+
+input:-internal-autofill-selected {
+  color: var(--light-color-one);
+  background: transparent !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--grey);
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* input:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid var(--input-focus-border-color);
+  box-shadow: 0 0 0 1px var(--input-focus-border-color);
+} */
+
+select {
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 28px;
+  background: url('../../img/icons/select-arrowdown-black.png') no-repeat right 16px center;
+  background-size: 8px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+form .entry {
+  margin-bottom: 12px;
+}
+
+form .entry:last-child {
+  margin-bottom: 0;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  line-height: var(--font-size-xs-line-heigth);
+}

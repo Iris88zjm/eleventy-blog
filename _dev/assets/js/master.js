@@ -1,4 +1,5 @@
 const ORIGIN = $("html").data("origin");
+const DOC_WIDTH = window.screen.width;
 function scrollPageNav(scrollH, pageID, divID, row) {
   let value = $(divID).length;
   if (value > 0) {
@@ -124,9 +125,8 @@ $(function () {
   });
   $("#links .container-left ul li a").on("tap click", function () {
     let href = $(this).attr("href");
-    let docWidth = window.screen.width;
     let scrollVal = 0;
-    if (docWidth >= 1024) {
+    if (DOC_WIDTH >= 1024) {
       if (href == "#vue") {
         scrollVal = 100;
       } else {

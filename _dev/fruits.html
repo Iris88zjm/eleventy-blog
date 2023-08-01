@@ -1,0 +1,79 @@
+---
+layout: zh.liquid
+pageSlug: fruitsPage
+title: 水果全集
+pageDescription: 水果全集
+cssFiles: ["fruits"]
+jsFiles: ["fruits"]
+---
+<section class="fruits-container">
+  <section class="fruits-container-left">
+    <form class="fruits-search-form">
+      <div class="entry">
+        <label for="inquiry">科目：</label> 
+        <select name="searchFamily" id="searchFamily">
+          <option value="">请选择科目</option>
+      </select>
+      </div>
+      <div class="entry">
+        <label for="inquiry">属目：</label> 
+        <select name="searchGenu" id="searchGenu">
+          <option value="">请选择属目</option>
+        </select>
+      </div>
+      <div class="entry">
+        <label for="searchFruitName">搜索内容：</label> 
+        <input name="searchFruitName" id="searchFruitName" type="text" placeholder="Search your fruit">
+      </div>
+    </form>
+  </section>
+  <!-- https://codepen.io/giana/embed/YZWjQy?default-tab=result&editable=true&theme-id=0 -->
+
+  <!-- https://cardanocrocsclub.com/ -->
+  <section class="fruits-container-right">
+    <!-- {%- for item in fruitMenu.data -%}
+    <div class="family" data-family-name="{{ item.family }}">
+      {%- for genu in item.genus -%}
+      {% assign fruitKey = genu | split: "-" %}
+      {% assign fruitObj = fruits[fruitKey[1]] %}
+
+      {%- for obj in fruitObj.data -%}
+      <div class="fruit" data-genu-name="{{ fruitKey[0] }}" data-chinese-name="{{ obj.chinese-name }}" id="{{ obj.id }}">
+        <div class="front-content">
+          <div class="divimg">
+            <img src="{{ baseURL | url }}/assets/img/fruits/{{ item.name }}/{{ fruitKey[1] }}/{{ obj.images[0] }}.jpg"
+              alt="">
+          </div>
+          <div class="content-bottom">
+            <div class="tags">
+              <span class="tag-family">{{ item.family }}</span> -
+              <span class="tag-genu">{{ fruitKey[0] }}</span>
+            </div>
+            <div class="chinese-name">{{ obj.chinese-name }}</div>
+          </div>
+        </div>
+
+        <div class="back-content">
+          <div class="scientific-name">学名: {{ obj.scientific-name }}</div>
+          <div class="chinese-name">中文名: {{ obj.chinese-name }}</div>
+          <div class="english-name">英文名: {{ obj.english-name }}</div>
+          <div class="nickname">别名: {{ obj.nickname }}</div>
+          <div class="origin">产地: {{ obj.origin }}</div>
+          <div class="mutation">变异: {{ obj.mutation }}</div>
+          <div class="description">描述: {{ obj.description }}</div>
+          <div class="comment">备注: {{ obj.comment }}</div>
+        </div>
+
+        <div class="toggle-content">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      {%- endfor -%}
+
+      {%- endfor -%}
+    </div>
+    {%- endfor -%} -->
+
+  </section>
+</section>

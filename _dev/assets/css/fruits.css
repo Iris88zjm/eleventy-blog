@@ -1,0 +1,191 @@
+@media screen and (min-width: 0px) {
+  #fruitsPage {
+    padding: var(--page-padding-tb) 0;
+  }
+
+  .fruits-container {
+    display: grid;
+    gap: 16px;
+  }
+
+  .fruits-container-left {
+    display: grid;
+    gap: 12px;
+    padding: 0 var(--page-padding-lr);
+  }
+
+  .fruits-container-right {
+    display: grid;
+    max-width: 2560px;
+    margin: 0 auto;
+  }
+
+  .family {
+    display: grid;
+  }
+
+  .family.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .family.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .family.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .family.cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* .family .fruit { position: relative; aspect-ratio: 1/1; -webkit-perspective: 1500px; -moz-perspective: 1500px; }
+  .family .fruit .front-content { position: relative; height: 100%; transition: all ease-in-out 0.3s; backface-visibility: hidden; transform: rotateY(0deg); }
+  .family .fruit .front-content .divimg { height: 100%; }
+  .family .fruit .front-content .divimg img { height: 100%; object-fit: cover; }
+  .family .fruit .front-content .content-bottom { position: absolute; left: 0; right: 0; top: auto; bottom: 0; padding: 12px 20px; background-color: rgba(0,0,0, .5); color: #FFF; transition: var(--transition-animation); }
+  .family .fruit .front-content .tags,
+  .family .fruit .front-content .scientific-name { font-size: var(--font-size-xxs); line-height: var(--font-size-xxs-line-height); }
+  .family .fruit .back-content { position: absolute; left: 0; right: 0; top: 0; bottom: 0; padding: 20px; color: #FFF; transition: all ease-in-out 0.3s; backface-visibility: hidden; transform: rotateY(-180deg); background-color: rgba(33, 150, 243, 0.8); font-size: var(--font-size-xxs); line-height: var(--font-size-xxs-line-height); }
+  .fruit:nth-child(3n) .back-content { background-color: rgba(33, 150, 243, 0.8); }
+  .fruit:nth-child(3n+1) .back-content { background-color: rgba(3, 169, 144, 0.8); }
+  .fruit:nth-child(3n+2) .back-content { background-color: rgba(255, 152, 0, 0.8); } */
+  .family .fruit {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+
+  .family .fruit .front-content {
+    position: relative;
+    height: 100%;
+  }
+
+  .family .fruit .front-content .divimg {
+    height: 100%;
+    transition: var(--transition-animation);
+  }
+
+  .family .fruit .front-content .divimg img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .family .fruit .front-content .content-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #FFF;
+    transition: var(--transition-animation);
+    transform: translateY(0%);
+  }
+
+  .family .fruit .front-content .tags,
+  .family .fruit .front-content .scientific-name {
+    font-size: var(--font-size-xxs);
+    line-height: var(--font-size-xxs-line-height);
+  }
+
+  .family .fruit .back-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    color: #FFF;
+    transition: all ease-in-out 0.3s;
+    visibility: hidden;
+    will-change: transform;
+    transform: translateY(100%);
+    background-color: rgba(33, 150, 243, 0.8);
+    font-size: var(--font-size-xxs);
+    line-height: var(--font-size-xxs-line-height);
+  }
+
+  .family:nth-child(2n) .fruit:nth-child(4n) .back-content {
+    background-color: rgba(33, 150, 243, 0.8);
+  }
+
+  .family:nth-child(2n) .fruit:nth-child(4n+1) .back-content {
+    background-color: rgba(3, 169, 144, 0.8);
+  }
+
+  .family:nth-child(2n) .fruit:nth-child(4n+2) .back-content {
+    background-color: rgba(255, 152, 0, 0.8);
+  }
+
+  .family:nth-child(2n) .fruit:nth-child(4n+3) .back-content {
+    background-color: rgba(107, 175, 29, 0.8);
+  }
+
+  .family:nth-child(2n+1) .fruit:nth-child(4n) .back-content {
+    background-color: rgba(255, 152, 0, 0.8);
+  }
+  
+  .family:nth-child(2n+1) .fruit:nth-child(4n+1) .back-content {
+    background-color: rgba(107, 175, 29, 0.8);
+  }
+  
+  .family:nth-child(2n+1) .fruit:nth-child(4n+2) .back-content {
+    background-color: rgba(33, 150, 243, 0.8);
+  }
+  .family:nth-child(2n+1) .fruit:nth-child(4n+3) .back-content {
+    background-color: rgba(3, 169, 144, 0.8);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fruits-search-form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {
+
+  /* .family .fruit { transition: all ease-in-out 0.3s; }
+  .fruit:hover .front-content { transform: rotateY(-180deg); }
+  .fruit:hover .back-content { transform: rotateY(0deg); } */
+
+  /* Next family, genus are above their columns, giving downward motion on hover */
+  .family:hover~.family .back-content {
+    transform: translateY(-100%);
+  }
+
+  /* Current family, genus to the right of their columns, giving left motion on hover */
+  .family:hover .back-content {
+    transform: translateX(100%);
+  }
+
+  /* Current family, next genus, genus to the left of their columns, giving right motion on hover */
+  .family:hover .fruit:hover~.fruit .back-content {
+    transform: translateX(-100%);
+  }
+
+  /* Current genu */
+  .family:hover .fruit:hover .back-content {
+    transform: none;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .fruit:hover .front-content .divimg {
+    transform: scale(1.5);
+  }
+
+  .fruit:hover .front-content .content-bottom {
+    transform: translateY(100%);
+  }
+
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+@media screen and (min-width: 2001px) {
+  .fruits-container-right {
+    padding: 0 var(--page-padding-lr);
+  }
+}
